@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabell</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <style>
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Roboto', Helvetica, sans-serif;
+            font-weight: 300;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 16px;
+        }
+
+        @media (max-width: 1100px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 800px) {
+            main{
+                grid-template-columns: 1fr;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table thead {
+            background-color: #f9f9f9;
+            text-transform: uppercase;
+            font-size: .875rem;
+            border-bottom: 4px solid goldenrod;
+
+        }
+        th {
+            text-align: left;
+        }
+        th, td {
+            /* 16x0.5625 =  10 */
+            padding: .5625rem .625rem;
+            border-right: 1px solid #ddd;
+        }
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>Her skal det være en meny</nav>
+</header>
+
+<main>
+    <article>
+        <h1>Klinkekuler</h1>
+        <table>
+            <thead>
+            <tr>
+
+                <th>Farger</th>
+                <th>Liten</th>
+                <th>Medium</th>
+                <th>Stor</th>
+                <th>Sum</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+
+                <td>Gul</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+
+                <td>Grønn</td>
+                <td>1</td>
+                <td>3</td>
+                <td>4</td>
+                <td>8</td>
+
+            </tr>
+            <tr>
+
+                <td>Rød</td>
+                <td>1</td>
+                <td>6</td>
+                <td>0</td>
+                <td>7</td>
+
+            </tr>
+            <tr>
+
+                <td>Blå</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </article>
