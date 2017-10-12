@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Katten som går</title>
+    <style>
+
+        @keyframes catwalk {
+            to {
+                background-position: 0 -2280px;
+            }
+        }
+        @keyframes moveRight {
+            to {
+                transform: translateX(800px);
+            }
+        }
+        .katt {
+            background-image: url("sprite_catwalk.png");
+            width: 400px;
+            height: 190px;
+
+            animation: catwalk steps(12) 1.8s infinite;
+            animation-name: catwalk, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 4s;
+            animation-iteration-count: infinite;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="katt"></div>
+
+</body>
+</html>
