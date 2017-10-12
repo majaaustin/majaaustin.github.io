@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lemmings</title>
+    <style>
+        @keyframes walkright {
+            to {
+                background-position: -256px 0;
+            }
+        }
+
+            @keyframes karsten {
+                from {
+                    left: 0px;
+                }
+                to {
+                    left: 128px;
+                }
+
+            }
+            @keyframes karsten_faller {
+                from {
+                    top: 168px;
+                    left: 128px;
+                }
+
+                to {
+                    top: 336px;
+                    left: 128px;
+                }
+
+            }
+
+
+        #game {
+            overflow: hidden;
+            position: relative;
+            width: 600px;
+            height: 450px;
+            margin: 30px auto;
+            background-color: black;
+            border: 15px solid peru;
+        }
+        /*alle elementer på første nnnivå innenfor games*/
+        #game > * {
+            position: absolute;
+
+        }
+        #gulv {
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            width: 128px;
+            height: 15px;
+            background-color: peru;
+        }
+        .walkright {
+            background-image: url("lemming_walk_r.gif");
+            width: 32px;
+            height: 32px;
+            animation: walkright 1s steps(8) infinite;
+        }
+
+        #karsten {
+            width: 32px;
+                height: 32px;
+                top: 168px;
+                left: -100px;
+            animation: karsten 4s steps(32);
+        }
+        .paraply_right {
+            background-image: url("paraply_right.gif");
+            width: 32px;
+            height: 32px;
+            animation: walkright 1s steps(8) infinite;
+
+        }
+        #karsten_faller {
+            width: 32px;
+            height: 32px;
+            top: 168px;
+            left: -100px;
+            animation: karsten_faller 4s 4s steps(32);
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="game">
+        <div id="karsten">
+            <div class="walkright"></div>
+        </div>
+        <div id="karsten_faller">
+            <div class="paraply_right"></div>
+        </div>
+
+        <div id="gulv"></div>
+    </div>
+
+</body>
+</html>
