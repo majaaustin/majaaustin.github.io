@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>IT 1</title>
+
+
+
     <style>
 
+        @keyframes catwalk {
+            to {
+                background-position: 0 -2280px;
+            }
+        }
+        @keyframes moveRight {
+            to {
+                transform: translateX(650px);
+            }
+        }
+
+
+        .Badeball {
+            background-image: url("Badeball.png");
+            width: 400px;
+            height: 190px;
+
+            animation: catwalk steps(12) 1.8s infinite;
+            animation-name: catwalk, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 4s;
+            animation-iteration-count: infinite;
+
     </style>
+
     <h1>IT 1 2017/18</h1>
-</head>
+
 <body>
+<div class="Badeball"></div>
 <nav>
     <li>
         <a href="Lekse/Forside_12.html">Lekser</a>
