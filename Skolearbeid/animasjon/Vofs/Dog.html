@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hund som går</title>
+    <style>
+
+        @keyframes dogwalk {
+            to {
+                background-position:  0 500px;
+            }
+        }
+        @keyframes moveRight {
+            to {
+                transform: translateX(800px);
+            }
+        }
+
+
+        .Dog {
+            background-image: url("dogwalk-01.png");
+            width: 500px;
+            height: 500px;
+
+            animation: catwalk steps(12) 1.8s infinite;
+            animation-name: dogwalk, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 4s;
+            animation-iteration-count: infinite;
+
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="Dog"></div>
+
+</body>
+</html>
