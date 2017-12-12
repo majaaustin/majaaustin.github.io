@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            background-color: #eeeeee;
+            font-family: sans-serif;
+            color: #333;
+        }
+        body > header {
+            background-color: white;
+            filter: drop-shadow(0px 5px 5px gray);
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Spectral SC', serif;
+        }
+        body > header > nav > a.valgt {
+            background-color: #efaa2e;
+            color: white;
+
+        }
+        body > header > nav > a:hover {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        main {
+            max-width: 960%;
+            overflow: hidden;
+            margin:0 auto;
+            min-height: 100vh;
+            background-color: white;
+
+        }
+        .slides {
+            width: 500%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            transition: 0.5s;
+
+
+        }
+        .slides > div {
+            text-align: center;
+
+        }
+        .slides > div >img {
+            width: 80%;
+            user-select: none;
+
+
+        }
+
+        body > footer > article > img {
+            width: 709px;
+            height: 483.5px;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <a href="#"></a>
+        <a href="#">Find a pet</a>
+        <a href="#">Adoption info</a>
+        <a href="#">Key issues</a>
+        <a href="#" class="valgt">Get involved</a>
+
+    </nav>
+</header>
+<body>
+
+<main>
+
+
+
+    <div class="slides">
+
+        <div>
+            <img src="DogHome.jpg">
+        </div>
+        <div>
+            <img src="pexels-photo-569170.jpeg">
+        </div>
+        <div>
+            <img src="rabbit-palm-hand-snatch-53966.jpeg">
+        </div>
+        <div>
+            <img src="pexels-photo-545010.jpeg">
+        </div>
+        <div>
+            <img src="guinea-pig-guinea-pig-house-cavia-porcellus-form-domestica-50572.jpeg">
+        </div>
+
+    </div>
+
+</main>
+<script>
+
+    let slides = document.querySelector(".slides")
+    let marg = 0;
+
+    document.onclick = function(klikk) {
+
+        if(klikk.clientX > innerWidth / 2) {
+            if(marg > -400){
+                marg = marg - 100;
+            } else {
+                slides.animate([
+                    {transform: "translateX(20px)"},
+                    {transform: "translateX(0)"},
+                    {transform: "translateX(10px)"},
+                    {transform: "translateX(0)"}
+                ], {
+                    duration: 200
+                });
+            }
+
+        } else {
+            if(marg < 0) {
+                marg = marg + 100;
+            } else {
+                slides.animate([
+                    {transform: "translateX(-20px)"},
+                    {transform: "translateX(0)"},
+                    {transform: "translateX(-10px)"},
+                    {transform: "translateX(0)"}
+                ], {
+                    duration: 200
+                });
+
+            }
+
+
+        }
+
+
+        slides.style.marginLeft = marg + "%";
+    };
+
+
+
+
+</script>
+
+
+<footer>
+    <article>
+        <img src="">
+
+    </article>
+    <article>
+        <img src="">
+
+    </article>
+    <article>
+    <img src="">
+
+</article>
+</footer>
+
+</body>
+</html>
+
+
+

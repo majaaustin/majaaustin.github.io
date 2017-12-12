@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+
+            background-color: lightgrey;
+            font-family: sans-serif;
+            color: #333;
+
+        }
+        body > header {
+            cursor: pointer;
+            background-color: white;
+            filter: drop-shadow(0px 5px 5px gray);
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-family: 'Spectral SC', serif;
+        }
+        body > header > nav > a.valgt {
+            background-color: #efaa2e;
+            color: white;
+
+        }
+        body > header > nav > a:hover {
+            background-color: #998675;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        main {
+            max-width: 100%;
+            overflow: hidden;
+            min-height: 100vh;
+            background-color: white;
+
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        .slider {
+            width: 100%;
+            display: grid;
+            transition: 0.5s;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            user-select: none;
+            margin-left: 40px;
+
+
+
+
+        }
+
+        .slide {
+
+            position: absolute;
+            width: 90.5%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 2s linear;
+
+        }
+
+        .slider-wrapper > .slide:first-child {
+            opacity: 1;
+
+        }
+
+        body > footer > article > img {
+            width: 30px;
+    </style>
+</head>
+<header>
+    <nav>
+        <a href="h.html"></a>
+        <a href="findpet.html">Find a pet</a>
+        <a href="adoptioninfo.html">Adoption info</a>
+        <a href="Key_issues.html">Key issues</a>
+        <a href="get_involved.html">Get involved</a>
+
+    </nav>
+</header>
+<body>
+
+<main>
+    <div class="slider" id="main-slider"><!-- outermost container element -->
+        <div class="slider-wrapper"><!-- innermost wrapper element -->
+            <img src="DogHome.jpg" alt="First" class="slide" /><!-- slides -->
+            <img src="pexels-photo-569170.jpeg" alt="Second" class="slide" />
+            <img src="rabbit-palm-hand-snatch-53966.jpeg" alt="Third" class="slide" />
+            <img src="pexels-photo-545010.jpeg" alt="Forth" class="slide" />
+            <img src="guinea-pig-guinea-pig-house-cavia-porcellus-form-domestica-50572.jpeg" alt="Fifth" class="slide" />
+        </div>
+    </div>
+
+
+</main>
+<script>
+    (function() {
+
+        function Slideshow( element ) {
+            this.el = document.querySelector( element );
+            this.init();
+        }
+
+        Slideshow.prototype = {
+            init: function() {
+                this.wrapper = this.el.querySelector( ".slider-wrapper" );
+                this.slides = this.el.querySelectorAll( ".slide" );
+                this.previous = this.el.querySelector( ".slider-previous" );
+                this.next = this.el.querySelector( ".slider-next" );
+                this.index = 0;
+                this.total = this.slides.length;
+                this.timer = null;
+
+                this.action();
+                this.stopStart();
+            },
+            _slideTo: function( slide ) {
+                var currentSlide = this.slides[slide];
+                currentSlide.style.opacity = 1;
+
+                for( var i = 0; i < this.slides.length; i++ ) {
+                    var slide = this.slides[i];
+                    if( slide !== currentSlide ) {
+                        slide.style.opacity = 0;
+                    }
+                }
+            },
+            action: function() {
+                var self = this;
+                self.timer = setInterval(function() {
+                    self.index++;
+                    if( self.index == self.slides.length ) {
+                        self.index = 0;
+                    }
+                    self._slideTo( self.index );
+
+                }, 5500);
+            },
+            stopStart: function() {
+                var self = this;
+                self.el.addEventListener( "mouseover", function() {
+                    clearInterval( self.timer );
+                    self.timer = null;
+
+                }, false);
+                self.el.addEventListener( "mouseout", function() {
+                    self.action();
+
+                }, false);
+            }
+
+
+        };
+
+        document.addEventListener( "DOMContentLoaded", function() {
+
+            var slider = new Slideshow( "#main-slider" );
+
+        });
+
+
+    })();
+
+
+
+
+</script>
+
+
+<footer>
+    <article>
+        <img src="">
+
+    </article>
+    <article>
+        <img src="">
+
+    </article>
+    <article>
+        <img src="">
+
+    </article>
+</footer>
+
+</body>
+</html>
