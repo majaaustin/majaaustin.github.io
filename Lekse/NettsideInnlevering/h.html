@@ -7,23 +7,30 @@
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
 
         body {
 
-            background-color: lightgrey;
-            font-family: sans-serif;
-            color: #333;
+            background-color: white;
+            font-family: 'Spectral SC', serif;
+            color: black;
+
 
         }
         body > header {
             cursor: pointer;
             background-color: white;
-            filter: drop-shadow(0px 5px 5px gray);
+            filter: drop-shadow(0px 5px 5px black);
+            position: relative;
+
+            margin-bottom: 4px;
         }
         body > header > nav {
             display: grid;
             grid-auto-flow: column;
+            background-color: white;
+            z-index: 100;
         }
         body > header > nav > a {
             text-decoration: none;
@@ -32,54 +39,91 @@
             padding: 15px;
             font-family: 'Spectral SC', serif;
         }
-        body > header > nav > a.valgt {
-            background-color: #efaa2e;
-            color: white;
 
-        }
+        .row-1 { grid-row: span 1; }
+        .row-2 { grid-row: span 2; }
+        .row-3 { grid-row: span 3; }
+        .row-4 { grid-row: span 4; }
+        .row-5 { grid-row: span 5; }
+        .row-6 { grid-row: span 6; }
+        .row-7 { grid-row: span 7; }
+        .row-8 { grid-row: span 8; }
+        .row-9 { grid-row: span 9; }
+        .row-10 { grid-row: span 10; }
+        .row-11 { grid-row: span 11;}
+        .row-12 { grid-row: span 12; }
+
+
+        .col-1 { grid-column: span 1;}
+        .col-2 { grid-column: span 2;}
+        .col-3 { grid-column: span 3;}
+        .col-4 { grid-column: span 4;}
+        .col-5 { grid-column: span 5;}
+        .col-6 { grid-column: span 6;}
+        .col-7 { grid-column: span 7;}
+        .col-8 { grid-column: span 8;}
+        .col-9 { grid-column: span 9;}
+        .col-10 { grid-column: span 10;}
+        .col-11 { grid-column: span 11;}
+        .col-12 { grid-column: span 12;}
+
         body > header > nav > a:hover {
             background-color: #998675;
             color: white;
             font-weight: bold;
         }
+
         h1 {
             margin-bottom: 16px;
             text-align: center;
         }
-        main {
-            max-width: 100%;
-            overflow: hidden;
-            min-height: 100vh;
-            background-color: white;
+        main  {
+
+            max-width: 700px;
+            margin: auto;
 
         }
-        html,body {
-            margin: 0;
-            padding: 0;
+        main > article {
+            position: relative;
+
         }
         .slider {
-            width: 100%;
             display: grid;
             transition: 0.5s;
         }
-
         .slider-wrapper {
             width: 100%;
             user-select: none;
-            margin-left: 40px;
 
-
-
+            margin-top: 0px;
 
         }
 
+
+        .firekolonner {
+            background-color: palegoldenrod;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #736357;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+        }
+        .firekolonner > article > p {
+            font-family: 'Spectral SC', serif;
+            text-align: center;
+
+        }
         .slide {
 
             position: absolute;
-            width: 90.5%;
+            width: 100%;
             height: 100%;
             opacity: 0;
             transition: opacity 2s linear;
+            z-index: 0;
+
 
         }
 
@@ -87,11 +131,117 @@
             opacity: 1;
 
         }
+        p {
 
-        body > footer > article > img {
+        }
+        .vofs {
+            width: 100%;
+            cursor: pointer;
+
+        }
+        .cat {
+            width: 100%;
+            cursor: pointer;
+        }
+        body > footer {
+            background-color: #998675;
+            font-family: 'Spectral SC', serif;
+            color: black;
+
+        }
+        footer > article > img {
+            height: 30px;
             width: 30px;
+        }
+        @keyframes dogwalk {
+             to {
+                 background-position:  0 -6000px;
+             }
+         }
+        @keyframes moveRight {
+            to {
+                transform: translateX(500px);
+            }
+        }
+        .Dog {
+            background-image: url("dogwalk-01.png");
+            width: 3cm;
+            height: 3cm;
+
+
+            animation: dogwalk steps(12) 1.8s infinite;
+            animation-name: dogwalk, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 4s;
+            animation-iteration-count: infinite;
+
+
+        }
+        #burger {
+            cursor: pointer;
+            display: grid;
+            width:16px;
+            height: 16px;
+            align-content: space-between;
+            /*legger luft mellom delene av burgeren*/
+            margin-bottom: 10px;
+            margin-top: -18px;
+            margin-left: 180px;
+
+        }
+        #burger > div {
+            height: 2px;
+            background-color: black;
+            left: auto;
+        }
+        #menu {
+            background-color: #998675;
+            filter: drop-shadow(0px 5px 5px darkgray);
+            position: absolute;
+            min-height: calc(100vh - 64px);
+            width: 300px;
+            right: -300px;
+            top: 64px;
+            transition: 1s;
+            color: white;
+            font-family:'Spectral SC', serif;
+
+        }
+        #cb {
+            display: none;
+        }
+        #cb:checked ~ #menu {
+            right: 0;
+        }
+        #burger > div {
+            transition: 1s;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        .theSlides {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .treer {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+
+        }
     </style>
 </head>
+<body>
 <header>
     <nav>
         <a href="h.html"></a>
@@ -102,19 +252,70 @@
 
     </nav>
 </header>
-<body>
+
 
 <main>
-    <div class="slider" id="main-slider"><!-- outermost container element -->
-        <div class="slider-wrapper"><!-- innermost wrapper element -->
-            <img src="DogHome.jpg" alt="First" class="slide" /><!-- slides -->
-            <img src="pexels-photo-569170.jpeg" alt="Second" class="slide" />
-            <img src="rabbit-palm-hand-snatch-53966.jpeg" alt="Third" class="slide" />
-            <img src="pexels-photo-545010.jpeg" alt="Forth" class="slide" />
-            <img src="guinea-pig-guinea-pig-house-cavia-porcellus-form-domestica-50572.jpeg" alt="Fifth" class="slide" />
+
+    <article class="theSlides">
+
+        <div class="slider" id="main-slider"><!-- outermost container element -->
+            <div class="slider-wrapper"><!-- innermost wrapper element -->
+                <img src="DogHome.jpg" alt="First" class="slide" /><!-- slides -->
+                <img src="pexels-photo-569170.jpeg" alt="Second" class="slide" />
+                <img src="pexels-photo-129634.jpeg" alt="Third" class="slide" />
+                <img src="pexels-photo-325490.jpeg" alt="Forth" class="slide">
+                <img src="pexels-photo-545010.jpeg" alt="Fifth" class="slide" />
+                <img src="guinea-pig-guinea-pig-house-cavia-porcellus-form-domestica-50572.jpeg" alt="Sixt" class="slide" />
+            </div>
         </div>
+
+    </article>
+    <div class="firekolonner">
+        <article class= "row-1">
+            <p>Find a dog</p>
+        </article>
+        <article class="row-1.5 " >
+            <p>Find a cat</p>
+        </article>
+        <article class="row-1 ">
+            <p>Find other pets</p>
+            <input type="checkbox" id="cb">
+            <label for="cb" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="menu">
+                <p>Birds</p>
+                <p>Fish</p>
+                <p>Horses</p>
+                <p>Reptiles</p>
+                <p>Rodents</p>
+                <p></p>
+            </nav>
+        </article>
+
     </div>
 
+    <div class="treer">
+
+        <article>
+            <img src="dogg1.png" class="vofs"/>
+            <a href="https://www.aspca.org/pet-care/dog-care/general-dog-care">Dog care</a>
+        </article>
+
+        <article>
+            <img src="pretty-cat.png" class="cat" />
+            <a href="">Cat care</a>
+
+        </article>
+
+        <article>
+            <img src="pretty-cat.png" class="cat" />
+
+        </article>
+
+    </div>
 
 </main>
 <script>
@@ -192,19 +393,25 @@
 
 
 <footer>
+
+    <p>Contact us</p>
+
     <article>
-        <img src="">
+        <img src="mail.svg">
+        <p>pethome@online.com</p>
 
     </article>
     <article>
         <img src="">
+        <p>+47 98 43 14 13</p>
 
     </article>
     <article>
         <img src="">
+        <a href="https://www.google.no/maps/place/Johannes+gate+3,+4014+Stavanger/@58.9682501,5.7488796,17z/data=!3m1!4b1!4m5!3m4!1s0x463a352e2b9df7a9:0x785f2143fbc6e90d!8m2!3d58.9682501!4d5.7510683">Johannes gate 3, Stavanger</a>
 
     </article>
 </footer>
-
+<div class="Dog"></div>
 </body>
 </html>
