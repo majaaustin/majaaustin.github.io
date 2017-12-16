@@ -14,8 +14,43 @@
             background-color: #eeeeee;
             font-family: 'Spectral SC', serif;
             color: #333;
+        }
+        main{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            max-width: 700px;
+            margin: auto;
+            grid-gap: 10px;
+
 
         }
+        .row-1 { grid-row: span 1; }
+        .row-2 { grid-row: span 2; }
+        .row-3 { grid-row: span 3; }
+        .row-4 { grid-row: span 4; }
+        .row-5 { grid-row: span 5; }
+        .row-6 { grid-row: span 6; }
+        .row-7 { grid-row: span 7; }
+        .row-8 { grid-row: span 8; }
+        .row-9 { grid-row: span 9; }
+        .row-10 { grid-row: span 10; }
+        .row-11 { grid-row: span 11;}
+        .row-12 { grid-row: span 12; }
+
+
+        .col-1 { grid-column: span 1;}
+        .col-2 { grid-column: span 2;}
+        .col-3 { grid-column: span 3;}
+        .col-4 { grid-column: span 4;}
+        .col-5 { grid-column: span 5;}
+        .col-6 { grid-column: span 6;}
+        .col-7 { grid-column: span 7;}
+        .col-8 { grid-column: span 8;}
+        .col-9 { grid-column: span 9;}
+        .col-10 { grid-column: span 10;}
+        .col-11 { grid-column: span 11;}
+        .col-12 { grid-column: span 12;}
+
         body > header {
             background-color: white;
             filter: drop-shadow(0px 5px 5px gray);
@@ -55,88 +90,32 @@
             margin: 0px 15px;
             padding: 12px 0 0 0;
         }
+        h1 {
+            text-decoration: underline;
+        }
+        p {
+            font-size: 15px;
+        }
 
-        _flexed.scss:11
-        * {
-            box-sizing: border-box;
-        }
-        user agent stylesheet
-        div {
-            display: block;
-        }
-        Inherited from div.postbox.body
-        style.css:26
-        .body, .body h3, .body-space, .body h4, .body-bold, .body-orange, .body-bold-orange {
-            font-family: Helvetica, Arial, Geneva, sans-serif;
-            font-size: 13px;
-            line-height: 18px;
-            font-weight: 400;
-            color: #444;
-            text-decoration: none;
-        }
-        Inherited from body#dummybodyid.petDetails.blog
-        _presets.scss:39
-        body {
-            margin: 0;
-            color: #4d4d4d;
-            font-family: "Helvetica Neue",Helvetica,Arial,Roboto,"Lucida Grande",sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.5;
-            text-decoration: none;
-        }
-        style.css:13
-        body {
-            margin: 0;
-            padding: 0;
-            color: #444444;
-            background-color: #FFFFFF;
-        }
-        Inherited from html
-        _normalize.scss:13
-        html {
-            line-height: 1.15;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
-        Pseudo ::before element
-        _flexed.scss:14
-        ::after, ::before {
-            box-sizing: border-box;
-        }
-        Pseudo ::after element
-        _flexed.scss:14
-        ::after, ::before {
-            box-sizing: border-box;
-        }
-        Pseudo ::scrollbar element
-        _presets.scss:83
-        ::-webkit-scrollbar {
-            -webkit-appearance: none;
-            width: 7px;
-        }
-        Pseudo ::scrollbar-thumb element
-        _presets.scss:85
-        ::-webkit-scrollbar-thumb {
-            border-radius: 4px;
-            background-color: rgba(0,0,0,.5);
-            -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-        }
+
     </style>
 </head>
+<body>
 <header>
     <nav>
         <a href="h.html"></a>
-        <a href="findpet.html" class="valgt">Find a pet</a>
-        <a href="adoptioninfo.html">Adoption info</a>
+        <a href="findpet.html" >Find a pet</a>
+        <a href="adoptioninfo.html" class="valgt">Adoption info</a>
         <a href="Key_issues.html">Key issues</a>
         <a href="get_involved.html" >Get involved</a>
 
     </nav>
 </header>
-<div class="post-content">
-    <p>Below are some articles to help you when you’re getting ready to adopt or have already adopted a dog.&nbsp;Thank you for adopting a pet!</p>
-    <p style="padding-left: 30px;"><strong></strong><strong><a href="http://www.adoptapet.com/dog-adoption">Find a Dog to Adopt: Search here</a>!</strong>&nbsp;If you don’t see your perfect pooch right away, type your email address into the New Pet Alerts box, then click the confirmation link in the email you will receive instantly. Then any new pets who match your search criteria will be emailed to you once a day.</p>
+<p class="post-content">
+<main>
+    <h2>Adoption information</h2>
+    <p>Below are some articles to help you when you’re getting ready to adopt or have already adopted a dog. Thank you for adopting a pet!</p>
+    <a href="http://www.adoptapet.com/dog-adoption">Find a Dog to Adopt: Search here</a><p>If you don’t see your perfect pooch right away, type your email address into the New Pet Alerts box, then click the confirmation link in the email you will receive instantly. Then any new pets who match your search criteria will be emailed to you once a day.</p>
     <p><img class="alignleft size-full wp-image-8368" title="adopt a dog" alt="" src="http://www.adoptapet.com/blog/uploads/2014/01/iStock_000011033917XSmall1.jpg" width="231" height="386"></p>
     <div>
         <ul>
@@ -253,6 +232,6 @@
     <script type="text/javascript" src="http://www.adoptapet.com/blog/wp-content/plugins/top-10/top-10-addcount.js.php?top_ten_id=8366"></script><div class="tptn_counter" id="tptn_counter_8366"><script type="text/javascript" data-cfasync="false" src="http://www.adoptapet.com/blog/wp-content/plugins/top-10/top-10-counter.js.php?top_ten_id=8366&amp;_wpnonce=33cbcd108d"></script></div><div class="addthis_toolbox addthis_default_style " addthis:url="http://www.adoptapet.com/blog/adopting-a-dog/" addthis:title="Adopting a Dog "><a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"><div class="fb-like fb_iframe_widget" data-layout="button_count" data-show_faces="false" data-share="false" data-action="like" data-width="90" data-height="25" data-font="arial" data-href="http://www.adoptapet.com/blog/adopting-a-dog/" data-send="false" style="height: 25px;" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=172525162793917&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=http%3A%2F%2Fwww.adoptapet.com%2Fblog%2Fadopting-a-dog%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=90"><span style="vertical-align: bottom; width: 67px; height: 20px;"><iframe name="fbb485c4a7e244" width="90px" height="25px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.6/plugins/like.php?action=like&amp;app_id=172525162793917&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlY4eZXm_YWu.js%3Fversion%3D42%23cb%3Df15fb0512e754%26domain%3Dwww.adoptapet.com%26origin%3Dhttps%253A%252F%252Fwww.adoptapet.com%252Ff27202e9d84107c%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=http%3A%2F%2Fwww.adoptapet.com%2Fblog%2Fadopting-a-dog%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=90" style="border: none; visibility: visible; width: 67px; height: 20px;" class=""></iframe></span></div></a><a class="addthis_button_tweet at300b"><div class="tweet_iframe_widget" style="width: 62px; height: 25px;"><span><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.64457a6e8f493e1f1022f50e4e7e67e8.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fwww.adoptapet.com%2Fblog%2Fadopting-a-dog%2F%23.WjRZb0ribtQ&amp;size=m&amp;text=Adopting%20a%20Dog%20&amp;time=1513380208273&amp;type=share&amp;url=http%3A%2F%2Fwww.adoptapet.com%2Fblog%2Fadopting-a-dog%2F%23.WjRZbz7ls78.twitter" data-url="http://www.adoptapet.com/blog/adopting-a-dog/#.WjRZbz7ls78.twitter"></iframe></span></div></a><a class="addthis_button_pinterest_pinit at300b"><div class="pin_it_iframe_widget" style="height: 25px;"><span><span class="at_PinItButton"></span></span></div></a><a class="addthis_counter addthis_pill_style addthis_nonzero" href="#" style="display: inline-block;"><a class="atc_s addthis_button_compact">Share<span></span></a><a class="addthis_button_expanded" target="_blank" title="More" href="#">4.6K</a></a><div class="atclear"></div></div>		                <p class="postmetadata">
     <a href="http://www.adoptapet.com/blog/category/best-of-adopting-a-dog/" title="View all posts in Best of Adopting a Dog" rel="category tag">Best of Adopting a Dog</a> <strong>|</strong>                         </p>
 </div>
-<body>
 
+</main>
 </body>

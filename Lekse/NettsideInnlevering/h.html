@@ -23,8 +23,8 @@
             background-color: white;
             filter: drop-shadow(0px 5px 5px black);
             position: relative;
-
-            margin-bottom: 4px;
+            z-index: 200;
+            margin-bottom: 0px;
         }
         body > header > nav {
             display: grid;
@@ -81,6 +81,7 @@
 
             max-width: 700px;
             margin: auto;
+            z-index: 0;
 
         }
         main > article {
@@ -90,11 +91,12 @@
         .slider {
             display: grid;
             transition: 0.5s;
+            z-index: 0;
         }
         .slider-wrapper {
             width: 100%;
             user-select: none;
-
+            z-index: 0;
             margin-top: 0px;
 
         }
@@ -122,7 +124,6 @@
             height: 100%;
             opacity: 0;
             transition: opacity 2s linear;
-            z-index: 0;
 
 
         }
@@ -131,6 +132,7 @@
             opacity: 1;
 
         }
+
         p {
 
         }
@@ -147,6 +149,9 @@
             background-color: #998675;
             font-family: 'Spectral SC', serif;
             color: black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
 
         }
         footer > article > img {
@@ -155,24 +160,24 @@
         }
         @keyframes dogwalk {
              to {
-                 background-position:  0 -6000px;
+                 background-position:  0 -1020px;
              }
          }
         @keyframes moveRight {
             to {
-                transform: translateX(500px);
+                transform: translateX(615px);
             }
         }
         .Dog {
             background-image: url("dogwalk-01.png");
-            width: 3cm;
-            height: 3cm;
+            width: 85px;
+            height: 85px;
 
 
             animation: dogwalk steps(12) 1.8s infinite;
             animation-name: dogwalk, moveRight;
-            animation-timing-function: steps(12), steps(48);
-            animation-duration: 1s, 4s;
+            animation-timing-function: steps(12), steps(96);
+            animation-duration: 1s, 8s;
             animation-iteration-count: infinite;
 
 
@@ -199,13 +204,14 @@
             filter: drop-shadow(0px 5px 5px darkgray);
             position: absolute;
             min-height: calc(100vh - 200px);
-            width: 250px;
-            right: -250px;
+            width: 0px;
+            right: 100px;
             top: 64px;
             transition: 1s;
             color: white;
             font-family:'Spectral SC', serif;
             margin-top: 450px;
+            visibility: hidden;
 
         }
         #cb {
@@ -213,6 +219,8 @@
         }
         #cb:checked ~ #menu {
             right: 0;
+            width: 250px;
+            visibility: visible;
         }
         #burger > div {
             transition: 1s;
@@ -231,6 +239,7 @@
             width: 100%;
             margin-bottom: 20px;
             overflow: hidden;
+            z-index: 0;
         }
 
         .treer {
@@ -307,12 +316,14 @@
 
         <article>
             <img src="pretty-cat.png" class="cat" />
-            <a href="">Cat care</a>
+            <a href="http://www.vet.cornell.edu/fhc/Health_Information/NewCat.cfm">Cat care</a>
 
         </article>
 
         <article>
             <img src="pretty-cat.png" class="cat" />
+            <a href="https://secure.aspca.org/donate/donate?ms=wb_rig_rescuer-dog&initialms=wb_rig_rescuer-dog&pcode=WEBMEMBER&lpcode=WEBGUARD>">Donate</a>
+
 
         </article>
 
@@ -395,21 +406,22 @@
 
 <footer>
 
-    <p>Contact us</p>
+    <p style="text-decoration: underline">Contact us:</p>
 
     <article>
-        <img src="mail.svg">
-        <p>pethome@online.com</p>
-
-    </article>
-    <article>
-        <img src="">
-        <p>+47 98 43 14 13</p>
+        <img class="" src="mail.svg">
+        <p class="">pethome@online.com</p>
 
     </article>
     <article>
-        <img src="">
-        <a href="https://www.google.no/maps/place/Johannes+gate+3,+4014+Stavanger/@58.9682501,5.7488796,17z/data=!3m1!4b1!4m5!3m4!1s0x463a352e2b9df7a9:0x785f2143fbc6e90d!8m2!3d58.9682501!4d5.7510683">Johannes gate 3, Stavanger</a>
+        <img src="phone.svg">
+        <p class="">+47 98 43 14 13</p>
+
+
+    </article>
+    <article>
+        <img src="map.svg">
+        <a class="" href="https://www.google.no/maps/place/Johannes+gate+3,+4014+Stavanger/@58.9682501,5.7488796,17z/data=!3m1!4b1!4m5!3m4!1s0x463a352e2b9df7a9:0x785f2143fbc6e90d!8m2!3d58.9682501!4d5.7510683">Johannes gate 3, Stavanger</a>
 
     </article>
 </footer>
