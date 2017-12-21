@@ -26,20 +26,25 @@
             filter: drop-shadow(0px 5px 5px black);
             position: relative;
             z-index: 200;
-            margin-bottom: 0px;
+            text-align: center ;
+
+
         }
         body > header > nav {
             display: grid;
             grid-auto-flow: column;
             background-color: white;
             z-index: 100;
+            text-align: center;
+
         }
         body > header > nav > a {
             text-decoration: none;
             color: black;
             text-align: center;
-            padding: 15px;
+            padding: 1px;
             font-family: 'Spectral SC', serif;
+            margin-top: 10px;
         }
 
         .row-1 { grid-row: span 1; }
@@ -73,6 +78,7 @@
             background-color: #998675;
             color: white;
             font-weight: bold;
+            text-align: center;
         }
 
         h1 {
@@ -105,7 +111,7 @@
 
 
         .firekolonner {
-            background-color: palegoldenrod;
+            background-color: #998675;
             margin-bottom: 15px;
             border-radius: 10px;
             overflow: hidden;
@@ -113,10 +119,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 30px;
+            color: white;
         }
-        .firekolonner > article > p {
+        .firekolonner > article > a {
             font-family: 'Spectral SC', serif;
             text-align: center;
+            color: white;
+            text-decoration: none;
 
         }
         .slide {
@@ -184,6 +193,12 @@
 
 
         }
+        article > nav > a{
+            color: #eeeeee;
+            font-family:'Spectral SC', serif;
+            padding: 5px;
+
+        }
         #burger {
             cursor: pointer;
             display: grid;
@@ -198,7 +213,7 @@
         }
         #burger > div {
             height: 2px;
-            background-color: black;
+            background-color: white;
             left: auto;
         }
         #menu {
@@ -251,12 +266,21 @@
             grid-gap: 30px;
 
         }
+        header > nav > a > img {
+            width: 40%;
+            height: 40%;
+            max-width: 100px;
+
+
+        }
+
     </style>
 </head>
 <body>
 <header>
     <nav>
-        <a href="h.html"></a>
+        <a href="h.html"><img src="pote.jpg"></a>
+
         <a href="findpet.html">Find a pet</a>
         <a href="find.html">Adoption info</a>
         <a href="Key_issues.html">Key issues</a>
@@ -284,13 +308,15 @@
     </article>
     <div class="firekolonner">
         <article class= "row-1">
-            <p>Find a dog</p>
+            <a href="Findmydog.html">Find a dog</a>
         </article>
+
         <article class="row-1.5 " >
-            <p>Find a cat</p>
+            <a href="Findmycat.html">Find a cat</a>
         </article>
+
         <article class="row-1 ">
-            <p>Find other pets</p>
+            <a href="">Find other pets</a>
             <input type="checkbox" id="cb">
             <label for="cb" id="burger">
                 <div></div>
@@ -298,11 +324,11 @@
                 <div></div>
             </label>
             <nav id="menu">
-                <p>Birds</p>
-                <p>Fish</p>
-                <p>Horses</p>
-                <p>Reptiles</p>
-                <p>Rodents</p>
+                <a href="B.html">Birds</a><br>
+                <a href="F.html">Fish</a><br>
+                <a href="H1.html">Horses</a><br>
+                <a href="Rep.html">Reptiles</a><br>
+                <a href="Rod.html">Rodents</a><br>
                 <p></p>
             </nav>
         </article>
@@ -399,20 +425,6 @@
 
 
     })();
-
-    var addEvent = function(object, type, callback) {
-        if (object == null || typeof(object) == 'undefined') return;
-        if (object.addEventListener) {
-            object.addEventListener(type, callback, false);
-        } else if (object.attachEvent) {
-            object.attachEvent("on" + type, callback);
-        } else {
-            object["on"+type] = callback;
-        }
-    };
-    addEvent(window, "resize", function(event) {
-        console.log('resized');
-    });
 
 
 </script>
