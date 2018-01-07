@@ -14,23 +14,49 @@
             background-color: #eeeeee;
             font-family: 'Spectral SC', serif;
             color: #333;
+        }
 
-        }
-        body > header {
-            background-color: white;
-            filter: drop-shadow(0px 5px 5px gray);
-        }
         body > header > nav {
             display: grid;
+            grid-auto-columns: 20%;
             grid-auto-flow: column;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            text-align: center;
+
         }
         body > header > nav > a {
             text-decoration: none;
             color: black;
             text-align: center;
-            padding: 15px;
+            font-size: 135%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'Spectral SC', serif;
+
         }
+
+        .li > a {
+            text-align: center;
+            font-family:'Spectral SC', serif;
+            font-size: inherit;
+            font-weight: inherit;
+
+        }
+        .li > img {
+            max-height: 100%;
+        }
+
+        body > header {
+            background-color: white;
+            filter: drop-shadow(0px 5px 5px gray);
+        }
+
         body > header > nav > a.valgt {
             background-color: #efaa2e;
             color: white;
@@ -50,14 +76,7 @@
             overflow: hidden;
             min-height: 100vh;
             background-color: white;
-        }header > nav > a > img {
-             width: 20%;
-             height: 20%;
-             max-width: 100px;
-
-
-
-         }
+        }
         .img {
             width: 100%;
             height: 100%;
@@ -66,6 +85,10 @@
         .title-area {
             overflow: hidden;
 
+        }
+
+        .blo {
+            background-color: #363636;
         }
         .dan {
             position: relative;
@@ -120,7 +143,7 @@
 <body>
 <header>
     <nav>
-        <a href="h.html"><img src="pote1.png"></a>
+        <a href="h.html" class="li"><img src="pote1.png"></a>
         <a href="F.html">Find a pet</a>
         <a href="adopt.html">Adoption info</a>
         <a href="Key_issues.html" class="valgt">Key issues</a>
@@ -154,12 +177,38 @@
 
         <img class="pup" src="doggs.jpg">
         <div class="donate-bar-content">
-        <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
+            <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
             <a href="https://secure.aspca.org/donate/donate?ms=wb_foo_donatebar-puppies-cruelty-20160616&amp;initialms=wb_foo_donatebar-puppies-cruelty-20160616&amp;pcode=WEBMEMBER&amp;lpcode=WEBGUARD" class="donate">Donate</a>
         </div>
 
+
     </article>
+
+
+    <div style="text-align: center" class="blo">
+        <br>
+        <h3 style="font-weight: bold; color: darkorange; font-size: 230%">PET RESCUE CENTER</h3> <br>
+        <p style="color: white">About Us   Careers   Contact   Corporate Partners   Press   Pet Care</p>
+        <p style="text-align: center; color: gray;">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
+            The PRC is a 501(c)(3) non-for-profit organization. Privacy Policy  Legal Info</p>
+        <br>
+        <img style="width: 5%; border-radius: 100%" src="mail.svg">
+        <img style="width: 5%; border-radius: 100%"src="phone.svg">
+        <img style="width: 5%; border-radius: 100%"src="map.svg">
+        <br>
+        <p style="color: white">_____________________________________________________________________________________________________</p>
+        <br>
+        <p style="text-align: center; color: grey; font-size: 200% ">Our Partnership:</p>
+        <a href="http://www.aspcapetinsurance.com/"><img style="width: 10%" src="ASPCA-Pet-Insurance.png"></a>
+        <a href="https://www.aspca.org/"><img style="width: 10%" src="ASPCA_logo.png"></a>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
 </footer>
+
 
 </body>
 </html>

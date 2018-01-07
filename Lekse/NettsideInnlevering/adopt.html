@@ -53,14 +53,38 @@
         }
         body > header > nav {
             display: grid;
+            grid-auto-columns: 20%;
             grid-auto-flow: column;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            text-align: center;
+
         }
         body > header > nav > a {
             text-decoration: none;
             color: black;
             text-align: center;
-            padding: 15px;
+            font-size: 135%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'Spectral SC', serif;
+
+        }
+
+        .li > a {
+            text-align: center;
+            font-family:'Spectral SC', serif;
+            font-size: inherit;
+            font-weight: inherit;
+
+        }
+        .li > img {
+            max-height: 100%;
         }
         body > header > nav > a.valgt {
             background-color: #efaa2e;
@@ -97,14 +121,43 @@
         p {
             font-size: 15px;
         }
-        header > nav > a > img {
-            width: 20%;
-            height: 20%;
-            max-width: 100px;
 
-
+        .dan {
+            position: relative;
         }
 
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+        .donate {
+            background-color: darkorange;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donate-bar-content{
+            position: absolute;
+            left:0;
+            bottom:0;
+            height: 100%;
+            width:100%;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center;
+            flex-direction: column;
+        }
+        .pup {
+            height: 100%;
+            width: 100%;
+        }
+        .blo {
+            background-color: #363636;
+        }
 
 
     </style>
@@ -112,7 +165,7 @@
 <body>
 <header>
     <nav>
-        <a href="h.html"><img src="pote1.png"></a>
+        <a class="li" href="h.html"><img src="pote1.png"></a>
 
         <a href="F.html">Find a pet</a>
         <a href="adopt.html" class="valgt">Adoption info</a>
@@ -138,32 +191,71 @@
 
     <div class="col-6">
         <h2>Helpful articles for all pet adopters:</h2>
-        <ul>
-            <li id="post-3956"><a title="Permanent Link to 10 Things To Consider Before Adopting A Pet" href="http://www.adoptapet.com/blog/10-things-to-consider-before-adopting-a-pet/" rel="bookmark">10 Things To Consider Before Adopting A Pet</a></li>
-            <li id="post-6482"><a title="Permanent Link to How to pick a pet if you have allergies" href="http://www.adoptapet.com/blog/how-to-pick-a-pet-if-you-have-allergies/" rel="bookmark">How to pick a pet if you have allergies</a></li>
-            <li id="post-6317"><a title="Permanent Link to Pet Chemistry in Matchmaking" href="http://www.adoptapet.com/blog/pet-chemistry-in-matchmaking/" rel="bookmark">Pet Chemistry in Matchmaking<br>
+
+        <ul >
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/10-things-to-consider-before-adopting-a-pet/" rel="bookmark">10 Things To Consider Before Adopting A Pet</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/how-to-pick-a-pet-if-you-have-allergies/" rel="bookmark">How to pick a pet if you have allergies</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/pet-chemistry-in-matchmaking/" rel="bookmark">Pet Chemistry in Matchmaking<br>
             </a></li>
-            <li id="post-6183"><a title="Permanent Link to Giving Pets as Gifts" href="http://www.adoptapet.com/blog/giving-pets-as-gifts/" rel="bookmark">Giving Pets as Gifts</a></li>
-            <li id="post-6183"><a title="Permanent Link to How to give a pet as a gift" href="http://www.adoptapet.com/blog/how-to-give-a-pet-as-a-gift/" rel="bookmark">How to give a pet as a gift</a></li>
-            <li id="post-6183"><a title="Permanent Link to New Study Shows Babies Exposed to Pets at Home are Healthier!" href="http://www.adoptapet.com/blog/new-study-shows-babies-exposed-to-pets-at-home-are-healthier/" rel="bookmark">New Study Shows Babies Exposed to Pets at Home are Healthier!</a></li>
-            <li id="post-4773"><a title="Permanent Link to Pet Adoption Teaches Good Parenting" href="http://www.adoptapet.com/blog/pet-adoption-teaches-good-parenting/" rel="bookmark">Pet Adoption Teaches Good Parenting</a></li>
-            <li id="post-4773"><a title="Permanent Link to 10 Reasons Pets Are Good For Kids" href="http://www.adoptapet.com/blog/10-reasons-pets-are-good-for-kids/" rel="bookmark">10 Reasons Pets Are Good For Kids</a></li>
-            <li id="post-3956"><a title="Permanent Link to Shelter, SPCA, humane society or rescue?" href="http://www.adoptapet.com/blog/shelter-spca-humane-society-or-rescue/" rel="bookmark">Shelter, SPCA, humane society or rescue?</a></li>
-            <li id="post-3956"><a title="Permanent Link to Why there is a Fee For Adoption" href="http://www.adoptapet.com/blog/why-there-is-a-fee-for-adoption/" rel="bookmark">Why there is a Fee For Adoption</a></li>
-            <li id="post-3956"><a title="Permanent Link to The Advantages of Adopting Pets In Pairs" href="http://www.adoptapet.com/blog/the-advantages-of-adopting-pets-in-pairs/" rel="bookmark">The Advantages of Adopting Pets In Pairs</a></li>
-            <li id="post-3956"><a title="Permanent Link to Average Cost of Owning a Cat or Dog" href="http://www.adoptapet.com/blog/average-cost-of-owning-a-cat-or-dog/" rel="bookmark">Average Cost of Owning a Cat or Dog</a></li>
-            <li id="post-3956"><a title="Permanent Link to How to prepare for your pet’s vet costs" href="http://www.adoptapet.com/blog/how-to-prepare-for-your-pets-vet-costs/" rel="bookmark">How to prepare for your pet’s vet costs</a></li>
-            <li id="post-3956"><a title="Permanent Link to Vet Q&amp;A: Are pets for adoption healthy?" href="http://www.adoptapet.com/blog/vet-qa-are-pets-for-adoption-healthy/" target="_blank" rel="bookmark">Vet Q&amp;A: Are pets for adoption healthy?</a></li>
-            <li id="post-3956"><a title="Permanent Link to Renting with pets" href="http://www.adoptapet.com/blog/renting-with-pets/" rel="bookmark">Renting with pets</a></li>
-            <li id="post-3956"><a title="Permanent Link to Disabled pets can be amazing!" href="http://www.adoptapet.com/blog/disabled-pets-can-be-amazing/" rel="bookmark">Disabled pets can be amazing!</a></li>
-            <li id="post-3956"><a title="Permanent Link to How to avoid picking the wrong pet" href="http://www.adoptapet.com/blog/how-to-avoid-picking-the-wrong-pet/" rel="bookmark">How to avoid picking the wrong pet</a></li>
-            <li id="post-3956"><a title="Permanent Link to Wisdom of the Elderly – Adopt a Senior Pet!" href="http://www.adoptapet.com/blog/adopt-a-senior-pet/" rel="bookmark">Wisdom of the Elderly – Adopt a Senior Pet!</a></li>
-            <li><a href="http://www.adoptapet.com/blog/caring-for-a-senior-pet/">Caring for a senior pet</a></li>
-            <li id="post-3956"><a style="font-size: 13px; line-height: 19px;" title="Permanent Link to Choosing a Name For Your Adopted Pet" href="http://www.adoptapet.com/blog/choosing-a-name-for-your-adopted-pet/" rel="bookmark">Choosing a Name For Your Adopted Pet</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/giving-pets-as-gifts/" rel="bookmark">Giving Pets as Gifts</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/how-to-give-a-pet-as-a-gift/" rel="bookmark">How to give a pet as a gift</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/new-study-shows-babies-exposed-to-pets-at-home-are-healthier/" rel="bookmark">New Study Shows Babies Exposed to Pets at Home are Healthier!</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/pet-adoption-teaches-good-parenting/" rel="bookmark">Pet Adoption Teaches Good Parenting</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/10-reasons-pets-are-good-for-kids/" rel="bookmark">10 Reasons Pets Are Good For Kids</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/shelter-spca-humane-society-or-rescue/" rel="bookmark">Shelter, SPCA, humane society or rescue?</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/why-there-is-a-fee-for-adoption/" rel="bookmark">Why there is a Fee For Adoption</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/the-advantages-of-adopting-pets-in-pairs/" rel="bookmark">The Advantages of Adopting Pets In Pairs</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/average-cost-of-owning-a-cat-or-dog/" rel="bookmark">Average Cost of Owning a Cat or Dog</a></li>
+            <li><a style="color: black; text-decoration: none;"  href="http://www.adoptapet.com/blog/how-to-prepare-for-your-pets-vet-costs/" rel="bookmark">How to prepare for your pet’s vet costs</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/vet-qa-are-pets-for-adoption-healthy/" target="_blank" rel="bookmark">Vet Q&amp;A: Are pets for adoption healthy?</a></li>
+            <li><a style="color: black; text-decoration: none;"  href="http://www.adoptapet.com/blog/renting-with-pets/" rel="bookmark">Renting with pets</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/disabled-pets-can-be-amazing/" rel="bookmark">Disabled pets can be amazing!</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/how-to-avoid-picking-the-wrong-pet/" rel="bookmark">How to avoid picking the wrong pet</a></li>
+            <li><a  style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/adopt-a-senior-pet/" rel="bookmark">Wisdom of the Elderly – Adopt a Senior Pet!</a></li>
+            <li><a style="color: black; text-decoration: none;" href="http://www.adoptapet.com/blog/caring-for-a-senior-pet/">Caring for a senior pet</a></li>
+            <li><a style="color: black; text-decoration: none;"  href="http://www.adoptapet.com/blog/choosing-a-name-for-your-adopted-pet/" rel="bookmark">Choosing a Name For Your Adopted Pet</a></li>
         </ul>
         <p>&nbsp;</p>
         <p><span style="color: #888888;">&nbsp;</span></p>
     </div>
 
 </main>
+<footer>
+
+    <article class="dan">
+
+        <img class="pup" src="doggs.jpg">
+        <div class="donate-bar-content">
+            <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
+            <a href="https://secure.aspca.org/donate/donate?ms=wb_foo_donatebar-puppies-cruelty-20160616&amp;initialms=wb_foo_donatebar-puppies-cruelty-20160616&amp;pcode=WEBMEMBER&amp;lpcode=WEBGUARD" class="donate">Donate</a>
+        </div>
+
+
+    </article>
+
+
+    <div style="text-align: center" class="blo">
+        <br>
+        <h3 style="font-weight: bold; color: darkorange; font-size: 230%">PET RESCUE CENTER</h3> <br>
+        <p style="color: white">About Us   Careers   Contact   Corporate Partners   Press   Pet Care</p>
+        <p style="text-align: center; color: gray;">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
+            The PRC is a 501(c)(3) non-for-profit organization. Privacy Policy  Legal Info</p>
+        <br>
+        <img style="width: 5%; border-radius: 100%" src="mail.svg">
+        <img style="width: 5%; border-radius: 100%"src="phone.svg">
+        <img style="width: 5%; border-radius: 100%"src="map.svg">
+        <br>
+        <p style="color: white">_____________________________________________________________________________________________________</p>
+        <br>
+        <p style="text-align: center; color: grey; font-size: 200% ">Our Partnership:</p>
+        <a href="http://www.aspcapetinsurance.com/"><img style="width: 10%" src="ASPCA-Pet-Insurance.png"></a>
+        <a href="https://www.aspca.org/"><img style="width: 10%" src="ASPCA_logo.png"></a>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+</footer>
+
 </body>

@@ -22,14 +22,38 @@
         }
         body > header > nav {
             display: grid;
+            grid-auto-columns: 20%;
             grid-auto-flow: column;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            text-align: center;
+
         }
         body > header > nav > a {
             text-decoration: none;
             color: black;
             text-align: center;
-            padding: 15px;
+            font-size: 135%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'Spectral SC', serif;
+
+        }
+
+        .li > a {
+            text-align: center;
+            font-family:'Spectral SC', serif;
+            font-size: inherit;
+            font-weight: inherit;
+
+        }
+        .li > img {
+            max-height: 100%;
         }
         body > header > nav > a.valgt {
             background-color: #efaa2e;
@@ -41,14 +65,7 @@
             color: white;
             font-weight: bold;
         }
-        header > nav > a > img {
-            width: 20%;
-            height: 20%;
-            max-width: 100px;
 
-
-
-        }
 
 
         .row-1 { grid-row: span 1; }
@@ -88,18 +105,66 @@
         .tre {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 10px;
-            border: solid;
+            grid-gap:5%;
             box-sizing: content-box;
             overflow: hidden;
+
         }
+        .dan {
+            position: relative;
+        }
+
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+        .donate {
+            background-color: darkorange;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donate-bar-content{
+            position: absolute;
+            left:0;
+            bottom:0;
+            height: 100%;
+            width:100%;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center;
+            flex-direction: column;
+        }
+        .pup {
+            height: 100%;
+            width: 100%;
+        }
+        .blo {
+            background-color: #363636;
+        }
+        main {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        h3 {
+            color: black;
+
+        }
+        h6 {
+            color: black;
+        }
+
 
     </style>
 </head>
 <body>
 <header>
     <nav>
-        <a href="h.html"><img src="pote1.png"></a>
+        <a class="li" href="h.html"><img src="pote1.png"></a>
 
         <a href="F.html" class="valgt">Find a pet</a>
         <a href="adopt.html">Adoption info</a>
@@ -109,24 +174,29 @@
     </nav>
 </header>
 <body>
-<h1>All Pets Available for Adoption</h1>
+<h1 style="text-align: center">All Pets Available for Adoption</h1> <br>
+<p style="margin-right: 5%; margin-left: 5%"> This are all the pets we currently have in at our center. If you are interested in any of our wonderful animals is it just to contact us and we will happily help.</p>
+<br>
 <main>
-    <di class="tre">
+    <div class="tre">
     <article class="row-1">
 
-
-            <a href="http://www.pawschicago.org/pet-available-for-adoption/showcat/marge/"><img src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/53741_Marge_circle.jpg"><br>Marge
-                <br>Lincoln Park Adoption Center
+<div>
+            <a href="http://www.pawschicago.org/pet-available-for-adoption/showcat/marge/"><img src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/53741_Marge_circle.jpg">
+    </div>   <h3>Marge</h3>
+        <h6>Lincoln Park Adoption Center</h6>
             </a>
 
     </article>
         <article class="row-1">
 
+<div>
 
 
-
-                <a href="http://www.pawschicago.org/pet-available-for-adoption/showcat/goliath-1/"><img src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/49590_Goliath_circle14.jpg"><br>Goliath<br>Lincoln Park Adoption Center
-
+                <a href="http://www.pawschicago.org/pet-available-for-adoption/showcat/goliath-1/"><img src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/49590_Goliath_circle14.jpg">
+    </div>
+            <h3>Goliath</h3>
+            <h6>Lincoln Park Adoption Center</h6>
                 </a>
         </article>
 
@@ -134,10 +204,13 @@
             <a href="http://www.pawschicago.org/pet-available-for-adoption/showdog/chloe-2/">
 
 
+<div>
+                <img alt="Chloe" src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/53917_Chloe_circle.jpg">
 
-                <img alt="Chloe" src="http://www.pawschicago.org/fileadmin/media/images/Animal_Profile_Photos/Cats/Rockstar_Animals/53917_Chloe_circle.jpg"><br>Chloe
-                <br>Lincoln Park Adoption Center
+    </div>
 
+            <h3>Chloe</h3>
+            <h6>Lincoln Park Adoption Center</h6>
             </a>
         </article>
 
@@ -155,7 +228,7 @@
 
                     <h3>Carol</h3>
 
-                    <h6><span></span>Lincoln Park Adoption Center</h6>
+                    <h6>Lincoln Park Adoption Center</h6>
 
                 </a>
 
@@ -1152,6 +1225,43 @@
 
 
  </main>
+<footer>
+
+    <article class="dan">
+
+        <img class="pup" src="doggs.jpg">
+        <div class="donate-bar-content">
+            <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
+            <a href="https://secure.aspca.org/donate/donate?ms=wb_foo_donatebar-puppies-cruelty-20160616&amp;initialms=wb_foo_donatebar-puppies-cruelty-20160616&amp;pcode=WEBMEMBER&amp;lpcode=WEBGUARD" class="donate">Donate</a>
+        </div>
+
+
+    </article>
+
+
+    <div style="text-align: center" class="blo">
+        <br>
+        <h3 style="font-weight: bold; color: darkorange; font-size: 230%">PET RESCUE CENTER</h3> <br>
+        <p style="color: white">About Us   Careers   Contact   Corporate Partners   Press   Pet Care</p>
+        <p style="text-align: center; color: gray;">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
+            The PRC is a 501(c)(3) non-for-profit organization. Privacy Policy  Legal Info</p>
+        <br>
+        <img style="width: 5%; border-radius: 100%" src="mail.svg">
+        <img style="width: 5%; border-radius: 100%"src="phone.svg">
+        <img style="width: 5%; border-radius: 100%"src="map.svg">
+        <br>
+        <p style="color: white">_____________________________________________________________________________________________________</p>
+        <br>
+        <p style="text-align: center; color: grey; font-size: 200% ">Our Partnership:</p>
+        <a href="http://www.aspcapetinsurance.com/"><img style="width: 10%" src="ASPCA-Pet-Insurance.png"></a>
+        <a href="https://www.aspca.org/"><img style="width: 10%" src="ASPCA_logo.png"></a>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+</footer>
 
 
 </body>
