@@ -75,6 +75,44 @@
             max-width: 100px;
 
         }
+        .tre >  article > a > img {
+            max-width: 90%;
+            padding: 10px;
+        }
+        .tre {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            border: solid;
+            box-sizing: content-box;
+            overflow: hidden;
+        }
+        .row-1 { grid-row: span 1; }
+        .row-2 { grid-row: span 2; }
+        .row-3 { grid-row: span 3; }
+        .row-4 { grid-row: span 4; }
+        .row-5 { grid-row: span 5; }
+        .row-6 { grid-row: span 6; }
+        .row-7 { grid-row: span 7; }
+        .row-8 { grid-row: span 8; }
+        .row-9 { grid-row: span 9; }
+        .row-10 { grid-row: span 10; }
+        .row-11 { grid-row: span 11;}
+        .row-12 { grid-row: span 12; }
+
+
+        .col-1 { grid-column: span 1;}
+        .col-2 { grid-column: span 2;}
+        .col-3 { grid-column: span 3;}
+        .col-4 { grid-column: span 4;}
+        .col-5 { grid-column: span 5;}
+        .col-6 { grid-column: span 6;}
+        .col-7 { grid-column: span 7;}
+        .col-8 { grid-column: span 8;}
+        .col-9 { grid-column: span 9;}
+        .col-10 { grid-column: span 10;}
+        .col-11 { grid-column: span 11;}
+        .col-12 { grid-column: span 12;}
 
     </style>
 </head>
@@ -82,21 +120,23 @@
 <header>
     <nav>
         <a href="h.html"><img src="pote1.png"></a>
-        <a href="findpet.html" class="valgt">Find a pet</a>
-        <a href="find.html">Adoption info</a>
+
+        <a href="find.html">Find a pet</a>
+        <a href="adopt.html">Adoption info</a>
         <a href="Key_issues.html">Key issues</a>
-        <a href="get_involved.html" >Get involved</a>
+        <a href="get_involved.html">Get involved</a>
 
     </nav>
 </header>
 <main>
+    <h1>All Dogs Available for Adoption</h1>
 
-<h2 class="home__title m-space--small">Featured Dogs</h2>
-<div>
+    <div class="tre">
+        <article class="row-1">
 
-    <img src="https://pet-uploads.adoptapet.com/3/3/d/258579388.jpg">
-    <a href="https://www.adoptapet.com/pet/15151477-beverly-hills-california-mixed-breed-small-mix"><br>Gigi lap dog <br> Female, Adult Beverly Hills, CA </a>
-</div>
+
+    <a href="https://www.adoptapet.com/pet/15151477-beverly-hills-california-mixed-breed-small-mix"><img src="https://pet-uploads.adoptapet.com/3/3/d/258579388.jpg"><br>Gigi lap dog <br> Female, Adult Beverly Hills, CA </a>
+        </article>
 </main>
 <footer>
 

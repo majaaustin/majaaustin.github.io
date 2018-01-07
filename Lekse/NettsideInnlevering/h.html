@@ -47,6 +47,7 @@
 
         }
 
+
         .row-1 { grid-row: span 1; }
         .row-2 { grid-row: span 2; }
         .row-3 { grid-row: span 3; }
@@ -113,13 +114,13 @@
         .firekolonner {
             background-color: #998675;
             margin-bottom: 15px;
-            border-radius: 10px;
             overflow: hidden;
             border: 1px solid #736357;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 30px;
             color: white;
+
         }
         .firekolonner > article > a {
             font-family: 'Spectral SC', serif;
@@ -150,25 +151,32 @@
         .vofs {
             width: 100%;
             cursor: pointer;
+            border-radius: 100px;
 
-        }
+        }.donare {
+             width: 100%;
+             cursor: pointer;
+             border-radius: 160px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #736357;
+
+         }
         .cat {
             width: 100%;
             cursor: pointer;
+            border-radius: 100px;
         }
-        body > footer {
+        body > footer > div > nav > article {
             background-color: #998675;
             font-family: 'Spectral SC', serif;
             color: black;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(12, 1fr);
             grid-gap: 30px;
 
         }
-        footer > article > img {
-            height: 30px;
-            width: 30px;
-        }
+
         @keyframes dogwalk {
              to {
                  background-position:  0 -1020px;
@@ -261,9 +269,11 @@
 
         .treer {
 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 30px;
+
+
 
         }
         header > nav > a > img {
@@ -273,18 +283,152 @@
 
 
         }
+        .li > a {
+            text-align: center;
+            font-family:'Spectral SC', serif;
+            font-size: 24px;
+            font-weight: inherit;
+
+        }
+
+        .image {
+            position: relative;
+            width: 100%; /* for IE 6 */
+        }
+
+        .image > a {
+            position: absolute;
+            top: 100px;
+            left: 35px;
+            width: 100%;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            visibility: hidden;
+
+        }
+
+        .image:hover .tooltiptext {
+            visibility: visible;
+
+        }
+        .fhot {
+            position: relative;
+            width: 100%; /* for IE 6 */
+        }
+
+        .fhot > a {
+            position: absolute;
+            top: 100px;
+            left: 35px;
+            width: 100%;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            visibility: hidden;
+
+        }
+
+        .fhot:hover .tool {
+            visibility: visible;
+
+        }
+        .do {
+            position: relative;
+            width: 100%; /* for IE 6 */
+        }
+
+        .do > a > span {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 100%;
+            font-size: 30px;
+            text-decoration: none;
+            color: black;
+            visibility: hidden;
+
+        }
+        .do > a {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 100%;
+            font-size: 30px;
+            text-decoration: none;
+            color: black;
+
+
+        }
+
+        .do:hover .dona {
+            visibility: visible;
+
+        }
+        .ti >  article > a > img {
+            max-width: 30%;
+            padding: 10px;
+        }
+        .ti {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+
+        }
+        .title-area {
+            overflow: hidden;
+
+        }
+        .dan {
+            position: relative;
+        }
+
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+        .donate {
+            background-color: darkorange;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donate-bar-content{
+            position: absolute;
+            left:0;
+            bottom:0;
+            height: 100%;
+            width:100%;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center;
+            flex-direction: column;
+        }
+        .pup {
+            height: 100%;
+            width: 100%;
+        }
+        .blo {
+            background-color: #363636;
+        }
+
 
     </style>
 </head>
 <body>
 <header>
-    <nav>
-        <a href="h.html"><img src="pote1.png"></a>
 
-        <a href="findpet.html">Find a pet</a>
-        <a href="find.html">Adoption info</a>
+    <nav>
+
+        <a class="li" href="h.html"><img src="pote1.png">   </a>
+        <a href="F.html">Find a pet</a>
+        <a href="adopt.html">Adoption info</a>
         <a href="Key_issues.html">Key issues</a>
-        <a href="get_involved.html">Get involved</a>
+        <a href="get_involved.html">Contact us</a>
 
     </nav>
 </header>
@@ -333,29 +477,7 @@
             </nav>
         </article>
 
-    </div>
 
-    <div class="treer">
-
-        <article>
-            <img src="dogg1.png" class="vofs"/>
-            <a href="https://www.aspca.org/pet-care/dog-care/general-dog-care">Dog care</a>
-        </article>
-
-        <article>
-            <img src="pretty-cat.png" class="cat" />
-            <a href="http://www.vet.cornell.edu/fhc/Health_Information/NewCat.cfm">Cat care</a>
-
-        </article>
-
-        <article>
-            <img src="pretty-cat.png" class="cat" />
-            <a href="https://secure.aspca.org/donate/donate?ms=wb_rig_rescuer-dog&initialms=wb_rig_rescuer-dog&pcode=WEBMEMBER&lpcode=WEBGUARD>">Donate</a>
-
-
-        </article>
-
-    </div>
 
 </main>
 <script>
@@ -432,25 +554,35 @@
 
 <footer>
 
-    <p style="text-decoration: underline">Contact us:</p>
+    <article class="dan">
 
-    <article>
-        <img class="" src="mail.svg">
-        <p class="">pethome@online.com</p>
-
-    </article>
-    <article>
-        <img src="phone.svg">
-        <p class="">+47 98 43 14 13</p>
+        <img class="pup" src="doggs.jpg">
+        <div class="donate-bar-content">
+            <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
+            <a href="https://secure.aspca.org/donate/donate?ms=wb_foo_donatebar-puppies-cruelty-20160616&amp;initialms=wb_foo_donatebar-puppies-cruelty-20160616&amp;pcode=WEBMEMBER&amp;lpcode=WEBGUARD" class="donate">Donate</a>
+        </div>
 
 
     </article>
-    <article>
-        <img src="map.svg">
-        <a class="" href="https://www.google.no/maps/place/Johannes+gate+3,+4014+Stavanger/@58.9682501,5.7488796,17z/data=!3m1!4b1!4m5!3m4!1s0x463a352e2b9df7a9:0x785f2143fbc6e90d!8m2!3d58.9682501!4d5.7510683">Johannes gate 3, Stavanger</a>
 
-    </article>
+
+    <div style="text-align: center" class="blo">
+        <br>
+        <h3 style="font-weight: bold; color: darkorange; font-size: 230%">PET ADOPTION</h3> <br>
+        <p style="color: white">About Us   Careers   Contact   Corporate Partners   Press   Pet Care</p>
+        <p style="text-align: center; color: gray; margin-bottom:">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
+            The ASPCA is a 501(c)(3) non-for-profit organization. Privacy Policy  Legal Info</p>
+        <br>
+        <img style="width: 10%" src="mail.svg">
+        <img style="width: 10%"src="phone.svg">
+        <img style="width: 10%"src="map.svg">
+        <br>
+    </div>
+
+
 </footer>
+
+
 <div class="Dog"></div>
 </body>
 </html>

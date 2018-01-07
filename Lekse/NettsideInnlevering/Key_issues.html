@@ -50,20 +50,116 @@
             overflow: hidden;
             min-height: 100vh;
             background-color: white;
+        }header > nav > a > img {
+             width: 20%;
+             height: 20%;
+             max-width: 100px;
+
+
+
+         }
+        .img {
+            width: 100%;
+            height: 100%;
+
         }
-        </style>
+        .title-area {
+            overflow: hidden;
+
+        }
+        .dan {
+            position: relative;
+        }
+
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+        .donate {
+            background-color: darkorange;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donate-bar-content{
+            position: absolute;
+            left:0;
+            bottom:0;
+            height: 100%;
+            width:100%;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center;
+            flex-direction: column;
+        }
+        .pup {
+            height: 100%;
+            width: 100%;
+        }
+        .subtitle {
+            margin-left: 1%;
+            margin-right: 1%;
+            text-align: center;
+        }
+        main > div > h2 {
+            margin-left: 1%;
+            margin-right: 1%;
+
+        }
+        main > div > p {
+            margin-left: 1%;
+            margin-right: 1%;
+
+        }
+    </style>
 </head>
+<body>
 <header>
     <nav>
-        <a href="h.html"></a>
-        <a href="findpet.html">Find a pet</a>
-        <a href="find.html">Adoption info</a>
+        <a href="h.html"><img src="pote1.png"></a>
+        <a href="F.html">Find a pet</a>
+        <a href="adopt.html">Adoption info</a>
         <a href="Key_issues.html" class="valgt">Key issues</a>
         <a href="get_involved.html" >Get involved</a>
 
     </nav>
 </header>
 <body>
+<main>
+    <div class="title-area  banner">
+        <img class="img" src="https://www.aspca.org/sites/default/files/styles/inner_page_banner/public/field/image/section/animal-homelessness_background-image_c.jpg?itok=_iHJd-Ru" width="2000" height="430">
+        <div class="title">
+        <h1 class="page__title title" id="page-title">Animal Homelessness</h1>
+        <div class="subtitle">Each year, approximately 7.6 million animals enter animal shelters nationwide—and
+            nearly 3 million don't make it out.</div>            		      </div>
+    </div>
+    <br>
+    <div>
+        <h2>Homelessness Issues</h2>
+        <p>  Animal shelters across the nation are forced to stretch their resources to the brink to accommodate an overwhelming population of homeless and at-risk animals.</p>
+    </div>
+    <div>
+        <h2>Cruelty Issues</h2>
+        <p> As you read this, another innocent animal is being abused, neglected or forced to fight. The first step to creating positive change for these animals is recognizing the cruelty that threatens them.</p>
+    </div>
+
+</main>
+<footer>
+
+    <article class="dan">
+
+        <img class="pup" src="doggs.jpg">
+        <div class="donate-bar-content">
+        <h3 class="text">Help the ASPCA Put a Stop to Animal Cruelty</h3>
+            <a href="https://secure.aspca.org/donate/donate?ms=wb_foo_donatebar-puppies-cruelty-20160616&amp;initialms=wb_foo_donatebar-puppies-cruelty-20160616&amp;pcode=WEBMEMBER&amp;lpcode=WEBGUARD" class="donate">Donate</a>
+        </div>
+
+    </article>
+</footer>
 
 </body>
 </html>
