@@ -88,7 +88,7 @@
         }
         main  {
 
-            max-width: 700px;
+            max-width: 95%;
             margin: auto;
             z-index: 0;
 
@@ -148,25 +148,7 @@
         p {
 
         }
-        .vofs {
-            width: 100%;
-            cursor: pointer;
-            border-radius: 100px;
 
-        }.donare {
-             width: 100%;
-             cursor: pointer;
-             border-radius: 160px;
-            border-style: solid;
-            border-width: 3px;
-            border-color: #736357;
-
-         }
-        .cat {
-            width: 100%;
-            cursor: pointer;
-            border-radius: 100px;
-        }
         body > footer > div > nav > article {
             background-color: #998675;
             font-family: 'Spectral SC', serif;
@@ -193,11 +175,14 @@
             height: 85px;
 
 
+
+
             animation: dogwalk steps(12) 1.8s infinite;
             animation-name: dogwalk, moveRight;
             animation-timing-function: steps(12), steps(96);
             animation-duration: 1s, 8s;
-            animation-iteration-count: infinite;
+            /*animation-iteration-count: infinite; */
+            animation-iteration-count: 20;
 
 
         }
@@ -260,22 +245,14 @@
             transform: translateY(-7px) rotate(-45deg);
         }
         .theSlides {
-            height: 400px;
+            height: 550px;
             width: 100%;
             margin-bottom: 20px;
             overflow: hidden;
             z-index: 0;
         }
 
-        .treer {
 
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 30px;
-
-
-
-        }
         header > nav > a > img {
             width: 20%;
             height: 20%;
@@ -333,10 +310,7 @@
             visibility: visible;
 
         }
-        .do {
-            position: relative;
-            width: 100%; /* for IE 6 */
-        }
+
 
         .do > a > span {
             position: absolute;
@@ -414,6 +388,27 @@
         }
         .blo {
             background-color: #363636;
+        }
+        @keyframes disappear {
+            99%{
+                opacity: 1;
+                z-index:10000;
+            }
+            100% {
+                opacity: 0;
+                z-index:-1;
+            }
+        }
+        .du {
+            background-color: #FFFFFF;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:150%;
+            z-index: 10000;
+
+            animation: disappear 3s forwards;
         }
 
 
@@ -570,12 +565,12 @@
         <br>
         <h3 style="font-weight: bold; color: darkorange; font-size: 230%">PET ADOPTION</h3> <br>
         <p style="color: white">About Us   Careers   Contact   Corporate Partners   Press   Pet Care</p>
-        <p style="text-align: center; color: gray; margin-bottom:">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
+        <p style="text-align: center; color: gray;">© 2018 American Society for the Prevention of Cruelty to Animals. All rights reserved. <br>
             The ASPCA is a 501(c)(3) non-for-profit organization. Privacy Policy  Legal Info</p>
         <br>
-        <img style="width: 10%" src="mail.svg">
-        <img style="width: 10%"src="phone.svg">
-        <img style="width: 10%"src="map.svg">
+        <img style="width: 5%; border-radius: 100%" src="mail.svg">
+        <img style="width: 5%; border-radius: 100%"src="phone.svg">
+        <img style="width: 5%; border-radius: 100%"src="map.svg">
         <br>
     </div>
 
@@ -583,6 +578,9 @@
 </footer>
 
 
-<div class="Dog"></div>
+<div class="du">
+    <div class="Dog" style="margin-left: 25%; margin-top: 25%; position: fixed"></div>
+</div>
 </body>
+
 </html>
