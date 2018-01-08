@@ -181,7 +181,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap:5%;
             box-sizing: content-box;
-            overflow: hidden;
+            overflow: visible;
 
         }
         main {
@@ -191,7 +191,7 @@
     </style>
 </head>
 <body>
-<header style="position: relative">
+<header style="position: relative; visibility: hidden">
     <nav>
         <a class="li" href="h.html"><img src="pote1.png"></a>
         <a href="F.html">Find a pet</a>
@@ -218,11 +218,11 @@
     <p style="margin-right: 5%; margin-left: 5%"> This are all the dogs we currently have in at our center. If you are interested in any of our wonderful animals is it just to contact us and we will happily help.</p>
     <br>
 
-    <main>
+    <main style="margin: 0px">
         <div class="tre">
 
-
-            <article class="row-1">
+            <div>
+            <div class="row-1" style="height: 302px;">
                 <a href="http://www.pawschicago.org/pet-available-for-adoption/showdog/chloe-2/">
 
 
@@ -234,8 +234,8 @@
                     <h3>Chloe</h3>
                     <h6>Lincoln Park Adoption Center</h6>
                 </a>
-            </article>
-
+            </div>
+            </div>
 
 
             <div>
