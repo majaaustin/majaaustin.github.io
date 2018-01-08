@@ -19,6 +19,10 @@
         body > header {
             background-color: white;
             filter: drop-shadow(0px 5px 5px gray);
+            position: fixed;
+            top: 0px;
+            width:100%;
+            z-index:1000;
         }
         body > header > nav {
             display: grid;
@@ -162,6 +166,17 @@
     </style>
 </head>
 <body>
+<header style="position: relative">
+    <nav>
+        <a class="li" href="h.html"><img src="pote1.png"></a>
+        <a href="F.html">Find a pet</a>
+        <a href="adopt.html">Adoption info</a>
+        <a href="Key_issues.html">Key issues</a>
+        <a href="get_involved.html" class="valgt">Contact us</a>
+
+    </nav>
+</header>
+
 <header>
     <nav>
         <a class="li" href="h.html"><img src="pote1.png"></a>
@@ -169,7 +184,7 @@
         <a href="F.html" class="valgt">Find a pet</a>
         <a href="adopt.html">Adoption info</a>
         <a href="Key_issues.html">Key issues</a>
-        <a href="get_involved.html">Get involved</a>
+        <a href="get_involved.html">Contact us</a>
 
     </nav>
 </header>

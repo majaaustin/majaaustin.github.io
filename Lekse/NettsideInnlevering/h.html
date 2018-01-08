@@ -25,10 +25,11 @@
             cursor: pointer;
             background-color: white;
             filter: drop-shadow(0px 5px 5px black);
-            position: relative;
             z-index: 200;
             width: 100%;
             text-align: center ;
+            position: fixed;
+            top: 0px;
 
 
         }
@@ -111,6 +112,7 @@
             max-width: 75%;
             margin: auto;
             z-index: 0;
+            margin-top: -2%;
 
         }
         main > article {
@@ -226,11 +228,12 @@
             /*legger luft mellom delene av burgeren*/
             margin-bottom: 10px;
             margin-top: -18px;
-            margin-left: 180px;
+            margin-left: 82%;
 
         }
         #burger > div {
             height: 2px;
+            z-index: 10;
             background-color: white;
             left: auto;
         }
@@ -242,7 +245,7 @@
             width: 250px;
             height: 0px;
             right: 12.5%;
-            top: 15.2%;
+            top: 11.5%;
             z-index: 2;
             transition: 1s;
             color: white;
@@ -444,6 +447,16 @@
     </style>
 </head>
 <body>
+<header style="position: relative">
+    <nav>
+        <a class="li" href="h.html"><img src="pote1.png"></a>
+        <a href="F.html">Find a pet</a>
+        <a href="adopt.html">Adoption info</a>
+        <a href="Key_issues.html">Key issues</a>
+        <a href="get_involved.html" class="valgt">Contact us</a>
+
+    </nav>
+</header>
 
 <header>
 
@@ -498,11 +511,11 @@
                 <div></div>
             </label>
             <nav id="menu">
-                <a href="B.html">Birds</a><br>
+                <a href="F.html">Birds</a><br>
                 <a href="F.html">Fish</a><br>
-                <a href="H1.html">Horses</a><br>
-                <a href="Rep.html">Reptiles</a><br>
-                <a href="Rod.html">Rodents</a><br>
+                <a href="F.html">Horses</a><br>
+                <a href="F.html">Reptiles</a><br>
+                <a href="F.html">Rodents</a><br>
                 <p></p>
             </nav>
         </article>
