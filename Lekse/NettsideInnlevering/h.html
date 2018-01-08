@@ -142,11 +142,16 @@
             color: white;
 
         }
+
+        .firekolonner > article {
+            text-align: center;
+        }
         .firekolonner > article > a {
             font-family: 'Spectral SC', serif;
             text-align: center;
             color: white;
             text-decoration: none;
+            margin-right: 6%;
 
         }
         .slide {
@@ -233,23 +238,25 @@
             background-color: #998675;
             filter: drop-shadow(0px 5px 5px darkgray);
             position: absolute;
-            min-height: calc(100vh - 200px);
-            width: 0px;
-            right: 100px;
-            top: 64px;
+            /*min-height: calc(100vh - 200px);*/
+            width: 250px;
+            height: 0px;
+            right: 12.5%;
+            top: 15.2%;
+            z-index: 2;
             transition: 1s;
             color: white;
             font-family:'Spectral SC', serif;
             margin-top: 450px;
             visibility: hidden;
+            overflow: hidden;
 
         }
         #cb {
             display: none;
         }
         #cb:checked ~ #menu {
-            right: 0;
-            width: 250px;
+            height: 125px;
             visibility: visible;
         }
         #burger > div {
