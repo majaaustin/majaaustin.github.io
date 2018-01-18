@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Last opp et bilde</title>
+    <style>
+
+        body {
+            background-color: goldenrod;
+        }
+
+        #bildeContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-auto-rows: 200px;
+            grid-gap: 4px;
+        }
+
+        #bildeContainer > div {
+            filter: invert(100%);
+            border: 4px solid white;
+            background-size: cover;
+            background-position: center center;
+        }
+        @media (max-width: 600px){
+            #bildeContainer {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+        @media (max-width: 600px){
+            #bildeContainer {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 300px;
+            }
+        }
+        @media (max-width:460px ) {
+            #bildeContainer {
+                grid-template-columns: 1fr;
+                grid-template-rows: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<input type="file" id="inpBilde">
+<main id="bildeContainer">
+
+
+
+</main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+        authDomain: "it01-b6976.firebaseapp.com",
+        databaseURL: "https://it01-b6976.firebaseio.com",
+        projectId: "it01-b6976",
+        storageBucket: "it01-b6976.appspot.com",
+        messagingSenderId: "525456804574"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<script>
+    const storage = firebase.storage();
+    const db = firebase.database();
+
+    const minebilder = db.ref("minebilder");
+
+    const inpBilde = document.getElementById("inpBilde");
+
+    const bildeContainer = document.getElementById("bildeContainer");
+
+    function lagreInfo(bildeinfo) {
+        //lagrer linker (URL) til biildet i databasen
+        minebilder.push(bildeinfo.downloadURL);
+
+
+    }
+
+    function lastOppBilde() {
+        //en referanse til filen vi har valgt
+        const bilde = inpBilde.files[0];
+        //hvor skal vi lagre bilde
+        const lagringsplass = storage.ref("bilder/" + new Date());
+        //last opp bildet til lagringsplassen
+        lagringsplass.put(bilde).then(lagreInfo);
+
+    }
+
+    function visBilde(snap) {
+        const bilde = snap.val();
+
+        bildeContainer.innerHTML = `
+            <div style="background-image: url('${bilde}')"></div>
+        ` + bildeContainer.innerHTML;
+    }
+
+
+    inpBilde.onchange = lastOppBilde;
+    minebilder.on("child_added", visBilde);
+</script>
+
+
+</body>
+</html>
