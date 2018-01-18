@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My tube</title>
+    <style>
+
+        body {
+            background-color: goldenrod;
+            margin: 0;
+        }
+        header {
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            max-width: 700px;
+            margin: auto;
+        }
+        video {
+            width: 100%;
+        }
+        #videoliste {
+            margin-top: 15px;
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+        }
+        #videoliste > span {
+            cursor: pointer;
+            padding: 5px;
+            background-color: red;
+            font-family: sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <input type="text" id="inpTittel" placeholder="Hva heter filmen?">
+        <input type="file" id="inpVideo">
+    </header>
+
+<main>
+    <video controls id="minVideo"></video>
+    <div id="videoliste"></div>
+</main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+            authDomain: "it01-b6976.firebaseapp.com",
+            databaseURL: "https://it01-b6976.firebaseio.com",
+            projectId: "it01-b6976",
+            storageBucket: "it01-b6976.appspot.com",
+            messagingSenderId: "525456804574"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script>
+        const inpTittel = document.getElementById("inpTittel");
+        const inpVideo = document.getElementById("inpVideo");
+        const minVideo = document.getElementById("minVideo");
+        const videoliste = document.getElementById("videoliste");
+
+        const db = firebase.database();
+        const storage = firebase.storage();
+        const minevideoer = db.ref("minevideoer");
+        //info inneholder data om videoen som er lastet opp
+        function lagreData(info) {
+            minevideoer.push({
+                tittel: inpTittel.value,
+                url: info.downloadURL
+            });
+
+
+        }
+
+        function lastOppVideo() {
+            const video = inpVideo.files[0];
+            const lagringsplass = storage.ref("videofiler/" + new Date());
+            lagringsplass.put(video).then(lagreData);
+
+
+        }
+
+        function spillFilm(url) {
+            minVideo.src = url;
+            minVideo.play();
+        }
+
+        function visListe(snap) {
+            const film = snap.val();
+            videoliste.innerHTML += `<span onclick="spillFilm('${film.url}')">${film.tittel}</span>`;
+
+        }
+
+        inpVideo.onchange = lastOppVideo;
+        minevideoer.on("child_added", visListe);
+
+    </script>
+
+</body>
+</html>
