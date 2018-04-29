@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form id="skjema">
+        <input type="text" id="q">
+        <button type="submit">SØK</button>
+    </form>
+    <div id="resultat"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+            authDomain: "it01-b6976.firebaseapp.com",
+            databaseURL: "https://it01-b6976.firebaseio.com",
+            projectId: "it01-b6976",
+            storageBucket: "it01-b6976.appspot.com",
+            messagingSenderId: "525456804574"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const skjema = document.getElementById("skjema");
+        const q = document.getElementById("q");
+        const resultat = document.getElementById("resultat");
+
+        const db = firebase.database();
+        const pokemons = db.ref("pokemons");
+
+
+        function visPokemons(snap) {
+            const pokemon = snap.val();
+            resultat.innerHTML += `<p>${pokemon.Name}</p>`;
+            resultat.innerHTML += `<p>${pokemon.Image}</p>`;
+        }
+
+        pokemons.on("child_added", visPokemons);
+
+        function search(evt){
+            evt.preventDefault();
+            resultat.innerHTML = "";
+            pokemons
+                .orderByChild("Name")
+                .equalTo(q.value)
+                .on("child_added", visPokemons);
+                .startAt()
+
+        }
+
+        skjema.onsubmit = search;
+
+    </script>
+</body>
+</html>

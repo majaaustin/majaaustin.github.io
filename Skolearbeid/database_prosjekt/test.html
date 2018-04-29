@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="teststyle.css">
+    <meta charset="UTF-8">
+    <title>Sample FirebaseUI App</title>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+            authDomain: "it01-b6976.firebaseapp.com",
+            databaseURL: "https://it01-b6976.firebaseio.com",
+            projectId: "it01-b6976",
+            storageBucket: "it01-b6976.appspot.com",
+            messagingSenderId: "525456804574"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
+
+</head>
+<body>
+<header>
+
+    <a href="pokemon.html">Pokéfind</a>
+    <article><img src="logoen.png" alt=""></article>
+
+
+</header>
+<!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+<main style="background-color: grey">
+    <br>
+<br>
+    <div style="border: solid black">
+        <main id="main"></main>
+        <span class="time-left"></span>
+    </div>
+    <div class="container">
+        <input type="text" placeholder="Write a comment" id="inpMelding" style="min-width: 100%; font-size: 20px; font-family: 'Calibri Light';">
+
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+    const inpMelding = document.getElementById("inpMelding");
+    const main = document.getElementById("main");
+
+    const db = firebase.database();
+    const meldinger = db.ref("meldinger");
+
+    function lagreMelding() {
+        meldinger.push(inpMelding.value);
+        inpMelding.value = "";
+
+    }
+
+
+    function visMelding(snap) {
+        const melding = snap.val();
+        main.innerHTML = `<p>${melding}</p><img src="${user.photoURL}"><p>${user.displayName}</p>` + main.innerHTML;
+
+    }
+
+
+    inpMelding.onchange = lagreMelding;
+    meldinger.on("child_added", visMelding);
+
+
+
+
+
+</script>
+</body>
+</html>

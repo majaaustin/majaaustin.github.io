@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="poke.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+
+    <title>Pokemon</title>
+</head>
+<body>
+<header>
+    <h1>Pokéfind</h1>
+    <form id="skjema">
+        <input type="text" id="q">
+        <button type="submit">SØK</button>
+    </form>
+
+</header>
+<main>
+    <section id="allePokemon">
+        <div id="resultat"></div>
+    </section>
+
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+        authDomain: "it01-b6976.firebaseapp.com",
+        databaseURL: "https://it01-b6976.firebaseio.com",
+        projectId: "it01-b6976",
+        storageBucket: "it01-b6976.appspot.com",
+        messagingSenderId: "525456804574"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+
+    const skjema = document.getElementById("skjema");
+    const q = document.getElementById("q");
+    const resultat = document.getElementById("resultat");
+
+    const db = firebase.database();
+    const pokemons = db.ref("pokemons");
+
+
+
+    function visPokemons(snap) {
+        const pokemon = snap.val();
+        resultat.innerHTML += `
+                <article>
+                    <p style="font-weight: bold">${pokemon.Number} ${pokemon.Name}</p>
+                   <img src="${pokemon.Image}">
+                    <p>Type: ${pokemon.Types}</p>
+                    <p>Max CP: ${pokemon.MaxCP}</p>
+                    <p>Max HP: ${pokemon.MaxHP}</p>
+                    <p>Next Evolution: ${pokemon.Next_Evolution.Name}${pokemon.Next_Evolution.Number}</p>
+                    <p>Next Evolution Requirements: ${pokemon.Next_Evolution_Requirements.Amount}${pokemon.Next_Evolution_Requirements.Name}</p>
+
+
+                </article>
+        `;
+
+    }
+
+    pokemons.on("child_added", visPokemons);
+
+    function search(evt){
+        evt.preventDefault();
+        resultat.innerHTML = "";
+        pokemons
+            .orderByChild("Name")
+            .equalTo(q.value)
+            .on("child_added", visPokemons)
+    }
+
+    skjema.onsubmit = search;
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>

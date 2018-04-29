@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        /* Chat containers */
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Darker chat container */
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+
+        /* Clear floats */
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Style images */
+        .container img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        /* Style the right image */
+        .container img.right {
+            float: right;
+            margin-left: 20px;
+            margin-right:0;
+        }
+
+        /* Style time text */
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        /* Style time text */
+        .time-left {
+            float: left;
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main id="main">
+
+
+
+        <div class="container">
+            <img src="/w3images/bandmember.jpg" alt="Avatar">
+            <span class="time-right">11:00</span>
+        </div>
+
+        <div class="container darker">
+            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+            <p>Hey! I'm fine. Thanks for asking!</p>
+            <span class="time-left">11:01</span>
+        </div>
+
+        <div class="container">
+            <img src="/w3images/bandmember.jpg" alt="Avatar">
+            <p>Sweet! So, what do you wanna do today?</p>
+            <span class="time-right">11:02</span>
+        </div>
+
+        <div class="container darker">
+            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+            <span class="time-left">11:05</span>
+        </div>
+
+
+    </main>
+    <footer>
+        <input type="text" placeholder="Hva mener du?" id="inpMelding">
+    </footer>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+        authDomain: "it01-b6976.firebaseapp.com",
+        databaseURL: "https://it01-b6976.firebaseio.com",
+        projectId: "it01-b6976",
+        storageBucket: "",
+        messagingSenderId: "525456804574"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<script>
+    initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                var displayName = user.displayName;
+                var email = user.email;
+                var emailVerified = user.emailVerified;
+                var photoURL = user.photoURL;
+                var uid = user.uid;
+                var phoneNumber = user.phoneNumber;
+                var providerData = user.providerData;
+
+
+                const inpMelding = document.getElementById("inpMelding");
+                const main = document.getElementById("main");
+
+                const db = firebase.database();
+                const meldinger = db.ref("meldinger");
+
+                function lagreMelding() {
+                    let melding = {
+                        tekst: inpMelding.value,
+                        avsender: uid,
+                        navn: displayName,
+                        bilde: photoURL,
+                        tid: firebase.database.ServerValue.TIMESTAMP
+                    };
+
+                    meldinger.push(melding);
+                    inpMelding.value = "";
+
+                }
+
+
+                function visMelding(snap) {
+                    const melding = snap.val();
+                    main.innerHTML += `
+            <div class="container">
+                <img src="/w3images/bandmember.jpg" alt="Avatar">
+                <p>${melding.avsender}</p>
+                <p>${new Date(melding.tid)}</p>
+                <p>${melding.tekst}</p>
+                <span class="time-right">11:02</span>
+        </div>
+        `;
+
+                }
+
+                inpMelding.onchange = lagreMelding;
+                meldinger.on("child_added", visMelding);
+
+
+
+                user.getIdToken().then(function(accessToken) {
+                //    document.getElementById('sign-in-status').textContent = 'Signed in';
+                  //  document.getElementById('sign-in').textContent = 'Sign out';
+                    //document.getElementById('account-details').textContent = JSON.stringify({
+                      //  displayName: displayName,
+                      //  email: email,
+                      //  emailVerified: emailVerified,
+                       // phoneNumber: phoneNumber,
+                      //  photoURL: photoURL,
+                      //  uid: uid,
+                      //  accessToken: accessToken,
+                      //  providerData: providerData
+                   // }, null, '  ');
+                });
+            } else {
+
+            }
+        }, function(error) {
+            console.log(error);
+        });
+    };
+
+    window.addEventListener('load', function() {
+        initApp()
+    });
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

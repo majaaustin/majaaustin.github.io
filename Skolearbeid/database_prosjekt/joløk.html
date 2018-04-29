@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>The Game</title>
+    <style>
+
+         {
+            width: 48px;
+            position: absolute;
+        }
+
+    </style>
+    <main>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
+            authDomain: "it01-b6976.firebaseapp.com",
+            databaseURL: "https://it01-b6976.firebaseio.com",
+            projectId: "it01-b6976",
+            storageBucket: "it01-b6976.appspot.com",
+            messagingSenderId: "525456804574"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script type="text/javascript">
+        initApp = function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    // User is signed in.
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var uid = user.uid;
+                    var phoneNumber = user.phoneNumber;
+                    var providerData = user.providerData;
+                    user.getIdToken().then(function(accessToken) {
+
+                        const db = firebase.database();
+                        const navn = db.ref("joløk/navn");
+
+                        function lagreNavn(klikk){
+                            navn.push({
+                                url: photoURL,
+                                x: klikk.clientX,
+                                y: klikk.clientY
+                            });
+                        }
+
+                        function visNavn(snap) {
+                            const navn = snap.val();
+                            document.body.innerHTML += `<img src="${bilde.url}" style="left: ${navn.x}px; top: ${navn.y}px";>`;
+                        }
+
+                        document.onclick = lagreNavn;
+                        bilder.on("child_added", visNavn);
+
+
+                    });
+                } else {
+                    // User is signed out.
+                    // Vi sender brukeren til en annen side
+                }
+            }, function(error) {
+                console.log(error);
+            });
+        };
+
+        window.addEventListener('load', function() {
+            initApp()
+        });
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>
