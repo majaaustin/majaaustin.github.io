@@ -47,15 +47,7 @@ header {
     font-size: 20px;
     background-color: grey;
 }
-header > img {
 
-    position: center;
-    margin-left: ;
-    margin-top: ;
-
-
-
-}
 header > img {
     max-height: 45%;
     max-width: 45%;
