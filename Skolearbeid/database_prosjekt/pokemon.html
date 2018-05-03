@@ -123,10 +123,9 @@
             evt.preventDefault();
             resultat.innerHTML = "";
             pokemons
-                .orderByChild("Numbers")
-               // .equalTo(q.value)
-               // .on("child_added", visPokemons)
-
+                .orderByChild("Number")
+                .equalTo(q.value)
+                .on("child_added", visPokemons)
         }
 
         skjema.onsubmit = search;
