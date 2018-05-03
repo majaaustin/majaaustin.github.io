@@ -36,7 +36,6 @@ main {
 }
 header {
     position: relative;
-    margin-top: ;
     margin-left: 5%;
     margin-right: 5%;
     padding: 0 20px;
@@ -49,8 +48,7 @@ header {
 }
 
 header > img {
-    max-height: 45%;
-    max-width: 45%;
+
 }
 header > a {
     margin-top: -0.1%;
