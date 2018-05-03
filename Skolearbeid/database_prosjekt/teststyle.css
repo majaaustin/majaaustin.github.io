@@ -104,7 +104,7 @@ header > a {
 article > span {
   margin-left: 1%;
 }
-main > article > img {
+article > img {
     margin-top: 1%;
     min-width: 50px;
     min-height: 50px;
