@@ -13,7 +13,7 @@
 
 
         <a href="pokemon.html">Pokéfind</a>
-        <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="">
+        <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="" >
         <form id="skjema">
             <input type="text" id="q">
             <button type="submit">SØK</button>
@@ -123,9 +123,10 @@
             evt.preventDefault();
             resultat.innerHTML = "";
             pokemons
-                .orderByChild("Name")
-                .equalTo(q.value)
-                .on("child_added", visPokemons)
+                .orderByChild("Numbers")
+               // .equalTo(q.value)
+               // .on("child_added", visPokemons)
+
         }
 
         skjema.onsubmit = search;
@@ -142,7 +143,10 @@
 
 
 
-</script>
+
+
+
+    </script>
 
 
 
