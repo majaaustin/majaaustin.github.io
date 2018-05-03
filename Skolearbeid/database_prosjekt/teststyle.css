@@ -24,9 +24,6 @@ body {
 
 
 }
-
-
-}
 html {
     font-family: "Fira Sans","Trebuchet MS","Tahoma","Ubuntu","Helvetica","Arial",sans-serif;
     font-size: 15px;
@@ -34,14 +31,14 @@ html {
     color: #404040;
 
 }
+
 main {
     background-color: grey;
     margin-left: 6%;
     margin-right: 6%;
 }
 header {
-    position: relative;
-    margin-top: ;
+
     margin-left: 5%;
     margin-right: 5%;
     padding: 0 20px;
@@ -55,8 +52,9 @@ header {
 header > article {
 
     position: center;
-    margin-left: 43%;
+    margin-left:
     margin-top: -4%;
+
 
 
 
@@ -64,6 +62,8 @@ header > article {
 header > article > img {
     max-height: 45%;
     max-width: 45%;
+    margin-top: -4%;
+    margin-left: 0;
 }
 header > a {
     margin-top: -0.1%;
@@ -100,31 +100,27 @@ header > a {
 .col-11 { grid-column: span 11;}
 .col-12 { grid-column: span 12;}
 
-article {
-    display: grid;
-    grid-template-columns: repeat(8, 8fr);
-    padding-left: 5%;
-    width: 80%;
-    padding-top: 2%;
 
-
-
-
+article > span {
+  margin-left: 1%;
 }
-
-article > img {
-    max-width: 200px;
-    max-height: 200px;
-}
-#inpTekst {
-    background-color: lightyellow;
-    font-size: 1.2rem;
+main > article > img {
+    margin-top: 1%;
+    min-width: 50px;
+    min-height: 50px;
+    position: relative;
+    margin-left: 5%;
 }
 #todolist > article {
     display: grid;
     grid-template-columns: 1fr auto;
 
 }
+#inpTekst {
+    background-color: lightyellow;
+    font-size: 1.2rem;
+}
+
 .lblDelete {
     padding-right: 5px;
     font-weight: bold;
@@ -140,7 +136,7 @@ footer {
     margin: auto;
     padding: 10px;
 
-
+}
 
 
 

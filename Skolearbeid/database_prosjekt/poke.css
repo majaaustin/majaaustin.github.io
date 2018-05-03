@@ -47,16 +47,16 @@ header {
     font-size: 20px;
     background-color: grey;
 }
-header > article {
+header > img {
 
     position: center;
-    margin-left: 43%;
-    margin-top: -4%;
+    margin-left: ;
+    margin-top: ;
 
 
 
 }
-header > article > img {
+header > img {
     max-height: 45%;
     max-width: 45%;
 }

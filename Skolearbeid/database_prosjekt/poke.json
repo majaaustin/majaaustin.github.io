@@ -64,16 +64,13 @@
         "Amount": 25,
         "Name": "Bulbasaur candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 2,
-          "Name": "Ivysaur"
+          "Number1": 2,
+          "Name": "Ivysaur",
+          "Number2": 3,
+          "Name2": "Venusaur"
         },
-        {
-          "Number": 3,
-          "Name": "Venusaur"
-        }
-      ],
       "MaxCP": 951,
       "MaxHP": 1071
     },
@@ -147,13 +144,12 @@
         "Amount": 100,
         "Name": "Bulbasaur candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
 
         {
-          "Number": 3,
+          "Number1": 3,
           "Name": "Venusaur"
-        }
-      ],
+        },
       "MaxCP": 1483,
       "MaxHP": 1632
     },
@@ -293,16 +289,13 @@
         "Amount": 25,
         "Name": "Charmander candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 5,
-          "Name": "Charmeleon"
+          "Number1": 5,
+          "Name": "Charmeleon",
+          "Number2": 6,
+          "Name2": "Charizard"
         },
-        {
-          "Number": 6,
-          "Name": "Charizard"
-        }
-      ],
       "MaxCP": 841,
       "MaxHP": 955
     },
@@ -375,12 +368,11 @@
         "Amount": 100,
         "Name": "Charmander candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 6,
+          "Number1": 6,
           "Name": "Charizard"
-        }
-      ],
+        },
       "MaxCP": 1411,
       "MaxHP": 1557
     },
@@ -517,16 +509,13 @@
         "Amount": 25,
         "Name": "Squirtle candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 8,
-          "Name": "Wartortle"
+          "Number1": 8,
+          "Name": "Wartortle",
+          "Number2": 9,
+          "Name2": "Blastoise"
         },
-        {
-          "Number": 9,
-          "Name": "Blastoise"
-        }
-      ],
       "MaxCP": 891,
       "MaxHP": 1008
     },
@@ -601,12 +590,11 @@
         "Amount": 100,
         "Name": "Squirtle candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 9,
+          "Number1": 9,
           "Name": "Blastoise"
-        }
-      ],
+        },
       "MaxCP": 1435,
       "MaxHP": 1582
     },
@@ -734,16 +722,13 @@
         "Amount": 12,
         "Name": "Caterpie candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 11,
-          "Name": "Metapod"
+          "Number1": 11,
+          "Name": "Metapod",
+          "Number2": 12,
+          "Name2": "Butterfree"
         },
-        {
-          "Number": 12,
-          "Name": "Butterfree"
-        }
-      ],
       "MaxCP": 367,
       "MaxHP": 443
     },
@@ -803,12 +788,11 @@
         "Amount": 50,
         "Name": "Caterpie candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 12,
+          "Number1": 12,
           "Name": "Butterfree"
-        }
-      ],
+        },
       "MaxCP": 397,
       "MaxHP": 477
     },
@@ -939,16 +923,13 @@
         "Amount": 12,
         "Name": "Weedle candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 14,
-          "Name": "Kakuna"
+          "Number1": 14,
+          "Name": "Kakuna",
+          "Number2": 15,
+          "Name2": "Beedrill"
         },
-        {
-          "Number": 15,
-          "Name": "Beedrill"
-        }
-      ],
       "MaxCP": 372,
       "MaxHP": 449
     },
@@ -1012,12 +993,11 @@
         "Amount": 50,
         "Name": "Weedle candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
           "Number": 15,
           "Name": "Beedrill"
-        }
-      ],
+        },
       "MaxCP": 405,
       "MaxHP": 485
     },
@@ -1156,16 +1136,13 @@
         "Amount": 12,
         "Name": "Pidgey candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 17,
-          "Name": "Pidgeotto"
+          "Number1": 17,
+          "Name": "Pidgeotto",
+          "Number2": 18,
+          "Name2": "Pidgeot"
         },
-        {
-          "Number": 18,
-          "Name": "Pidgeot"
-        }
-      ],
       "MaxCP": 585,
       "MaxHP": 679
     },
@@ -1237,12 +1214,11 @@
         "Amount": 50,
         "Name": "Pidgey candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 18,
+          "Number1": 18,
           "Name": "Pidgeot"
-        }
-      ],
+        },
       "MaxCP": 1096,
       "MaxHP": 1223
     },
@@ -1373,12 +1349,11 @@
         "Amount": 25,
         "Name": "Rattata candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 20,
+          "Number1": 20,
           "Name": "Raticate"
-        }
-      ],
+        },
       "MaxCP": 493,
       "MaxHP": 581
     },
@@ -1504,12 +1479,11 @@
         "Amount": 50,
         "Name": "Spearow candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 22,
+          "Number1": 22,
           "Name": "Fearow"
-        }
-      ],
+        },
       "MaxCP": 591,
       "MaxHP": 686
     },
@@ -1639,12 +1613,11 @@
         "Amount": 50,
         "Name": "Ekans candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 24,
+          "Number1": 24,
           "Name": "Arbok"
-        }
-      ],
+        },
       "MaxCP": 718,
       "MaxHP": 824
     },
@@ -1770,12 +1743,11 @@
         "Amount": 50,
         "Name": "Pikachu candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 26,
+          "Number1": 26,
           "Name": "Raichu"
-        }
-      ],
+        },
       "MaxCP": 777,
       "MaxHP": 887
     },
@@ -1900,12 +1872,11 @@
         "Amount": 50,
         "Name": "Sandshrew candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 28,
+          "Number1": 28,
           "Name": "Sandslash"
-        }
-      ],
+        },
       "MaxCP": 695,
       "MaxHP": 798
     },
@@ -2033,16 +2004,13 @@
         "Amount": 25,
         "Name": "Nidoran♀ candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 30,
-          "Name": "Nidorina"
+          "Number1": 30,
+          "Name": "Nidorina",
+          "Number2": 31,
+          "Name2": "Nidoqueen"
         },
-        {
-          "Number": 31,
-          "Name": "Nidoqueen"
-        }
-      ],
       "MaxCP": 768,
       "MaxHP": 876
     },
@@ -2112,12 +2080,11 @@
         "Amount": 100,
         "Name": "Nidoran♀ candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 31,
+          "Number1": 31,
           "Name": "Nidoqueen"
-        }
-      ],
+        },
       "MaxCP": 1267,
       "MaxHP": 1404
     },
@@ -2254,16 +2221,13 @@
         "Amount": 25,
         "Name": "Nidoran♂ candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 33,
-          "Name": "Nidorino"
+          "Number1": 33,
+          "Name": "Nidorino",
+          "Number2": 34,
+          "Name2": "Nidoking"
         },
-        {
-          "Number": 34,
-          "Name": "Nidoking"
-        }
-      ],
       "MaxCP": 737,
       "MaxHP": 843
     },
@@ -2333,12 +2297,11 @@
         "Amount": 100,
         "Name": "Nidoran♂ candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 34,
+          "Number1": 34,
           "Name": "Nidoking"
-        }
-      ],
+        },
       "MaxCP": 1236,
       "MaxHP": 1372
     },
@@ -2474,12 +2437,11 @@
         "Amount": 50,
         "Name": "Clefairy candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 36,
+          "Number1": 36,
           "Name": "Clefable"
-        }
-      ],
+        },
       "MaxCP": 1074,
       "MaxHP": 1200
     },
@@ -2609,12 +2571,11 @@
         "Amount": 50,
         "Name": "Vulpi"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 38,
+          "Number1": 38,
           "Name": "Ninetales"
-        }
-      ],
+        },
       "MaxCP": 725,
       "MaxHP": 831
     },
@@ -2745,12 +2706,11 @@
         "Amount": 50,
         "Name": "Jigglypuff candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 39,
+          "Number1": 39,
           "Name": "Jigglypuff"
-        }
-      ],
+        },
       "MaxCP": 796,
       "MaxHP": 917
     },
@@ -2882,12 +2842,11 @@
         "Amount": 50,
         "Name": "Zubat candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 42,
+          "Number1": 42,
           "Name": "Golbat"
-        }
-      ],
+        },
       "MaxCP": 550,
       "MaxHP": 642
     },
@@ -3022,16 +2981,13 @@
         "Amount": 25,
         "Name": "Oddish candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 44,
-          "Name": "Gloom"
+          "Number1": 44,
+          "Name": "Gloom",
+          "Number2": 45,
+          "Name2": "Vileplume"
         },
-        {
-          "Number": 45,
-          "Name": "Vileplume"
-        }
-      ],
       "MaxCP": 1023,
       "MaxHP": 1148
     },
@@ -3104,12 +3060,11 @@
         "Amount": 100,
         "Name": "Oddish candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 45,
+          "Number1": 45,
           "Name": "Vileplume"
-        }
-      ],
+        },
       "MaxCP": 1537,
       "MaxHP": 1689
     },
@@ -3250,12 +3205,11 @@
         "Amount": 50,
         "Name": "Paras candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 47,
+          "Number1": 47,
           "Name": "Parasect"
-        }
-      ],
+        },
       "MaxCP": 804,
       "MaxHP": 916
     },
@@ -3392,12 +3346,11 @@
         "Amount": 50,
         "Name": "Venonat candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 49,
+          "Number1": 49,
           "Name": "Venomoth"
-        }
-      ],
+        },
       "MaxCP": 912,
       "MaxHP": 1029
     },
@@ -3528,12 +3481,11 @@
         "Amount": 50,
         "Name": "Diglett candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 51,
+          "Number1": 51,
           "Name": "Dugtrio"
-        }
-      ],
+        },
       "MaxCP": 365,
       "MaxHP": 456
     },
@@ -3656,12 +3608,11 @@
         "Amount": 50,
         "Name": "Meowth candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 53,
+          "Number1": 53,
           "Name": "Persian"
-        }
-      ],
+        },
       "MaxCP": 656,
       "MaxHP": 756
     },
@@ -3784,12 +3735,11 @@
         "Amount": 50,
         "Name": "Psyduck candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 55,
+          "Number1": 55,
           "Name": "Golduck"
-        }
-      ],
+        },
       "MaxCP": 987,
       "MaxHP": 1109
     },
@@ -3921,12 +3871,11 @@
         "Amount": 50,
         "Name": "Mankey candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 57,
+          "Number1": 57,
           "Name": "Primeape"
-        }
-      ],
+        },
       "MaxCP": 769,
       "MaxHP": 878
     },
@@ -4056,12 +4005,11 @@
         "Amount": 50,
         "Name": "Growlithe candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 59,
+          "Number1": 59,
           "Name": "Arcanine"
-        }
-      ],
+        },
       "MaxCP": 1199,
       "MaxHP": 1335
     },
@@ -4191,16 +4139,13 @@
         "Amount": 25,
         "Name": "Poliwag candies"
       },
-      "Next_Evolution": [
+      "Next_Evolution":
         {
-          "Number": 61,
-          "Name": "Poliwhirl"
+          "Number1": 61,
+          "Name": "Poliwhirl",
+          "Number2": 62,
+          "Name2": "Poliwrath"
         },
-        {
-          "Number": 62,
-          "Name": "Poliwrath"
-        }
-      ],
       "MaxCP": 693,
       "MaxHP": 795
     },
