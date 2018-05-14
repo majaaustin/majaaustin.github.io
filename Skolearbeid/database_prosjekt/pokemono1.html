@@ -103,7 +103,7 @@
                    <img src="${pokemon.Image}">
                     <p>Type: ${pokemon.Types}</p>
                     <p>Max CP: ${pokemon.MaxCP}</p>
-                    <p>Next Evolution Requirements: ${pokemon.Next_Evolution_Requirements.Amount}${pokemon.Next_Evolution_Requirements.Name}</p>
+
                     ${"Next_Evolution" in pokemon ? "<p>Next Evolution:<br>#"+ pokemon.Next_Evolution.Number1 +" "+pokemon.Next_Evolution.Name + "<br>" + (("Number2" in pokemon.Next_Evolution) ? "#"+pokemon.Next_Evolution.Number2 +" "+pokemon.Next_Evolution.Name2 + "</p>" : "<p></p>") : "<p></p>"}
                     ${"Next_Evolution_Requirements" in pokemon ? "<p>Next Evolution Requirements:<br>" + pokemon.Next_Evolution_Requirements.Amount +" "+ pokemon.Next_Evolution_Requirements.Name+ "</p>" : "<p></p>"}
 
