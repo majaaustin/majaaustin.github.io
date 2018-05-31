@@ -94,6 +94,7 @@
 
 
         function visPokemons(snap) {
+
             const pokemon = snap.val();
             resultat.innerHTML += `
         <div id="wrapper">
@@ -115,7 +116,11 @@
         </divwrapper>
         `;
 
+            
+
         }
+
+
 
         pokemons.on("child_added", visPokemons);
 
@@ -123,7 +128,7 @@
             evt.preventDefault();
             resultat.innerHTML = "";
             pokemons
-                .orderByChild("Number")
+                .orderByChild("Name")
                 .equalTo(q.value)
                 .on("child_added", visPokemons)
         }

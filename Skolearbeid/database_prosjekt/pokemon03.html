@@ -1,82 +1,87 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Game</title>
     <link rel="stylesheet" href="teststyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.min.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.min.css">
+
+    <title>Title</title>
     <style>
+    body {
 
-        body {
+    margin: auto;
+    padding: 10px;
+    background-color: darkgreen;
+    color: white;
+    }
+    main {
+    background-color: grey;
+    margin-left: 6%;
+    margin-right: 6%;
 
-            margin: auto;
-            padding: 10px;
-            background-color: darkgreen;
-            color: white;
-        }
-        main {
-            background-color: grey;
-            margin-left: 6%;
-            margin-right: 6%;
-
-        }
-        img {
-            height: 2rem;
-            margin-left: 5%;
-            margin-top: 1%;
-        }
+    }
+    img {
+    height: 2rem;
+    margin-left: 5%;
+    margin-top: 1%;
+    }
 
 
-        #skrivere > article {
-            display: grid;
-            align-items: center;
-            grid-gap: 10px;
-            grid-template-columns: auto 1fr;
-        }
+    #skrivere > article {
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: auto 1fr;
+    }
 
-        @keyframes skriver {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-8px);
-            }
-        }
+    @keyframes skriver {
+    from {
+    transform: translateY(0);
+    }
+    to {
+    transform: translateY(-8px);
+    }
+    }
 
-        span .b {
-            display: inline-block;
-            animation: skriver 0.6s infinite alternate;
-        }
-        span .b:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        span .b:nth-child(3) {
-            animation-delay: 0.4s;
-        }
+    span .b {
+    display: inline-block;
+    animation: skriver 0.6s infinite alternate;
+    }
+    span .b:nth-child(2) {
+    animation-delay: 0.2s;
+    }
+    span .b:nth-child(3) {
+    animation-delay: 0.4s;
+    }
 
 
 
     </style>
 
+    </head>
 <body>
-
 <header>
 
+
     <a href="pokemono1.html">Pokéfind</a>
-    <article><img src="logoen.png" alt=""></article>
+    <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="" >
+    <form id="skjema">
+        <input type="text" id="q">
+        <button type="submit">SØK</button>
+    </form>
 
 </header>
 
 
-
-
-
 <main id="main">
+    <section id="allePokemon">
+        <div id="resultat"></div>
+    </section>
     <div id="comments"></div>
     <div class="container">
-        <input type="text" placeholder="Write a comment" id="inpMelding" autocomplete="off" autofocus style="min-width: 100%; font-size: 20px; font-family: 'Calibri Light';">
+        <input type="text" placeholder="Write a comment" id="inpKommentar" autocomplete="off" autofocus style="min-width: 100%; font-size: 20px; font-family: 'Calibri Light';">
 
 
 
@@ -100,6 +105,60 @@
     };
     firebase.initializeApp(config);
 </script>
+<script>
+    const skjema = document.getElementById("skjema");
+    const q = document.getElementById("q");
+    const resultat = document.getElementById("resultat");
+
+    const db = firebase.database();
+    const pokemons = db.ref("pokemons");
+
+
+
+    function visPokemons(snap) {
+
+        const pokemon = snap.val();
+        resultat.innerHTML += `
+        <div id="wrapper">
+                <article>
+                    <a style="font-weight: bold" color="white" text-decoration="none" href="pokemon03.html"> #${pokemon.Number} ${pokemon.Name}</a>
+                   <img src="${pokemon.Image}">
+                    <p>Type: ${pokemon.Types}</p>
+                    <p>Max CP: ${pokemon.MaxCP}</p>
+                    <p>Max HP: ${pokemon.MaxHP}</p>
+                    ${"Next_Evolution" in pokemon ? "<p>Next Evolution:<br>#"+ pokemon.Next_Evolution.Number1 +" "+pokemon.Next_Evolution.Name + "<br>" + (("Number2" in pokemon.Next_Evolution) ? "#"+pokemon.Next_Evolution.Number2 +" "+pokemon.Next_Evolution.Name2 + "</p>" : "<p></p>") : "<p></p>"}
+                    ${"Next_Evolution_Requirements" in pokemon ? "<p>Next Evolution Requirements:<br>" + pokemon.Next_Evolution_Requirements.Amount +" "+ pokemon.Next_Evolution_Requirements.Name+ "</p>" : "<p></p>"}
+
+
+
+                </article>
+                <p><hr></p>
+
+        </divwrapper>
+        `;
+
+
+
+    }
+
+
+
+    pokemons.on("child_added", visPokemons);
+
+    function search(evt){
+        evt.preventDefault();
+        resultat.innerHTML = "";
+        pokemons
+            .orderByChild("Name")
+            .equalTo(q.value)
+            .on("child_added", visPokemons)
+    }
+
+    skjema.onsubmit = search;
+
+
+
+</script>
 
 
 <script type="text/javascript">
@@ -118,7 +177,7 @@
                 user.getIdToken().then(function(accessToken) {
 
 
-                    const inpMelding = document.getElementById("inpMelding");
+                    const inpKommentar = document.getElementById("inpKommentar");
                     const skrivere = document.getElementById("skrivere");
                     const comments = document.getElementById("comments");
 
@@ -127,35 +186,35 @@
 
                     const db = firebase.database();
                     const personer = db.ref("game/personer");
-                    const meldinger = db.ref("meldinger");
+                    const kommentarer = db.ref("kommentarer");
 
 
-                    function lagreMelding() {
-                        meldinger.push({
-                            tekst: inpMelding.value,
+                    function lagreKommentar() {
+                        kommentarer.push({
+                            tekst: inpKommentar.value,
                             bilde: photoURL,
                             navn: displayName,
                             tid: firebase.database.ServerValue.TIMESTAMP
 
                         });
-                        inpMelding.value = "";
+                        inpKommentar.value = "";
 
                     }
 
 
-                    function visMelding(snap) {
-                        const melding = snap.val();
+                    function visKommentar(snap) {
+                        const kommentar = snap.val();
                         comments.innerHTML = `<article>
-                                                   <img src="${melding.bilde}">
-                                                   <span>${melding.navn}</span>
-                                                   <span style="color: lightgrey">${moment(new Date(melding.tid)).fromNow()}</span><br>
-                                                   <span style="margin-left: 13%; color: yellow">${melding.tekst}</span>
+                                                   <img src="${kommentar.bilde}">
+                                                   <span>${kommentar.navn}</span>
+                                                   <span style="color: lightgrey">${moment(new Date(kommentar.tid)).fromNow()}</span><br>
+                                                   <span style="margin-left: 13%; color: yellow">${kommentar.tekst}</span>
 
                                               </article>` + comments.innerHTML;
                     }
 
-                    inpMelding.onchange = lagreMelding;
-                    meldinger.on("child_added", visMelding);
+                    inpKommentar.onchange = lagreKommentar;
+                    kommentarer.on("child_added", visKommentar);
 
                     let timer;
 

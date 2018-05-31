@@ -12,7 +12,7 @@
 <header>
 
 
-    <a href="pokemon.html">Pokéfind</a>
+    <a href="pokemono1.html">Pokéfind</a>
     <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="" >
     <form id="skjema">
         <input type="text" id="q">
@@ -65,7 +65,7 @@
     </script>
     <h3 style="margin-left: 40%">Login to give us feedback...</h3>
     <div id="firebaseui-auth-container"></div>
-
+    </a>
 </footer>
 
 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
@@ -99,7 +99,7 @@
         resultat.innerHTML += `
         <div id="wrapper">
                 <article>
-                    <p style="font-weight: bold">#${pokemon.Number} ${pokemon.Name}</p>
+                    <a style="font-weight: bold" color="white" text-decoration="none" href="pokemon03.html"> #${pokemon.Number} ${pokemon.Name}</a>
                    <img src="${pokemon.Image}">
                     <p>Type: ${pokemon.Types}</p>
                     <p>Max CP: ${pokemon.MaxCP}</p>

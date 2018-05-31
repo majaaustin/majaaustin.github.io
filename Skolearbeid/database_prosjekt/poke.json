@@ -156,7 +156,7 @@
     {
       "Number": "003",
       "Name": "Venusaur",
-      "Image": "https://img.pokemondb.net/artwork/venusaur-mega.jpg",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png",
       "Classification": "Seed Pokèmon",
       "Types": [
         "Grass",
@@ -1421,6 +1421,7 @@
     {
       "Number": "021",
       "Name": "Spearow",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/8b/021Spearow.png/250px-021Spearow.png",
       "Classification": "Tiny Bird Pokèmon",
       "Types": [
         "Normal",
@@ -1490,6 +1491,7 @@
     {
       "Number": "022",
       "Name": "Fearow",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a0/022Fearow.png/250px-022Fearow.png",
       "Classification": "Beak Pokèmon",
       "Types": [
         "Normal",
@@ -1556,6 +1558,7 @@
     {
       "Number": "023",
       "Name": "Ekans",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/023Ekans.png/250px-023Ekans.png",
       "Classification": "Snake Pokèmon",
       "Types": [
         "Poison"
@@ -1624,6 +1627,7 @@
     {
       "Number": "024",
       "Name": "Arbok",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/cd/024Arbok.png/250px-024Arbok.png",
       "Classification": "Cobra Pokèmon",
       "Types": [
         "Poison"
@@ -1689,6 +1693,7 @@
     {
       "Number": "025",
       "Name": "Pikachu",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png",
       "Classification": "Mouse Pokèmon",
       "Types": [
         "Electric"
@@ -1754,6 +1759,7 @@
     {
       "Number": "026",
       "Name": "Raichu",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/88/026Raichu.png/250px-026Raichu.png",
       "Classification": "Mouse Pokèmon",
       "Types": [
         "Electric"
@@ -1816,6 +1822,7 @@
     {
       "Number": "027",
       "Name": "Sandshrew",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9e/027Sandshrew.png/250px-027Sandshrew.png",
       "Classification": "Mouse Pokèmon",
       "Types": [
         "Ground"
@@ -1883,6 +1890,7 @@
     {
       "Number": "028",
       "Name": "Sandslash",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/0b/028Sandslash.png/250px-028Sandslash.png",
       "Classification": "Mouse Pokèmon",
       "Types": [
         "Ground"
@@ -1947,6 +1955,7 @@
     {
       "Number": "029",
       "Name": "Nidoran ♀",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/81/029Nidoran.png/250px-029Nidoran.png",
       "Classification": "Poison Pin Pokèmon",
       "Types": [
         "Poison"
@@ -2017,6 +2026,7 @@
     {
       "Number": "030",
       "Name": "Nidorina",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/cd/030Nidorina.png/250px-030Nidorina.png",
       "Classification": "Poison Pin Pokèmon",
       "Types": [
         "Poison"
@@ -2091,6 +2101,7 @@
     {
       "Number": "031",
       "Name": "Nidoqueen",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/b/bf/031Nidoqueen.png/250px-031Nidoqueen.png",
       "Classification": "Drill Pokèmon",
       "Types": [
         "Poison",
@@ -2164,6 +2175,7 @@
     {
       "Number": "032",
       "Name": "Nidoran ♂",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/4a/032Nidoran.png/250px-032Nidoran.png",
       "Classification": "Poison Pin Pokèmon",
       "Types": [
         "Poison"
@@ -2234,6 +2246,7 @@
     {
       "Number": "033",
       "Name": "Nidorino",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9f/033Nidorino.png/250px-033Nidorino.png",
       "Classification": "Poison Pin Pokèmon",
       "Types": [
         "Poison"
@@ -2308,6 +2321,7 @@
     {
       "Number": "034",
       "Name": "Nidoking",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/c6/034Nidoking.png/250px-034Nidoking.png",
       "Classification": "Drill Pokèmon",
       "Types": [
         "Poison",
@@ -2381,6 +2395,7 @@
     {
       "Number": "035",
       "Name": "Clefairy",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/f/f4/035Clefairy.png/250px-035Clefairy.png",
       "Classification": "Fairy Pokèmon",
       "Types": [
         "Fairy"
@@ -2448,6 +2463,7 @@
     {
       "Number": "036",
       "Name": "Clefable",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a9/036Clefable.png/250px-036Clefable.png",
       "Classification": "Fairy Pokèmon",
       "Types": [
         "Fairy"
@@ -2512,6 +2528,7 @@
     {
       "Number": "037",
       "Name": "Vulpix",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/6/60/037Vulpix.png/250px-037Vulpix.png",
       "Classification": "Fox Pokèmon",
       "Types": [
         "Fire"
@@ -2582,6 +2599,7 @@
     {
       "Number": "038",
       "Name": "Ninetales",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/05/038Ninetales.png/250px-038Ninetales.png",
       "Classification": "Fox Pokèmon",
       "Types": [
         "Fire"
@@ -2649,6 +2667,7 @@
     {
       "Number": "039",
       "Name": "Jigglypuff",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
       "Classification": "Balloon Pokèmon",
       "Types": [
         "Normal",
@@ -2717,6 +2736,7 @@
     {
       "Number": "040",
       "Name": "Wigglytuff",
+      "Image": "http://clipart.toonarific.com/data/media/11/pokemon040.gif",
       "Classification": "Balloon Pokèmon",
       "Types": [
         "Normal",
@@ -2782,6 +2802,7 @@
     {
       "Number": "041",
       "Name": "Zubat",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/d/da/041Zubat.png/250px-041Zubat.png",
       "Classification": "Bat Pokèmon",
       "Types": [
         "Poison",
@@ -2853,6 +2874,7 @@
     {
       "Number": "042",
       "Name": "Golbat",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/0c/042Golbat.png/250px-042Golbat.png",
       "Classification": "Bat Pokèmon",
       "Types": [
         "Poison",
@@ -2921,6 +2943,7 @@
     {
       "Number": "043",
       "Name": "Oddish",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/43/043Oddish.png/250px-043Oddish.png",
       "Classification": "Weed Pokèmon",
       "Types": [
         "Grass",
@@ -2994,6 +3017,7 @@
     {
       "Number": "044",
       "Name": "Gloom",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/2/2a/044Gloom.png/250px-044Gloom.png",
       "Classification": "Weed Pokèmon",
       "Types": [
         "Grass",
@@ -3071,6 +3095,7 @@
     {
       "Number": "045",
       "Name": "Vileplume",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/6/6a/045Vileplume.png/250px-045Vileplume.png",
       "Classification": "Flower Pokèmon",
       "Types": [
         "Grass",
@@ -3143,6 +3168,7 @@
     {
       "Number": "046",
       "Name": "Paras",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/d/d4/046Paras.png/250px-046Paras.png",
       "Classification": "Mushroom Pokèmon",
       "Types": [
         "Bug",
@@ -3216,6 +3242,7 @@
     {
       "Number": "047",
       "Name": "Parasect",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/80/047Parasect.png/250px-047Parasect.png",
       "Classification": "Mushroom Pokèmon",
       "Types": [
         "Bug",
@@ -3286,6 +3313,7 @@
     {
       "Number": "048",
       "Name": "Venonat",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/ad/048Venonat.png/250px-048Venonat.png",
       "Classification": "Insect Pokèmon",
       "Types": [
         "Bug",
@@ -3357,6 +3385,7 @@
     {
       "Number": "049",
       "Name": "Venomoth",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/d/d3/049Venomoth.png/250px-049Venomoth.png",
       "Classification": "Poison Moth Pokèmon",
       "Types": [
         "Bug",
@@ -3425,6 +3454,7 @@
     {
       "Number": "050",
       "Name": "Diglett",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/31/050Diglett.png/250px-050Diglett.png",
       "Classification": "Mole Pokèmon",
       "Types": [
         "Ground"
@@ -3492,6 +3522,7 @@
     {
       "Number": "051",
       "Name": "Dugtrio",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/e/e5/051Dugtrio.png/250px-051Dugtrio.png",
       "Classification": "Mole Pokèmon",
       "Types": [
         "Ground"
@@ -3556,6 +3587,7 @@
     {
       "Number": "052",
       "Name": "Meowth",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/d/d6/052Meowth.png/250px-052Meowth.png",
       "Classification": "Scratch Cat Pokèmon",
       "Types": [
         "Normal"
@@ -3619,6 +3651,7 @@
     {
       "Number": "053",
       "Name": "Persian",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/1/13/053Persian.png/250px-053Persian.png",
       "Classification": "Classy Cat Pokèmon",
       "Types": [
         "Normal"
@@ -3679,6 +3712,7 @@
     {
       "Number": "054",
       "Name": "Psyduck",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/5/53/054Psyduck.png/250px-054Psyduck.png",
       "Classification": "Duck Pokèmon",
       "Types": [
         "Water"
@@ -3746,6 +3780,7 @@
     {
       "Number": "055",
       "Name": "Golduck",
+      "Image": "http://static.pokemonpets.com/images/monsters-images-300-300/55-Golduck.png",
       "Classification": "Duck Pokèmon",
       "Types": [
         "Water"
@@ -3815,6 +3850,7 @@
     {
       "Number": "056",
       "Name": "Mankey",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/41/056Mankey.png/250px-056Mankey.png",
       "Classification": "Pig Monkey Pokèmon",
       "Types": [
         "Fighting"
@@ -3882,6 +3918,7 @@
     {
       "Number": "057",
       "Name": "Primeape",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9a/057Primeape.png/250px-057Primeape.png",
       "Classification": "Pig Monkey Pokèmon",
       "Types": [
         "Fighting"
@@ -3946,6 +3983,7 @@
     {
       "Number": "058",
       "Name": "Growlithe",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/3d/058Growlithe.png/250px-058Growlithe.png",
       "Classification": "Puppy Pokèmon",
       "Types": [
         "Fire"
@@ -4016,6 +4054,7 @@
     {
       "Number": "059",
       "Name": "Arcanine",
+      "Image": "http://4.bp.blogspot.com/-ywFznstsYjQ/UyCc8QnKoKI/AAAAAAAAHWo/ZschryqJMuw/s1600/1rc8id67.wizardchan.Arcanine.png",
       "Classification": "Legendary Pokèmon",
       "Types": [
         "Fire"
@@ -4083,6 +4122,7 @@
     {
       "Number": "060",
       "Name": "Poliwag",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/49/060Poliwag.png/250px-060Poliwag.png",
       "Classification": "Tadpole Pokèmon",
       "Types": [
         "Water"
@@ -4152,6 +4192,7 @@
     {
       "Number": "061",
       "Name": "Poliwhirl",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a9/061Poliwhirl.png/250px-061Poliwhirl.png",
       "Classification": "Tadpole Pokèmon",
       "Types": [
         "Water"
@@ -4226,6 +4267,7 @@
     {
       "Number": "062",
       "Name": "Poliwrath",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/2/2d/062Poliwrath.png/250px-062Poliwrath.png",
       "Classification": "Tadpole Pokèmon",
       "Types": [
         "Water",
@@ -4301,6 +4343,7 @@
     {
       "Number": "063",
       "Name": "Abra",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/6/62/063Abra.png/250px-063Abra.png",
       "Classification": "Psi Pokèmon",
       "Types": [
         "Psychic"
@@ -4368,6 +4411,7 @@
     {
       "Number": "064",
       "Name": "Kadabra",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/97/064Kadabra.png/250px-064Kadabra.png",
       "Classification": "Psi Pokèmon",
       "Types": [
         "Psychic"
@@ -4441,6 +4485,7 @@
     {
       "Number": "065",
       "Name": "Alakazam",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/cc/065Alakazam.png/250px-065Alakazam.png",
       "Classification": "Psi Pokèmon",
       "Types": [
         "Psychic"
@@ -4508,6 +4553,7 @@
     {
       "Number": "066",
       "Name": "Machop",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/85/066Machop.png/250px-066Machop.png",
       "Classification": "Superpower Pokèmon",
       "Types": [
         "Fighting"
@@ -4580,6 +4626,7 @@
     {
       "Number": "067",
       "Name": "Machoke",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/8e/067Machoke.png/250px-067Machoke.png",
       "Classification": "Superpower Pokèmon",
       "Types": [
         "Fighting"
@@ -4654,6 +4701,7 @@
     {
       "Number": "068",
       "Name": "Machamp",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/8f/068Machamp.png/250px-068Machamp.png",
       "Classification": "Superpower Pokèmon",
       "Types": [
         "Fighting"
@@ -4722,6 +4770,7 @@
     {
       "Number": "069",
       "Name": "Bellsprout",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a2/069Bellsprout.png/250px-069Bellsprout.png",
       "Classification": "Flower Pokèmon",
       "Types": [
         "Grass",
@@ -4798,6 +4847,7 @@
     {
       "Number": "070",
       "Name": "Weepinbell",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9f/070Weepinbell.png/250px-070Weepinbell.png",
       "Classification": "Flycatcher Pokèmon",
       "Types": [
         "Grass",
@@ -4876,6 +4926,7 @@
     {
       "Number": "071",
       "Name": "Victreebel",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/b/be/071Victreebel.png/250px-071Victreebel.png",
       "Classification": "Flycatcher Pokèmon",
       "Types": [
         "Grass",
@@ -4948,6 +4999,7 @@
     {
       "Number": "072",
       "Name": "Tentacool",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/4e/072Tentacool.png/250px-072Tentacool.png",
       "Classification": "Jellyfish Pokèmon",
       "Types": [
         "Water",
@@ -5022,6 +5074,7 @@
     {
       "Number": "073",
       "Name": "Tentacruel",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/f/f6/073Tentacruel.png/250px-073Tentacruel.png",
       "Classification": "Jellyfish Pokèmon",
       "Types": [
         "Water",
@@ -5092,6 +5145,7 @@
     {
       "Number": "074",
       "Name": "Geodude",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/98/074Geodude.png/250px-074Geodude.png",
       "Classification": "Rock Pokèmon",
       "Types": [
         "Rock",
@@ -5171,6 +5225,7 @@
     {
       "Number": "075",
       "Name": "Graveler",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/7/75/075Graveler.png/250px-075Graveler.png",
       "Classification": "Rock Pokèmon",
       "Types": [
         "Rock",
@@ -5252,6 +5307,7 @@
     {
       "Number": "076",
       "Name": "Golem",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/f/f2/076Golem.png/250px-076Golem.png",
       "Classification": "Megaton Pokèmon",
       "Types": [
         "Rock",
@@ -5327,6 +5383,7 @@
     {
       "Number": "077",
       "Name": "Ponyta",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/3b/077Ponyta.png/250px-077Ponyta.png",
       "Classification": "Fire Horse Pokèmon",
       "Types": [
         "Fire"
@@ -5398,6 +5455,7 @@
     {
       "Number": "078",
       "Name": "Rapidash",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/3f/078Rapidash.png/250px-078Rapidash.png",
       "Classification": "Fire Horse Pokèmon",
       "Types": [
         "Fire"
@@ -5465,6 +5523,7 @@
     {
       "Number": "079",
       "Name": "Slowpoke",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/7/70/079Slowpoke.png/250px-079Slowpoke.png",
       "Classification": "Dopey Pokèmon",
       "Types": [
         "Water",
@@ -5539,6 +5598,7 @@
     {
       "Number": "080",
       "Name": "Slowbro",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/80/080Slowbro.png/250px-080Slowbro.png",
       "Classification": "Hermit Crab Pokèmon",
       "Types": [
         "Water",
@@ -5609,6 +5669,7 @@
     {
       "Number": "081",
       "Name": "Magnemite",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/6/6c/081Magnemite.png/250px-081Magnemite.png",
       "Classification": "Magnet Pokèmon",
       "Types": [
         "Electric",
@@ -5687,6 +5748,7 @@
     {
       "Number": "082",
       "Name": "Magneton",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/7/72/082Magneton.png/250px-082Magneton.png",
       "Classification": "Magnet Pokèmon",
       "Types": [
         "Electric",
@@ -5761,6 +5823,7 @@
     {
       "Number": "083",
       "Name": "Farfetch'd",
+      "Image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png",
       "Classification": "Wild Duck Pokèmon",
       "Types": [
         "Normal",
@@ -5819,6 +5882,7 @@
     {
       "Number": "084",
       "Name": "Doduo",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/5/54/084Doduo.png/250px-084Doduo.png",
       "Classification": "Twin Bird Pokèmon",
       "Types": [
         "Normal",
@@ -5889,6 +5953,7 @@
     {
       "Number": "085",
       "Name": "Dodrio",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/93/085Dodrio.png/250px-085Dodrio.png",
       "Classification": "Triple Bird Pokèmon",
       "Types": [
         "Normal",
@@ -5955,6 +6020,7 @@
     {
       "Number": "086",
       "Name": "Seel",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/1/1f/086Seel.png/250px-086Seel.png",
       "Classification": "Sea Lion Pokèmon",
       "Types": [
         "Water"
@@ -6023,6 +6089,7 @@
     {
       "Number": "087",
       "Name": "Dewgong",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/c7/087Dewgong.png/250px-087Dewgong.png",
       "Classification": "Sea Lion Pokèmon",
       "Types": [
         "Water",
@@ -6088,6 +6155,7 @@
     {
       "Number": "088",
       "Name": "Grimer",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a0/088Grimer.png/250px-088Grimer.png",
       "Classification": "Sludge Pokèmon",
       "Types": [
         "Poison"
@@ -6157,6 +6225,7 @@
     {
       "Number": "089",
       "Name": "Muk",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/7/7c/089Muk.png/250px-089Muk.png",
       "Classification": "Sludge Pokèmon",
       "Types": [
         "Poison"
@@ -6222,6 +6291,7 @@
     {
       "Number": "090",
       "Name": "Shellder",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/40/090Shellder.png/250px-090Shellder.png",
       "Classification": "Bivalve Pokèmon",
       "Types": [
         "Water"
@@ -6290,6 +6360,7 @@
     {
       "Number": "091",
       "Name": "Cloyster",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/1/1d/091Cloyster.png/250px-091Cloyster.png",
       "Classification": "Bivalve Pokèmon",
       "Types": [
         "Water",
@@ -6355,6 +6426,7 @@
     {
       "Number": "092",
       "Name": "Gastly",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/ca/092Gastly.png/250px-092Gastly.png",
       "Classification": "Gas Pokèmon",
       "Types": [
         "Ghost",
@@ -6432,6 +6504,7 @@
     {
       "Number": "093",
       "Name": "Haunter",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/6/62/093Haunter.png/250px-093Haunter.png",
       "Classification": "Gas Pokèmon",
       "Types": [
         "Ghost",
@@ -6511,6 +6584,7 @@
     {
       "Number": "094",
       "Name": "Gengar",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png",
       "Classification": "Shadow Pokèmon",
       "Types": [
         "Ghost",
@@ -6584,6 +6658,7 @@
     {
       "Number": "095",
       "Name": "Onix",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9a/095Onix.png/250px-095Onix.png",
       "Classification": "Rock Snake Pokèmon",
       "Types": [
         "Rock",
@@ -6649,6 +6724,7 @@
     {
       "Number": "096",
       "Name": "Drowzee",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/3e/096Drowzee.png/250px-096Drowzee.png",
       "Classification": "Hypnosis Pokèmon",
       "Types": [
         "Psychic"
@@ -6716,6 +6792,7 @@
     {
       "Number": "097",
       "Name": "Hypno",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/0a/097Hypno.png/250px-097Hypno.png",
       "Classification": "Hypnosis Pokèmon",
       "Types": [
         "Psychic"
@@ -6779,6 +6856,7 @@
     {
       "Number": "098",
       "Name": "Krabby",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a7/098Krabby.png/250px-098Krabby.png",
       "Classification": "River Crab Pokèmon",
       "Types": [
         "Water"
@@ -6847,6 +6925,7 @@
     {
       "Number": "099",
       "Name": "Kingler",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/7/71/099Kingler.png/250px-099Kingler.png",
       "Classification": "Pincer Pokèmon",
       "Types": [
         "Water"
@@ -6911,6 +6990,7 @@
     {
       "Number": "100",
       "Name": "Voltorb",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/d/da/100Voltorb.png/250px-100Voltorb.png",
       "Classification": "Ball Pokèmon",
       "Types": [
         "Electric"
@@ -6977,6 +7057,7 @@
     {
       "Number": "101",
       "Name": "Electrode",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/8/84/101Electrode.png/250px-101Electrode.png",
       "Classification": "Ball Pokèmon",
       "Types": [
         "Electric"
@@ -7039,6 +7120,7 @@
     {
       "Number": "102",
       "Name": "Exeggcute",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/af/102Exeggcute.png/250px-102Exeggcute.png",
       "Classification": "Egg Pokèmon",
       "Types": [
         "Grass",
@@ -7110,6 +7192,7 @@
     {
       "Number": "103",
       "Name": "Exeggutor",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/2/24/103Exeggutor.png/250px-103Exeggutor.png",
       "Classification": "Coconut Pokèmon",
       "Types": [
         "Grass",
@@ -7182,6 +7265,7 @@
     {
       "Number": "104",
       "Name": "Cubone",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/2/2a/104Cubone.png/250px-104Cubone.png",
       "Classification": "Lonely Pokèmon",
       "Types": [
         "Ground"
@@ -7250,6 +7334,7 @@
     {
       "Number": "105",
       "Name": "Marowak",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/98/105Marowak.png/250px-105Marowak.png",
       "Classification": "Bone Keeper Pokèmon",
       "Types": [
         "Ground"
@@ -7314,6 +7399,7 @@
     {
       "Number": "106",
       "Name": "Hitmonlee",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/3/32/106Hitmonlee.png/250px-106Hitmonlee.png",
       "Classification": "Kicking Pokèmon",
       "Types": [
         "Fighting"
@@ -7372,6 +7458,7 @@
     {
       "Number": "107",
       "Name": "Hitmonchan",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/a/a3/107Hitmonchan.png/250px-107Hitmonchan.png",
       "Classification": "Punching Pokèmon",
       "Types": [
         "Fighting"
@@ -7435,6 +7522,7 @@
     {
       "Number": "108",
       "Name": "Lickitung",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/0/00/108Lickitung.png/250px-108Lickitung.png",
       "Classification": "Licking Pokèmon",
       "Types": [
         "Normal"
@@ -7489,6 +7577,7 @@
     {
       "Number": "109",
       "Name": "Koffing",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/1/17/109Koffing.png/250px-109Koffing.png",
       "Classification": "Poison Gas Pokèmon",
       "Types": [
         "Poison"
@@ -7558,6 +7647,7 @@
     {
       "Number": "110",
       "Name": "Weezing",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/42/110Weezing.png/250px-110Weezing.png",
       "Classification": "Poison Gas Pokèmon",
       "Types": [
         "Poison"
@@ -7623,6 +7713,7 @@
     {
       "Number": "111",
       "Name": "Rhyhorn",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/111Rhyhorn.png/250px-111Rhyhorn.png",
       "Classification": "Spikes Pokèmon",
       "Types": [
         "Ground",
@@ -7698,6 +7789,7 @@
     {
       "Number": "112",
       "Name": "Rhydon",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/4/47/112Rhydon.png/250px-112Rhydon.png",
       "Classification": "Drill Pokèmon",
       "Types": [
         "Ground",
@@ -7769,6 +7861,7 @@
     {
       "Number": "113",
       "Name": "Chansey",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/c/cd/113Chansey.png/250px-113Chansey.pngb",
       "Classification": "Egg Pokèmon",
       "Types": [
         "Normal"
@@ -8345,6 +8438,7 @@
     {
       "Number": "122",
       "Name": "Mr. Mime",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/e/ec/122Mr._Mime.png/250px-122Mr._Mime.png",
       "Classification": "Barrier Pokèmon",
       "Types": [
         "Psychic",
@@ -9645,6 +9739,7 @@
     {
       "Number": "143",
       "Name": "Snorlax",
+      "Image": "https://cdn.bulbagarden.net/upload/thumb/f/fb/143Snorlax.png/250px-143Snorlax.png",
       "Classification": "Sleeping Pokèmon",
       "Types": [
         "Normal"
