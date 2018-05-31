@@ -11,7 +11,7 @@
     <style>
     body {
 
-    margin: auto;
+    margin-left: 1%;
     padding: 10px;
     background-color: darkgreen;
     color: white;
@@ -67,10 +67,6 @@
 
     <a href="pokemono1.html">Pokéfind</a>
     <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="" >
-    <form id="skjema">
-        <input type="text" id="q">
-        <button type="submit">SØK</button>
-    </form>
 
 </header>
 
@@ -113,6 +109,9 @@
     const db = firebase.database();
     const pokemons = db.ref("pokemons");
 
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var navn = url.searchParams.get("name");
 
 
     function visPokemons(snap) {
@@ -143,7 +142,10 @@
 
 
 
-    pokemons.on("child_added", visPokemons);
+    pokemons
+        .orderByChild("Name")
+        .equalTo(navn)
+        .on("child_added", visPokemons);
 
     function search(evt){
         evt.preventDefault();
@@ -193,6 +195,7 @@
                         kommentarer.push({
                             tekst: inpKommentar.value,
                             bilde: photoURL,
+                            pokemon: navn,
                             navn: displayName,
                             tid: firebase.database.ServerValue.TIMESTAMP
 
@@ -214,7 +217,10 @@
                     }
 
                     inpKommentar.onchange = lagreKommentar;
-                    kommentarer.on("child_added", visKommentar);
+                    kommentarer
+                        .orderByChild("pokemon")
+                        .equalTo(navn)
+                        .on("child_added", visKommentar);
 
                     let timer;
 
