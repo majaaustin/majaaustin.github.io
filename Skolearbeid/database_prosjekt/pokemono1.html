@@ -27,9 +27,13 @@
 
 </main>
 <footer>
+
     <meta charset="UTF-8">
     <title>Sample FirebaseUI App</title>
+<h3 style="margin-left: 40%">Login to give us feedback...</h3>
+<div id="firebaseui-auth-container"></div>
 
+</footer>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -62,27 +66,7 @@
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-    <h3 style="margin-left: 40%">Login to give us feedback...</h3>
-    <div id="firebaseui-auth-container"></div>
-    </a>
-</footer>
 
-<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAeo7fpc4LHhlVrplFlNuh5RHscONSRHvk",
-        authDomain: "it01-b6976.firebaseapp.com",
-        databaseURL: "https://it01-b6976.firebaseio.com",
-        projectId: "it01-b6976",
-        storageBucket: "it01-b6976.appspot.com",
-        messagingSenderId: "525456804574"
-    };
-    firebase.initializeApp(config);
-</script>
-
-<script>
 
     const skjema = document.getElementById("skjema");
     const q = document.getElementById("q");

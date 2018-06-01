@@ -3,29 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="teststyle.css">
+    <link rel="stylesheet" href="poke3.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.min.css">
 
     <title>Title</title>
     <style>
-    body {
+        #wrapper {
+            margin-left: 15%;
+            margin-right: 15%;
 
-    margin-left: 1%;
-    padding: 10px;
-    background-color: darkgreen;
-    color: white;
-    }
-    main {
-    background-color: grey;
-    margin-left: 6%;
-    margin-right: 6%;
+        }
+        .row-1 { grid-row: span 1; }
+        .row-2 { grid-row: span 2; }
+        .row-3 { grid-row: span 3; }
+        .row-4 { grid-row: span 4; }
+        .row-5 { grid-row: span 5; }
+        .row-6 { grid-row: span 6; }
+        .row-7 { grid-row: span 7; }
+        .row-8 { grid-row: span 8; }
+        .row-9 { grid-row: span 9; }
+        .row-10 { grid-row: span 10; }
+        .row-11 { grid-row: span 11;}
+        .row-12 { grid-row: span 12; }
 
-    }
+
+        .col-1 { grid-column: span 1;}
+        .col-2 { grid-column: span 2;}
+        .col-3 { grid-column: span 3;}
+        .col-4 { grid-column: span 4;}
+        .col-5 { grid-column: span 5;}
+        .col-6 { grid-column: span 6;}
+        .col-7 { grid-column: span 7;}
+        .col-8 { grid-column: span 8;}
+        .col-9 { grid-column: span 9;}
+        .col-10 { grid-column: span 10;}
+        .col-11 { grid-column: span 11;}
+        .col-12 { grid-column: span 12;}
+
+
+
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+
+
+
+        #wrapper > article {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 2fr 12fr;
+            padding: 2%;
+
+
+        }
+        #wrapper > article > a {
+            color: #eeeeee;
+            text-decoration: none;
+        }
+        html {
+            font-family: "Fira Sans","Trebuchet MS","Tahoma","Ubuntu","Helvetica","Arial",sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #404040;
+
+        }
+        main {
+            background-color: grey;
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+        header {
+
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 0 20px;
+            height: 80px;
+            border: 4px inset darkblue;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 20px;
+            background-color: grey;
+        }
+        header > a {
+            margin-top: -0.1%;
+            font-size: 250%;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            text-decoration: none;
+
+        }
+        article > span {
+            margin-left: 1%;
+        }
+        article > img {
+            margin-top: 1%;
+            min-width: 50px;
+            min-height: 50px;
+            position: relative;
+            margin-left: 5%;
+        }
+        #inpTekst {
+            background-color: lightyellow;
+            font-size: 1.2rem;
+        }
+
+        .lblDelete {
+            padding-right: 5px;
+            font-weight: bold;
+            padding-left: 5px;
+            opacity: 0.3;
+        }
+        .lblDelete:hover {
+            opacity: 1;
+        }
+
     img {
-    height: 2rem;
-    margin-left: 5%;
-    margin-top: 1%;
+    height: ;
+    margin-left: ;
+    margin-top: -2%;
+    }
+    article > img {
+        height: 2rem;
+        margin-left: 5%;
+        margin-top: 1%;
+
     }
 
 
@@ -35,7 +142,13 @@
     grid-gap: 10px;
     grid-template-columns: auto 1fr;
     }
-
+    body {
+        background-color: darkgreen;
+        color: white;
+        padding: 10px;
+        font-family: 'Orbitron', sans-serif;
+        margin-left: 1%;
+    }
     @keyframes skriver {
     from {
     transform: translateY(0);
@@ -55,7 +168,13 @@
     span .b:nth-child(3) {
     animation-delay: 0.4s;
     }
+    #wrapper > article {
 
+
+    }
+        header > img {
+
+        }
 
 
     </style>
@@ -66,7 +185,7 @@
 
 
     <a href="pokemono1.html">Pokéfind</a>
-    <img style="max-width: 45%; max-height: 45%" src="logoen.png" alt="" >
+    <img style="max-width: 50%; max-height: 50%;" src="logoen.png" alt="" >
 
 </header>
 
@@ -85,6 +204,7 @@
     <div id="skrivere"></div>
 
 </main>
+
 
 <script src="moment-with-locales.min.js"></script>
 
@@ -120,13 +240,13 @@
         resultat.innerHTML += `
         <div id="wrapper">
                 <article>
-                    <a style="font-weight: bold" color="white" text-decoration="none" href="pokemon03.html"> #${pokemon.Number} ${pokemon.Name}</a>
-                   <img src="${pokemon.Image}">
-                    <p>Type: ${pokemon.Types}</p>
-                    <p>Max CP: ${pokemon.MaxCP}</p>
-                    <p>Max HP: ${pokemon.MaxHP}</p>
-                    ${"Next_Evolution" in pokemon ? "<p>Next Evolution:<br>#"+ pokemon.Next_Evolution.Number1 +" "+pokemon.Next_Evolution.Name + "<br>" + (("Number2" in pokemon.Next_Evolution) ? "#"+pokemon.Next_Evolution.Number2 +" "+pokemon.Next_Evolution.Name2 + "</p>" : "<p></p>") : "<p></p>"}
-                    ${"Next_Evolution_Requirements" in pokemon ? "<p>Next Evolution Requirements:<br>" + pokemon.Next_Evolution_Requirements.Amount +" "+ pokemon.Next_Evolution_Requirements.Name+ "</p>" : "<p></p>"}
+                    <a class="col-1 row-1" style="font-size: 28px; font-weight: bold; color= white;" href="pokemon03.html"> #${pokemon.Number} ${pokemon.Name}</a>
+                   <img class="col-1 row-1" style="min-height: 200px; min-width: 200px" src="${pokemon.Image}">
+                    <p class="col-2">Type: ${pokemon.Types}</p>
+                    <p class="">Max CP: ${pokemon.MaxCP}</p>
+                    <p class="">Max HP: ${pokemon.MaxHP}</p>
+                    ${"Next_Evolution" in pokemon ? "<p class=''>Next Evolution:<br>#"+ pokemon.Next_Evolution.Number1 +" "+pokemon.Next_Evolution.Name + "<br>" + (("Number2" in pokemon.Next_Evolution) ? "#"+pokemon.Next_Evolution.Number2 +" "+pokemon.Next_Evolution.Name2 + "</p>" : "<p></p>") : "<p></p>"}
+                    ${"Next_Evolution_Requirements" in pokemon ? "<p class=''>Next Evolution Requirements:<br>" + pokemon.Next_Evolution_Requirements.Amount +" "+ pokemon.Next_Evolution_Requirements.Name+ "</p>" : "<p></p>"}
 
 
 
@@ -211,7 +331,7 @@
                                                    <img src="${kommentar.bilde}">
                                                    <span>${kommentar.navn}</span>
                                                    <span style="color: lightgrey">${moment(new Date(kommentar.tid)).fromNow()}</span><br>
-                                                   <span style="margin-left: 13%; color: yellow">${kommentar.tekst}</span>
+                                                   <span style="margin-left: 13%; color: yellow;">${kommentar.tekst}</span>
 
                                               </article>` + comments.innerHTML;
                     }
@@ -291,7 +411,7 @@
 
 </script>
 
-
-
 </body>
+
+
 </html>
