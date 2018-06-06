@@ -123,55 +123,55 @@
             opacity: 1;
         }
 
-    img {
-    height: ;
-    margin-left: ;
-    margin-top: -2%;
-    }
-    article > img {
-        height: 2rem;
-        margin-left: 5%;
-        margin-top: 1%;
+        img {
+            height: ;
+            margin-left: ;
+            margin-top: -2%;
+        }
+        article > img {
+            height: 2rem;
+            margin-left: 5%;
+            margin-top: 1%;
 
-    }
-
-
-    #skrivere > article {
-    display: grid;
-    align-items: center;
-    grid-gap: 10px;
-    grid-template-columns: auto 1fr;
-    }
-    body {
-        background-color: darkgreen;
-        color: white;
-        padding: 10px;
-        font-family: 'Orbitron', sans-serif;
-        margin-left: 1%;
-    }
-    @keyframes skriver {
-    from {
-    transform: translateY(0);
-    }
-    to {
-    transform: translateY(-8px);
-    }
-    }
-
-    span .b {
-    display: inline-block;
-    animation: skriver 0.6s infinite alternate;
-    }
-    span .b:nth-child(2) {
-    animation-delay: 0.2s;
-    }
-    span .b:nth-child(3) {
-    animation-delay: 0.4s;
-    }
-    #wrapper > article {
+        }
 
 
-    }
+        #skrivere > article {
+            display: grid;
+            align-items: center;
+            grid-gap: 10px;
+            grid-template-columns: auto 1fr;
+        }
+        body {
+            background-color: darkgreen;
+            color: white;
+            padding: 10px;
+            font-family: 'Orbitron', sans-serif;
+            margin-left: 1%;
+        }
+        @keyframes skriver {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-8px);
+            }
+        }
+
+        span .b {
+            display: inline-block;
+            animation: skriver 0.6s infinite alternate;
+        }
+        span .b:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        span .b:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        #wrapper > article {
+
+
+        }
         header > img {
 
         }
@@ -179,7 +179,7 @@
 
     </style>
 
-    </head>
+</head>
 <body>
 <header>
 
@@ -205,9 +205,17 @@
 
 </main>
 
+<footer>
 
+    <meta charset="UTF-8">
+    <title>Sample FirebaseUI App</title>
+
+    <div id="firebaseui-auth-container"></div>
+
+</footer>
 
 <script src="moment-with-locales.min.js"></script>
+
 
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 <script>
@@ -222,7 +230,29 @@
     };
     firebase.initializeApp(config);
 </script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
 <script>
+    // FirebaseUI config.
+    var uiConfig = {
+        signInSuccessUrl: 'po.html?name=${pokemon.Name}',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+<script>
+
+
     const skjema = document.getElementById("skjema");
     const q = document.getElementById("q");
     const resultat = document.getElementById("resultat");
@@ -241,7 +271,7 @@
         resultat.innerHTML += `
         <div id="wrapper">
                 <article>
-                    <a class="col-1 row-1" style="font-size: 28px; font-weight: bold; color= white;" href="pokemon03.html"> #${pokemon.Number} ${pokemon.Name}</a>
+                    <a class="col-1 row-1" style="font-size: 28px; font-weight: bold; color= white;" href="po.html"> #${pokemon.Number} ${pokemon.Name}</a>
                    <img class="col-1 row-1" style="min-height: 200px; min-width: 200px" src="${pokemon.Image}">
                     <p class="col-2">Type: ${pokemon.Types}</p>
                     <p class="">Max CP: ${pokemon.MaxCP}</p>
@@ -415,4 +445,3 @@
 </body>
 
 
-</html>
