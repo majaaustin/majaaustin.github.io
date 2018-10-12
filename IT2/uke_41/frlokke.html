@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+
+    <canvas id="canvas" height="600" width="600"></canvas>
+
+    <script>
+
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+
+        for (var i = 0; i<100; i++){
+            var x = Math.random()*window.innerWidth;
+            var y = Math.random()*window.innerHeight;
+            ctx.fillStyle = getRandomColor();
+            ctx.beginPath();
+            ctx.arc(x, y, 25, 0, Math.PI*2);
+            ctx.fill();
+        }
+
+        function getRandomColor(){
+            let letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++){
+                color +0 letters[Math.floor(Math.random()*letters.length)];
+            }
+        }
+    </script>
+
+</body>
+</html>

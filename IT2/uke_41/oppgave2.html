@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        function lekse(sider){
+            document.write("Lekse på side: " + sider + "<br>");
+        }
+        lekse(6);
+        lekse(10);
+        lekse(40);
+
+        function nyKontakt(fornavn, etternavn, telefon) {
+            document.write(fornavn + etternavn + telefon + "<br>");
+
+        }
+        nyKontakt("Per ", "Gaute ", 98341413);
+        nyKontakt("Per ", "Gaute ", 98341413);
+        nyKontakt("Per ", "Gaute ", 98341413);
+        nyKontakt("Per ", "Gaute ", 98341413);
+        nyKontakt("Per ", "Gaute ", 98341413);
+
+        function f(x){
+            document.write(3*x + "<br>");
+        }
+        f(2);
+        f(6);
+        function finnAreal(w, h){
+            document.write("Arealet er: " + w*h)
+        }
+
+        function lagDiv(tekst, bredde, bakgrunnsfarge, tekstfarge){
+            document.body.style.backgroundColor = bakgrunnsfarge;
+            document.body.style.color = tekstfarge;
+            document.body.style.fontSize = bredde;
+            document.write(tekst);
+        }
+        lagDiv("Hei", 10, "blue", "white");
+
+    </script>
+
+</body>
+</html>
