@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        function kvadrat(n){
+            // En funksjon som returnerer n^2.
+            // Inputparameter n: number
+            // -- Bytt ut XXX under med riktig kode ---
+            return Math.pow(n, 2);
+
+        }
+        //Test av funksjon:
+        console.log(kvadrat(4)); // Skal gi 16 i konsollen
+        console.log(kvadrat(17)); // Skal gi 289 i konsollen
+
+        function erOddeTall(tall){
+            // En funksjon om returnerer true hvis tall er oddetall, og false hvis n er partall
+            // Inputparameter tall: number
+            // -- Skriv din kode under her: --
+            return tall % 2 === 0;
+
+        }
+
+        //Test av funksjon:
+        console.log(erOddeTall(31)); // Skal gi true i konsollen
+        console.log(erOddeTall(52)); // Skal gi false i konsollen
+
+        function gange(n,m){
+            // En funksjon om returnerer true hvis tall er oddetall, og false hvis n er partall
+            // Inputparametre n: number, m: number
+            // -- Skriv din kode under her: --
+            return n*m;
+
+
+
+
+
+        }
+        console.log(gange(3,2));
+
+        function iFjerde(tallet){
+            // En funksjon som bruker funksjonen kvadrat(tallet), og returnerer tallet^4.
+            // Input tallet: number
+            // -- Skriv din kode under kode her: ---
+            return Math.pow(tallet, 4);
+
+
+        }
+        console.log(iFjerde(2));
+
+        function andregrad(a,b,c) {
+            var overrottegn = b*b-4*a*c;
+            var rot = Math.sqrt(overrottegn);
+
+            if (overrottegn < 0){
+                console.log("ingen løsning");
+            }
+            else{
+                return (-b + rot)/2*a && (-b - rot)/2*a;
+            }
+
+
+        }
+        console.log(andregrad(1,3,2));
+        
+
+
+    </script>
+
+</body>
+</html>

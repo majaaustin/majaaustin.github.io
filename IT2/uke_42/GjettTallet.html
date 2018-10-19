@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+    <p>Skriv inn tall:</p>
+    <br>
+    <input type="number" id="inpTall">
+    <button id="btnSvar">OK</button>
+    <div id="svar"></div>
+
+
+
+
+    <script>
+
+            var tallet = Math.floor(Math.random()*100);
+            var inpTall = document.getElementById("inpTall");
+            var btnSvar = document.getElementById("btnSvar");
+            var svar = document.getElementById("svar");
+
+
+            btnSvar.onclick = function (){
+
+                if (tallet < inpTall.value) {
+                    svar.innerHTML = "tallet ditt er for høyt";
+                }
+                else if (tallet > inpTall.value) {
+                    svar.innerHTML = "tallet ditt er for lavt";
+                }
+                else if (tallet === inpTall.value) {
+                    svar.innerHTML = tallet + "er riktig!";
+                }
+
+            }
+
+
+    </script>
+
+</body>
+</html>

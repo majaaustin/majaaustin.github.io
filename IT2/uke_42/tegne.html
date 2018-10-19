@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<input type="color" id="inpColor">
+<input type="range" min="1" max="100" value="25" id="inpRange">
+
+
+    <script>
+
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.height = window.innerHeight - 90;
+        canvas.width = window.innerWidth;
+        var inpColor = document.getElementById("inpColor");
+        var inpRange = document.getElementById("inpRange");
+        var radius = 25;
+
+        oninput = function () {
+         radius = inpRange.value;
+        }
+        canvas.onmousemove = function(event) {
+
+            ctx.fillStyle = inpColor.value;
+            var x = event.clientX;
+            var y = event.clientY;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fill();
+
+        }
+
+
+    </script>
+
+</body>
+</html>
