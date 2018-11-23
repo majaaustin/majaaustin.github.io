@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styleValg.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Dosis|IM+Fell+Great+Primer|Indie+Flower" rel="stylesheet">
     <title>valg</title>
 </head>
 <body>
@@ -14,19 +15,26 @@
 </header>
 <main>
 
-    <div id="divRamme">
-        <img src="foreløpig_guide.png" id="imgGuide">
-        <article>
+    <div id="divRamme" style="max-height: 50%; position: static">
+        <p id="pGuide" type="text">Press enter to continue, <br>
+            but remember to choose whisely! <br>
+            Before you can begin you must press next. <br>
+            Good luck!</p>
+        <img src="man1.jpg" alt="" style="visibility: hidden; cursor: pointer; max-width: 15%; max-height: 15%; margin-left: 28%" id="imgMan1">
+        <img src="man1.jpg"  style="visibility: hidden; max-height: 15%; cursor: pointer; max-width: 15%;" id="imgMan">
+        <img src="man3.png" alt="" style="visibility: hidden; cursor: pointer; max-height: 15%; max-width: 15%" id="imgMan2">
+        <!-- Kommentarer synes ikke på nettsiden <img src="" alt="" id="imgGuideMenue">
+        <img type="hidden" src="foreløpig_guide.png" id="imgGuide"> -->
+        <article id="article" style="visibility: hidden">
 
-            <div>
+            <div style="margin-left: 2%">
 
 
                 <p id="pTekst">Press next to begin...</p>
                 <input type="hidden" id="inpTekst">
                 <button style="visibility: hidden" id="btnTilInp">Ok</button>
 
-
-                <button id="btnSvar2">Next</button>
+                <button style="visibility: visible" id="btnSvar2">Next</button>
 
              </div>
 
