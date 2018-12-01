@@ -9,6 +9,7 @@ body {
 #article {
     padding: 1%;
     border: solid darkblue;
+    margin-top: 5%;
 
 
 
@@ -51,6 +52,9 @@ h1 {
     font-size: 220%;
     font-family: 'Indie Flower', cursive;
     color: white;
-    position: absolute;
+    margin-left: 2%;
+
+
+
 
 }
