@@ -51,8 +51,8 @@ btnSvar2.onclick = function () {
         imgMan.style.display = "block";
         imgMan1.style.display = "block";
         imgMan2.style.display = "block";
-        imgMan.src = "man1.jpg";
-        imgMan1.src = "Man2.png";
+        imgMan1.src = "man1.jpg";
+        imgMan.src = "Man2.png";
         imgMan2.src = "man3.png";
     }
 }
@@ -89,13 +89,13 @@ btnSvar2.onchange = function () {
     if (n === 11) {
         imgMan.style.display = "block";
         imgMan.src = "man3.png";
-    }h
+    }
     if (n === 12) {
         imgMan.style.display = "block";
         imgMan1.style.display = "block";
         imgMan2.style.display = "block";
-        imgMan.src = "man1.jpg";
-        imgMan1.src = "Man2.png";
+        imgMan1.src = "man1.jpg";
+        imgMan.src = "Man2.png";
         imgMan2.src = "man3.png";
     }
 }
@@ -106,7 +106,9 @@ btnTilInp.onclick = function () {
     btnTilInp.style.visibility = "hidden";
     inpTekst.type = "hidden";
     btnSvar2.style.visibility = "visible";
-    tekstliste[3] = "next..." + inpTekst.value;
+    tekstliste[3] = "press next...";
+    pTekst.innerHTML = tekstliste[3];
+    //pTekst = tekstliste[3];
 
 }
 window.onkeydown = function(event){
