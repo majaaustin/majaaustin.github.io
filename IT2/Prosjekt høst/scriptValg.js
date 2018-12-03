@@ -212,7 +212,7 @@ window.onkeyup = function(event){
 
 }
 
-
+//dette er gææææææææææææææææææææææææææææææææy
 
 
 //}
