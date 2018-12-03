@@ -76,7 +76,7 @@ btnSvar2.onclick = function () {
         var m = 1;
         while(m<=6){
             var t = m + " ";
-            pTall.innerHTML = t;
+            pTall.innerHTML += t;
 
             m++;
 
