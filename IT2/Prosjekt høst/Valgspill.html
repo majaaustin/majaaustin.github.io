@@ -20,9 +20,10 @@
             but remember to choose whisely! <br>
             Before you can begin you must press next. <br>
             Good luck!</p>
-        <img data-code="Key1" src="man1.jpg" alt="" style="display: none; cursor: pointer; max-width: 15%; max-height: 15%;" id="imgMan1">
-        <img data-code="Key2" src="man1.jpg"  style="display: none; max-height: 15%; cursor: pointer; max-width: 15%;" id="imgMan">
-        <img data-code="Key3" src="man3.png" alt="" style="display: none; cursor: pointer; max-height: 15%; max-width: 15%" id="imgMan2">
+
+        <img data-code="Digit1" src="man1.jpg" alt="" style="display: none; margin-top: 4%; margin-left: 54%; position: fixed; cursor: pointer; max-width: 20%; max-height: 20%;" id="imgMan1">
+        <img data-code="Digit2" src="man1.jpg"  style="display: none; max-height: 20%; margin-top: 4%; margin-left: 62%; position: fixed; cursor: pointer; max-width: 20%;" id="imgMan">
+        <img data-code="Digit3" src="man3.png" alt="" style="display: none; cursor: pointer; max-height: 20%; max-width: 20%; margin-top: 4%; margin-left: 70%; position: fixed;" id="imgMan2">
         <!-- Kommentarer synes ikke på nettsiden <img src="" alt="" id="imgGuideMenue">
         <img type="hidden" src="foreløpig_guide.png" id="imgGuide"> -->
         <article id="article" style="visibility: hidden">
@@ -32,7 +33,10 @@
 
                 <p id="pTekst">Press next to begin...</p>
                 <input type="hidden" id="inpTekst">
-                <button style="visibility: hidden" id="btnTilInp">Ok</button>
+                <input type="hidden" id="inpTekst1">
+                <p style="display: none" id="pTall"></p>
+                <button style="display: none" id="btnTilInp">Ok</button>
+                <button style="display: none" id="btnTilInp1">Ok</button>
 
                 <button style="visibility: visible" id="btnSvar2">Next</button>
 
@@ -43,9 +47,9 @@
     </div>
 
 </main>
-<audio data-code="Key1" src="boom.wav"></audio>
-<audio data-code="Key2" src="clap.wav"></audio>
-<audio data-code="Key3" src="hihat.wav"></audio>
+<audio data-code="Digit1" src="boom.wav"></audio>
+<audio data-code="Digit2" src="clap.wav"></audio>
+<audio data-code="Digit3" src="hihat.wav"></audio>
 
 <script src="scriptValg.js"></script>
 

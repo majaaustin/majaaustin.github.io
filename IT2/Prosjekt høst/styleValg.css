@@ -9,7 +9,7 @@ body {
 #article {
     padding: 1%;
     border: solid darkblue;
-    margin-top: 5%;
+    margin-top: 3%;
 
 
 
@@ -46,6 +46,10 @@ h1 {
 #pTekst {
     font-family: 'Indie Flower', cursive;
     font-size: 200%;
+}
+#pTall {
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
 }
 #pGuide {
     text-align: center;
