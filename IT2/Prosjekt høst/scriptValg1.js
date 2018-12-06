@@ -21,15 +21,15 @@ var tekstliste = ["Hi!",
     "Now it is time to start your adventure, don’t you agree?",
     "Now it is time to start your adventure, don’t you agree?",
     "s",
-    "b"]; //Array med all tekst innhold til spillet
+    "b"];
 
 
-var pTekst = document.getElementById("pTekst"); //variabel til hovedtekst
-var divRamme = document.getElementById("divRamme"); //ytter ramme
-var btnSvar2 = document.getElementById("btnSvar2"); //hoved knapp (next)
-var inpTekst = document.getElementById("inpTekst"); //innskrivningsfelt til navn
-var btnTilInp = document.getElementById("btnTilInp"); //knapp til navn
-var pGuide = document.getElementById("pGuide"); //
+var pTekst = document.getElementById("pTekst");
+var divRamme = document.getElementById("divRamme");
+var btnSvar2 = document.getElementById("btnSvar2");
+var inpTekst = document.getElementById("inpTekst");
+var btnTilInp = document.getElementById("btnTilInp");
+var pGuide = document.getElementById("pGuide");
 var article = document.getElementById("article");
 var imgMan = document.getElementById("imgMan");
 var imgMan1 = document.getElementById("imgMan1");
