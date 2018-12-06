@@ -52,16 +52,18 @@ var btnCity = document.getElementById("btnCity");
 var pTimer = document.getElementById("pTimer");
 var activeTimer = false;
 var timer;        //variable for the timer if you want to stop early
-var pTimer = document.getElementById("timer");
 function timerFunc(start, duration) {
     var now = Math.floor(new Date().getTime() / 1000);
     var remaining = duration + start - now;
     pTimer.innerHTML = remaining;
     if (remaining < 1) {
-        pTimer.innerHTML = "Timer ended"+remaining;
+        pTimer.innerHTML = "Timer ended";
 
         tekstliste[24] = "Your stickman has left your side. He would not stick upp for you, now that he saw that you are not a good leader.";
-        pTekst = tekstliste[24];
+        pTekst.innerHTML = tekstliste[24];
+        btnCity.style.display = "none";
+        btnForest.style.display = "none";
+        imgMan.style.display = "none";
 
     }
     return remaining;
@@ -76,10 +78,11 @@ var createTimer = function(duration) {
             activeTimer = false;
         }
 
-    }, 1000);
+    }, 1000);}
     function earlyStop() {
+
         clearInterval(timer);
-    }
+
 }
 
 
@@ -148,16 +151,18 @@ btnStart.onclick = function () {
     }
 
 btnCity.onclick = function () {
+    earlyStop();
     tekstliste[24] = "It will take some time to get to the city...";
     pTekst.innerHTML = tekstliste[24];
-    btnCity.style.display = "none;";
-    btnForest.style.display = "none;"
+    btnCity.style.display = "none";
+    btnForest.style.display = "none";
 }
 btnForest.onclick = function () {
+    earlyStop();
     tekstliste[24] = "It will take some time to get to the forest...";
     pTekst.innerHTML = tekstliste[24];
-    btnCity.style.display = "none;";
-    btnForest.style.display = "none;"
+    btnCity.style.display = "none";
+    btnForest.style.display = "none";
 }
 }
 btnSvar2.onclick = function () {
