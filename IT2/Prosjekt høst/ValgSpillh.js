@@ -96,8 +96,8 @@ btnCompName.onclick = function () {
 }
 btnStart.onclick = function () {
     if(inpStart.value === "yes"){
-        tekstliste[26] = "Do you want to go to the city or the forest?";
-        pTekst.innerHTML = tekstliste[26];
+        tekstliste[24] = "Do you want to go to the city or the forest?";
+        pTekst.innerHTML = tekstliste[24];
         btnSvar2.style.display = "none";
         btnStart.style.display = "none";
         inpStart.style.display = "none";
@@ -111,14 +111,14 @@ btnStart.onclick = function () {
     }
 
 btnCity.onclick = function () {
-    tekstliste[26] = "It will take some time to get to the city...";
-    pTekst.innerHTML = tekstliste[26];
+    tekstliste[24] = "It will take some time to get to the city...";
+    pTekst.innerHTML = tekstliste[24];
     btnCity.style.display = "none;";
     btnForest.style.display = "none;"
 }
 btnForest.onclick = function () {
-    tekstliste[26] = "It will take some time to get to the forest...";
-    pTekst.innerHTML = tekstliste[26];
+    tekstliste[24] = "It will take some time to get to the forest...";
+    pTekst.innerHTML = tekstliste[24];
     btnCity.style.display = "none;";
     btnForest.style.display = "none;"
 }
