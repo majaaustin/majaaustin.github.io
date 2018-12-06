@@ -49,6 +49,8 @@ var inpStart = document.getElementById("inpStart");
 var btnStart = document.getElementById("btnStart");
 var btnForest = document.getElementById("btnForest");
 var btnCity = document.getElementById("btnCity");
+var pTimer = document.getElementById("pTimer");
+
 
 
 btnTilInp.onclick = function () {
@@ -60,7 +62,7 @@ btnTilInp.onclick = function () {
     tekstliste[3] = "ooh, lovely...";
     pTekst.innerHTML = tekstliste[3];
 
-    //pTekst = tekstliste[3];
+
 
 }
 
@@ -102,7 +104,9 @@ btnStart.onclick = function () {
         btnStart.style.display = "none";
         inpStart.style.display = "none";
         btnForest.style.display = "block";
-        btnCity.style.display = "block"
+        btnCity.style.display = "block";
+        pTimer.style.display = "block";
+
     }
     else {
         tekstliste[24] = "What do you mean? Come on… let’s get going";
@@ -251,7 +255,7 @@ btnSvar2.onclick = function () {
     }
 }
 
-window.onkeydown = function(event){
+window.onkeydown = function(event){  // her har jeg tatt utgangspunkt i koden til trommemaskinen, men endret slik at det spilles av lyd og lagres en verdi for variabelen companion ved å trykke på 1, 2 eller tre.
     if(companion === 0){
         if(event.code==="Digit1"){companion = "man1.jpg"}
         else if(event.code==="Digit2"){companion = "Man2.png"}
