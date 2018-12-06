@@ -59,7 +59,7 @@ function timerFunc(start, duration) {
     if (remaining < 1) {
         pTimer.innerHTML = "Timer ended";
 
-        tekstliste[24] = "Your stickman has left your side. He would not stick upp for you, now that he saw that you are not a good leader.";
+        tekstliste[24] = "Your stickman has left your side. He would not stick up for you, now that he saw that you are not a good leader.";
         pTekst.innerHTML = tekstliste[24];
         btnCity.style.display = "none";
         btnForest.style.display = "none";
