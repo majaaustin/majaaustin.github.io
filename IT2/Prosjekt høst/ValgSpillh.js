@@ -50,7 +50,37 @@ var btnStart = document.getElementById("btnStart");
 var btnForest = document.getElementById("btnForest");
 var btnCity = document.getElementById("btnCity");
 var pTimer = document.getElementById("pTimer");
+var activeTimer = false;
+var timer;        //variable for the timer if you want to stop early
+var pTimer = document.getElementById("timer");
+function timerFunc(start, duration) {
+    var now = Math.floor(new Date().getTime() / 1000);
+    var remaining = duration + start - now;
+    pTimer.innerHTML = remaining;
+    if (remaining < 1) {
+        pTimer.innerHTML = "Timer ended"+remaining;
 
+        tekstliste[24] = "Your stickman has left your side. He would not stick upp for you, now that he saw that you are not a good leader.";
+        pTekst = tekstliste[24];
+
+    }
+    return remaining;
+}
+var createTimer = function(duration) {
+    activeTimer = true;
+    var now = Math.floor(new Date().getTime() / 1000);
+    timer = setInterval( function() {
+        var rem = timerFunc(now, duration);
+        if (rem < 1) {
+            clearInterval(timer);
+            activeTimer = false;
+        }
+
+    }, 1000);
+    function earlyStop() {
+        clearInterval(timer);
+    }
+}
 
 
 btnTilInp.onclick = function () {
@@ -61,7 +91,6 @@ btnTilInp.onclick = function () {
     btnSvar2.style.visibility = "visible";
     tekstliste[3] = "ooh, lovely...";
     pTekst.innerHTML = tekstliste[3];
-
 
 
 }
@@ -106,6 +135,10 @@ btnStart.onclick = function () {
         btnForest.style.display = "block";
         btnCity.style.display = "block";
         pTimer.style.display = "block";
+        createTimer(8);
+
+
+
 
     }
     else {
@@ -290,6 +323,9 @@ window.onkeyup = function(event){
     boks.classList.remove("spiller");
 
 }
+
+
+
 //document.getElementById("auto").loop = true;
 //var x = document.getElementById("auto").autoplay;
 //var x = document.getElementById("auto");
