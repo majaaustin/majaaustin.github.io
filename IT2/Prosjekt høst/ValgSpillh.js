@@ -21,15 +21,15 @@ var tekstliste = ["Hi!",
     "Now it is time to start your adventure, don’t you agree?",
     "Now it is time to start your adventure, don’t you agree?",
     "s",
-    "b"]; //Array med all tekst innhold til spillet
+    "b"];
 
 
-var pTekst = document.getElementById("pTekst"); //variabel til hovedtekst
-var divRamme = document.getElementById("divRamme"); //ytter ramme
-var btnSvar2 = document.getElementById("btnSvar2"); //hoved knapp (next)
-var inpTekst = document.getElementById("inpTekst"); //innskrivningsfelt til navn
-var btnTilInp = document.getElementById("btnTilInp"); //knapp til navn
-var pGuide = document.getElementById("pGuide"); //
+var pTekst = document.getElementById("pTekst");
+var divRamme = document.getElementById("divRamme");
+var btnSvar2 = document.getElementById("btnSvar2");
+var inpTekst = document.getElementById("inpTekst");
+var btnTilInp = document.getElementById("btnTilInp");
+var pGuide = document.getElementById("pGuide");
 var article = document.getElementById("article");
 var imgMan = document.getElementById("imgMan");
 var imgMan1 = document.getElementById("imgMan1");
@@ -47,9 +47,11 @@ var inpCompName = document.getElementById("inpCompName");
 var btnCompName = document.getElementById("btnCompName");
 var inpStart = document.getElementById("inpStart");
 var btnStart = document.getElementById("btnStart");
+var btnForest = document.getElementById("btnForest");
+var btnCity = document.getElementById("btnCity");
 
 
-btnTilInp.onchange = function () {
+btnTilInp.onclick = function () {
     tekstliste[4] = "Nice to meet you " + inpTekst.value;
     tekstliste[6] = inpTekst.value + ", you have to choose from the following three...";
     btnTilInp.style.display = "none";
@@ -62,7 +64,7 @@ btnTilInp.onchange = function () {
 
 }
 
-btnTilInp1.onchange = function () {
+btnTilInp1.onclick = function () {
     if(inpTekst1.value === "yes"){
         tekstliste[11] = "okey...";
         pTekst.innerHTML = tekstliste[11];
@@ -76,7 +78,7 @@ btnTilInp1.onchange = function () {
     }
 
 }
-btnTilInpTall.onchange = function () {
+btnTilInpTall.onclick = function () {
     btnSvar2.style.display = "block";
     btnTilInpTall.style.display = "none";
     inpTall.style.display = "none";
@@ -84,7 +86,7 @@ btnTilInpTall.onchange = function () {
     tekstliste[16] = "Lets see....";
     pTekst.innerHTML = tekstliste[16];
 }
-btnCompName.onchange = function () {
+btnCompName.onclick = function () {
     btnSvar2.style.display = "block";
     btnCompName.style.display = "none";
     inpCompName.style.display = "none";
@@ -92,146 +94,34 @@ btnCompName.onchange = function () {
     pTekst.innerHTML = tekstliste[18];
 
 }
-btnStart.onchange = function () {
+btnStart.onclick = function () {
     if(inpStart.value === "yes"){
-        tekstliste[26] = "Too bad, I dont know where to go next yet though...";
+        tekstliste[26] = "Do you want to go to the city or the forest?";
         pTekst.innerHTML = tekstliste[26];
         btnSvar2.style.display = "none";
         btnStart.style.display = "none";
         inpStart.style.display = "none";
+        btnForest.style.display = "block";
+        btnCity.style.display = "block"
     }
     else {
         tekstliste[24] = "What do you mean? Come on… let’s get going";
         pTekst.innerHTML = tekstliste[24];
 
     }
+
+btnCity.onclick = function () {
+    tekstliste[26] = "It will take some time to get to the city...";
+    pTekst.innerHTML = tekstliste[26];
+    btnCity.style.display = "none;";
+    btnForest.style.display = "none;"
 }
-btnSvar2.onkeydown = function () {
-    article.style.visibility = "visible";
-    pGuide.style.display = "none";
-    btnSvar2.style.fontSize = "110%";
-    btnSvar2.style.marginLeft = "90%";
-    divRamme.style.backgroundColor = "transparent";
-    pTekst.innerHTML = tekstliste[n];
-    n++;
-    if (n > 28) {
-        n = 0;
-
-        pTekst.innerHTML = tekstliste[n];
-    }
-    if (n === 1){
-        imgKing.style.display = "block";
-
-    }
-    if (n === 4) {
-        inpTekst.style.display = "block";
-        btnTilInp.style.display = "block";
-        btnSvar2.style.visibility =  "hidden";
-    }
-    if (n === 8) {
-        imgMan.style.display = "block";
-        imgMan.src = "man1.jpg"
-
-    }
-    if (n === 9) {
-        imgMan.style.display = "block";
-        imgMan.src = "Man2.png";
-    }
-    if (n === 10) {
-        imgMan.style.display = "block";
-        imgMan.src = "man3.png";
-    }
-    if (n === 11) {
-        imgMan.style.display = "block";
-        imgMan1.style.display = "block";
-        imgMan2.style.display = "block";
-        imgMan1.src = "man1.jpg";
-        imgMan.src = "Man2.png";
-        imgMan2.src = "man3.png";
-    }
-    if (n === 12) {
-        imgMan.style.display = "none";
-        imgMan1.style.display = "none";
-        imgMan2.style.display = "none";
-
-    }
-    if (n ===13) {
-        tekstliste[11] = "Let us have a bet, are you in " + inpTekst.value + "?" + " yes or no";
-        pTekst.innerHTML = tekstliste[11];
-        inpTekst1.style.display = "block";
-        btnTilInp1.style.display = "block";
-        btnSvar2.style.display = "none";
-    }
-    if (n === 16) {
-        pTall.style.display = "block";
-        var m = 4;
-        while(m<=7){
-            var t = m + " ";
-            pTall.innerHTML += t;
-
-            m++;
-
-        }
-        inpTall.style.display = "block";
-        btnTilInpTall.style.display = "block";
-        btnSvar2.style.display = "none";
-
-    }
-    if (n === 17) {
-        if (inpTall.value === "5"){
-
-            tekstliste[17] = "You got it right! This is your companion:";
-
-        }
-        else {
-
-            tekstliste[17] = "Sorry, you did not get it right. This is your companion:";
-
-        }
-    }
-    if (n === 18) {
-        if (inpTall.value === "5"){
-
-            imgMan.style.display = "block";
-            imgMan.src = companion;
-
-        }
-        else {
-            imgMan.style.display = "block";
-            var tilfeldig = Math.floor(Math.random()*3+1);
-            if (tilfeldig === 1){
-
-                imgMan.src = "man1.jpg";
-            }
-            else if (tilfeldig === 2){
-
-                imgMan.src = "Man2.png";
-            }
-            else if (tilfeldig === 3) {
-
-                imgMan.src = "man3.png";
-            }
-        }
-
-    }
-    if (n === 19) {
-        inpCompName.style.display = "block";
-        btnCompName.style.display = "block";
-        btnSvar2.style.display = "none";
-    }
-    if (n === 20) {
-        tekstliste[20] = "I agree… he really looks like a " + inpCompName.value;
-    }
-    if (n === 22) {
-        btnSvar2.style.display = "none";
-        btnStart.style.display = "block";
-        inpStart.style.display = "block";
-    }
-    if (n === 23) {
-        btnSvar2.style.display = "block";
-        btnStart.style.display = "none";
-        inpStart.style.display = "none";
-    }
+btnForest.onclick = function () {
+    tekstliste[26] = "It will take some time to get to the forest...";
+    pTekst.innerHTML = tekstliste[26];
+    btnCity.style.display = "none;";
+    btnForest.style.display = "none;"
+}
 }
 btnSvar2.onclick = function () {
     article.style.visibility = "visible";
