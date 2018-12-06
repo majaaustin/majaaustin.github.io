@@ -10,7 +10,7 @@
 <body>
 <header>
 
-    <h1>NAVN</h1>
+    <h1>Stickman Andventur</h1>
 
 </header>
 <main>
@@ -21,24 +21,27 @@
             Before you can begin you must press next. <br>
             Good luck!</p>
 
-        <img data-code="Digit1" src="man1.jpg" alt="" style="display: none; margin-top: 4%; margin-left: 54%; position: fixed; cursor: pointer; max-width: 20%; max-height: 20%;" id="imgMan1">
-        <img data-code="Digit2" src="man1.jpg"  style="display: none; max-height: 20%; margin-top: 4%; margin-left: 62%; position: fixed; cursor: pointer; max-width: 20%;" id="imgMan">
-        <img data-code="Digit3" src="man3.png" alt="" style="display: none; cursor: pointer; max-height: 20%; max-width: 20%; margin-top: 4%; margin-left: 70%; position: fixed;" id="imgMan2">
-        <!-- <img src="" alt="" id="imgGuideMenue">
-        <img type="hidden" src="foreløpig_guide.png" id="imgGuide"> -->
+        <img data-code="Digit1" src="man1.jpg" alt="" style="display: none; margin-top: 4%; margin-left: 52%; position: fixed; cursor: pointer; max-width: 20%; max-height: 20%;" id="imgMan1">
+        <img data-code="Digit2" src="man1.jpg"  style="display: none; max-height: 20%; margin-top: 4%; margin-left: 60%; position: fixed; cursor: pointer; max-width: 20%;" id="imgMan">
+        <img data-code="Digit3" src="man3.png" alt="" style="display: none; cursor: pointer; max-height: 20%; max-width: 20%; margin-top: 4%; margin-left: 68%; position: fixed;" id="imgMan2">
+        <img src="king.jpg" id="imgKing" style=" display: none; margin-left: 80%; max-height: 20%; max-width: 20%">
         <article id="article" style="visibility: hidden">
 
             <div style="margin-left: 2%">
 
 
                 <p id="pTekst">Press next to begin...</p>
-                <input type="hidden" id="inpTekst">
-                <input type="hidden" id="inpTekst1">
-                <input type="hidden" id="inpTall">
+                <input type="text" style="display: none" id="inpTekst">
+                <input  type="text" style="display: none" id="inpTekst1">
+                <input type="text" style="display: none" id="inpTall">
+                <input type="text" style="display: none" id="inpCompName">
+                <input type="text" style="display: none" id="inpStart">
                 <p style="display: none" id="pTall"></p>
                 <button style="display: none" id="btnTilInp">Ok</button>
                 <button style="display: none" id="btnTilInp1">Ok</button>
                 <button style="display: none" id="btnTilInpTall">Ok</button>
+                <button style="display: none" id="btnCompName">Ok</button>
+                <button style="display: none" id="btnStart">Ok</button>
 
                 <button style="visibility: visible" id="btnSvar2">Next</button>
 
@@ -49,11 +52,16 @@
     </div>
 
 </main>
+<audio controls autoplay loop>
+    <source src="Goodw.wav" type="audio/wav" id="auto">
+
+</audio>
+
 <audio data-code="Digit1" src="boom.wav"></audio>
 <audio data-code="Digit2" src="clap.wav"></audio>
 <audio data-code="Digit3" src="hihat.wav"></audio>
 
-<script src="scriptValg.js"></script>
+<script src="scriptValg1.js"></script>
 
 </body>
 </html>
