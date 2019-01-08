@@ -41,7 +41,7 @@ btnLeggTil.onclick = function () {
 window.onclick = function(event){
         // En funksjon som gjør at hvis knappen, popup-vinduet eller videoen trykkes på vises popup-vinduet, eller fortsettes å vises.
         // Hvis andre steder trykkes på vises ikke popup-vinduet.
-        if(event.target === knapp || event.target === popup || event.target === popup.children[0]){
+        if(event.target === btnLeggTil || event.target === popup || event.target === popup.children[0]){
             popup.style.display = "block"; // Elementet popup vises på nettsiden.
         }
         else{
@@ -72,7 +72,7 @@ btnTaUt.onclick = function () {
 window.onclick = function(event){
     // En funksjon som gjør at hvis knappen, popup-vinduet eller videoen trykkes på vises popup-vinduet, eller fortsettes å vises.
     // Hvis andre steder trykkes på vises ikke popup-vinduet.
-    if(event.target === knapp || event.target === popup1 || event.target === popup1.children[0]){
+    if(event.target === btnTaUt|| event.target === popup1 || event.target === popup1.children[0]){
         popup1.style.display = "block"; // Elementet popup vises på nettsiden.
     }
     else{
