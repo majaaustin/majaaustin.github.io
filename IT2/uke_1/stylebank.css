@@ -1,0 +1,27 @@
+#popup{
+    display: none; /* Skjuler popup-vinduet */
+    width: 400px; /* Setter en bredde på vinduet, høyden blir automatisk fikset */
+    background-color: peachpuff; /* Kul bakgrunnsfarge på popup-vinduet */
+    /* Midtstiller popup-vinduet horisontalt og vertikalt */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* Setter på kant og skygge */
+    border: solid 1px black;
+    box-shadow: 10px 10px;
+}
+
+#popup1{
+    display: none; /* Skjuler popup-vinduet */
+    width: 400px; /* Setter en bredde på vinduet, høyden blir automatisk fikset */
+    background-color: peachpuff; /* Kul bakgrunnsfarge på popup-vinduet */
+    /* Midtstiller popup-vinduet horisontalt og vertikalt */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* Setter på kant og skygge */
+    border: solid 1px black;
+    box-shadow: 10px 10px;
+}
