@@ -58,25 +58,37 @@ function draw() {
 }
 
 function drawSnake() {
-    var centerX = (WIDTH-snakesize)/2;
-    var centerY = Math.floor((HEIGHT-snakesize)/2);
+    var centerX = (WIDTH - snakesize) / 2;
+    var centerY = Math.floor((HEIGHT - snakesize) / 2);
 
     var posX = centerX + offsetX;
     var posY = centerY + offsetY;
     ctx.fillStyle = "yellow";
-    document.addEventListener("keydown",function(e){
-    if (e.keyCode == 38 || e.keyCode == 40) {
-        ctx.fillRect(posX, posY, -15, 30);
+    ctx.fillRect(posX, posY, 15, 15);
+}
 
-    }else if( e.keyCode == 37 || e.keyCode == 39) {
-        ctx.fillRect(posX, posY, -30, 15);
-    }
+function drawing() {
+
+    ctx.fillStyle = 'rgba(0,0,29,0.2)';
+    ctx.fillRect(0,0,WIDTH,HEIGHT);
+
+    drawEple();
+}
+
+function drawEple() {
+
+    var posXX = Math.floor(Math.random()*HEIGHT+1);
+    var posYY = Math.floor(Math.random()*WIDTH);
+    ctx.fillStyle = "red";
+    ctx.fillRect(posYY, posXX, 8, 8);
+}
+
 
         loadImages();
-    });
 
 
-}
+
+
 
 function update(){
     return;
@@ -85,6 +97,7 @@ function update(){
 function run(){
     update();
     draw();
+    drawing();
     window.requestAnimationFrame(run);
 }
 
