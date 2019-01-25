@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hjelp</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Trenger du hjelp?</h1>
+    <input type="text" id="inpProblem" placeholder="Skriv ditt problem..." style="width: 50%">
+    <input type="text" id="inpNavn" placeholder="Navn">
+    <button id="btnAdd">OK</button>
+
+    <div id="divFelt"></div>
+
+    <script>
+        var inpNavn =  document.getElementById("inpNavn");
+        var inpProblem = document.getElementById("inpProblem");
+        var divFelt = document.getElementById("divFelt");
+        var btnAdd = document.getElementById("btnAdd");
+        var arrayHjelp = [ ];
+        let problem = [ ];
+
+
+        btnAdd.onclick = function () {
+            let objektHjelp = {navn: "", problem: ""};
+            objektHjelp.navn = inpNavn.value;
+            objektHjelp.problem = inpProblem.value;
+
+            arrayHjelp.push(objektHjelp);
+            divFelt.innerHTML = "";
+        for (let objekt of arrayHjelp){
+             divFelt.innerHTML += "<li>" + objekt.navn + ", " + objekt.problem + "</li>";
+             }
+    }
+   /* btnAdd.onclick = function () {
+        hjelper.push({
+            navn: inpNavn.value,
+            problem: inpProblem.value
+        });
+
+    for(let objekt of hjelper){
+        divFelt.innerHTML += "<li>" + objekt.navn + ", " + objekt.problem + "</li>";
+    }
+        }*/
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

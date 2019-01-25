@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Set og Map</title>
+</head>
+<body>
+<div class = "oransj">Hei</div>
+<div>På</div>
+<div class = "oransj">Deg</div>
+<p id="p"></p>
+
+
+    <script>
+
+       /* let presidenter = new Set(); //kan ikke ha like verdier
+        presidenter.add("Barack Obama");
+        president.add("Donald Trump");
+        president.add("Ronald Regan");
+
+        console.log(president.has("Barack Obama"));
+        for (let president of presidenter){
+            document.write(president);
+        }
+
+        let innbyggere = new Map();
+        innbyggere.set("001",  "Heath Ledger");
+        innbyggere.set("002",  "Batman");
+        innbyggere.set("003",  "Heath Ledger");
+
+        innbyggere.get("001");
+     let p = document.getElementById("p")
+        let land = new Set();
+        land.add("Norge");
+        land.add("Danmark");
+        land.add("England");
+        land.add("Tyskland");
+        for ( let landene of land){
+            p.innerHTML += landene;
+        }
+
+        let klasseliste = new Map();
+        klasseliste.set("98431414", "Maria Garder");
+        klasseliste.set("97431411", "Marte Meum");
+        klasseliste.set("96431410", "Leif Andre");
+        klasseliste.delete("97431411");
+        klasseliste.delete("96431410");
+        for (let klasse of klasseliste){
+            p.innerHTML += klasse;
+        }*/
+       let divBokser = document.querySelectorAll(".oransj");
+       for(let boks of divBokser){
+           boks.style.backgroundColor = "orange";
+           boks.style.marginRight = "5px";
+           boks.style.float = "left";
+           boks.style.textAlign = "center";
+           boks.style.width = "200px";
+           boks.style.height = "120px";
+       }
+
+
+    </script>
+
+    </body>
+</html>
