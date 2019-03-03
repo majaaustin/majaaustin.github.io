@@ -5,28 +5,15 @@ const hdnRekord = document.getElementById("hdnRekord");
 const btnSpiller2 = document.getElementById("btnSpiller2");
 
 let poeng = 0;
-let okes = 0;
 let okef = 0;
 if(localStorage.rekord === undefined){
     localStorage.rekord = 0;
 }
 hdnRekord.innerHTML = "Rekord: " + localStorage.rekord;
 let bakgrunnsfarge = "green";
-//let slangekroppene = [slangekropp, ];
 
 
-let slange1 = {
-    bredde:40,
-    hoyde:20,
-    xpos:60,
-    ypos:70,
-    farge:"orange",
-    xfart:5,
-    xretning:1,
-    yfart:0,
-    yretning:0
-};
-let slangekropp = {
+let hode = {
     bredde:20,
     hoyde:20,
     xpos:60,
@@ -37,6 +24,7 @@ let slangekropp = {
     yfart:0,
     yretning:0
 };
+
 
 let eple1 = {
     bredde:10,
@@ -51,10 +39,10 @@ let eple1 = {
 gameLoop();
 function gameLoop() {
     clearCanvas();
-    sjekkKolisjon(slange1);
-    kolisjon(slange1,eple1);
-    flyttSlange(slange1);
-    tegnSlange(slange1);
+    sjekkKolisjon(hode);
+    kolisjon(hode,eple1);
+    flyttSlange(hode);
+    tegnSlange(hode);
     tegnEple(eple1);
 
 
@@ -86,33 +74,33 @@ function flyttSlange(slange){
             slange.xfart = 0;
             slange.xretning = 0;
             slange.bredde = 20;
-            slange.hoyde = 40;
+            slange.hoyde = 20;
 
         }
-        else if (e.keyCode == 39 && !(slange.xretning === -1) ){
+        if (e.keyCode == 39 && !(slange.xretning === -1) ){
             slange.yfart = 0;
             slange.yretning = 0;
             slange.xfart = 5 + okef;
             slange.xretning = 1;
-            slange.bredde = 40;
+            slange.bredde = 20;
             slange.hoyde = 20;
         }
-        else if (e.keyCode == 37 && !(slange.xretning === 1)){
+        if (e.keyCode == 37 && !(slange.xretning === 1)){
             slange.yfart = 0;
             slange.yretning = 0;
             slange.xfart = 5 + okef;
             slange.xretning = -1;
-            slange.bredde = 40;
+            slange.bredde = 20;
             slange.hoyde = 20;
         }
-        else if (e.keyCode == 40 && !(slange.yretning === -1)) {
+        if (e.keyCode == 40 && !(slange.yretning === -1)) {
             console.log('down');
             slange.yfart = 5 + okef;
             slange.xretning = 0;
             slange.yretning = 1;
             slange.xfart = 0;
             slange.bredde = 20;
-            slange.hoyde = 40;
+            slange.hoyde = 20;
         }
     });
 
@@ -125,7 +113,7 @@ function sjekkSvar(slange){
     slange.xfart = 5;
     slange.yfart = 0;
     slange.xretning = 1;
-    slange.bredde = 40;
+    slange.bredde = 20;
     slange.hoyde = 20;
     hdnPoeng.innerHTML = "Poeng: " + poeng;
     if(poeng > localStorage.rekord){
@@ -142,10 +130,10 @@ function sjekkSvar(slange){
 }
 function sjekkKolisjon(slange) {
     if (slange.xpos >= canvas.width-slange.bredde || slange.xpos <= 0 ){
-        sjekkSvar(slange1);
+        sjekkSvar(hode);
 
     }else if (slange.ypos >= canvas.height-slange.hoyde || slange.ypos <= 0 ){
-        sjekkSvar(slange1);
+        sjekkSvar(hode);
 
     }
 
@@ -156,7 +144,8 @@ function nyttEple(eple){
     eple.xpos = Math.random()*1200;
     eple.ypos = Math.random()*600;
     okef+=0.25;
-    //slangekroppene.push(slangekropp);
+
+
 }
 
 function kolisjon(slange, eple){
