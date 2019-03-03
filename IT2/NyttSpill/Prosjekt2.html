@@ -28,13 +28,18 @@
 <h1 id="hdnPoeng">Poeng: 0</h1>
 <h1 id="hdnRekord">Rekord: 0</h1>
 <canvas id="canvas" width="1280px" height="640px"></canvas>
+<button id="btnSpiller2">Legg til ny spiller</button>
 
 <script>
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     const hdnPoeng = document.getElementById("hdnPoeng");
     const hdnRekord = document.getElementById("hdnRekord");
+    const btnSpiller2 = document.getElementById("btnSpiller2");
+
     let poeng = 0;
+    let okes = 0;
+    let okef = 0;
     if(localStorage.rekord === undefined){
         localStorage.rekord = 0;
     }
@@ -54,6 +59,17 @@
         yfart:0,
         yretning:0
     };
+    let snake2 = {
+        bredde:40,
+        hoyde:20,
+        xpos:60,
+        ypos:100,
+        farge:"blue",
+        xfart:5,
+        xretning:1,
+        yfart:0,
+        yretning:0
+    };
     let eple1 = {
         bredde:10,
         hoyde:10,
@@ -65,7 +81,6 @@
 
 
     gameLoop();
-
     function gameLoop() {
         clearCanvas();
         sjekkKolisjon(snake1);
@@ -75,12 +90,18 @@
         tegnEple(eple1);
 
 
+
         requestAnimationFrame(gameLoop);
     }
+
+
+
+
     function tegnSnake(snake){
         ctx.fillStyle = snake.farge;
         ctx.fillRect(snake.xpos, snake.ypos, snake.bredde, snake.hoyde);
     }
+
     function tegnEple(eple){
         ctx.fillStyle = eple.farge;
         ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde);
@@ -92,6 +113,49 @@
 
             if (e.keyCode == 38 && !(snake.yretning === 1)){
                 console.log('up');
+                snake.yfart = 5 + okef;
+                snake.yretning = -1;
+                snake.xfart = 0;
+                snake.xretning = 0;
+                snake.bredde = 20;
+                snake.hoyde = 40 + okes;
+
+            }
+            else if (e.keyCode == 39 && !(snake.xretning === -1) ){
+                snake.yfart = 0;
+                snake.yretning = 0;
+                snake.xfart = 5 + okef;
+                snake.xretning = 1;
+                snake.bredde = 40 + okes;
+                snake.hoyde = 20;
+            }
+            else if (e.keyCode == 37 && !(snake.xretning === 1)){
+                snake.yfart = 0;
+                snake.yretning = 0;
+                snake.xfart = 5 + okef;
+                snake.xretning = -1;
+                snake.bredde = 40 + okes;
+                snake.hoyde = 20;
+            }
+            else if (e.keyCode == 40 && !(snake.yretning === -1)) {
+                console.log('down');
+                snake.yfart = 5 + okef;
+                snake.xretning = 0;
+                snake.yretning = 1;
+                snake.xfart = 0;
+                snake.bredde = 20;
+                snake.hoyde = 40 + okes;
+            }
+        });
+
+    }
+    function flyttSnake2(snake){
+        snake.xpos = snake.xpos + (snake.xretning*snake.xfart);
+        snake.ypos = snake.ypos + (snake.yretning*snake.yfart);
+        document.addEventListener("keydown",function(e){
+
+            if (e.keyCode == 87 && !(snake.yretning === 1)){
+                console.log('up');
                 snake.yfart = 5;
                 snake.yretning = -1;
                 snake.xfart = 0;
@@ -100,7 +164,7 @@
                 snake.hoyde = 40;
 
             }
-            else if (e.keyCode == 39 && !(snake.xretning === -1) ){
+            else if (e.keyCode == 68 && !(snake.xretning === -1) ){
                 snake.yfart = 0;
                 snake.yretning = 0;
                 snake.xfart = 5;
@@ -108,7 +172,7 @@
                 snake.bredde = 40;
                 snake.hoyde = 20;
             }
-            else if (e.keyCode == 37 && !(snake.xretning === 1)){
+            else if (e.keyCode == 65 && !(snake.xretning === 1)){
                 snake.yfart = 0;
                 snake.yretning = 0;
                 snake.xfart = 5;
@@ -116,7 +180,7 @@
                 snake.bredde = 40;
                 snake.hoyde = 20;
             }
-            else if (e.keyCode == 40 && !(snake.yretning === -1)) {
+            else if (e.keyCode == 83 && !(snake.yretning === -1)) {
                 console.log('down');
                 snake.yfart = 5;
                 snake.xretning = 0;
@@ -160,6 +224,8 @@
         hdnPoeng.innerHTML = "Poeng: " + poeng;
         eple.xpos = Math.random()*1270;
         eple.ypos = Math.random()*630;
+        okef+=0.25;
+        okes+=10;
     }
 
     function kolisjon(snake, eple){
