@@ -7,17 +7,41 @@
     <style>
         body {
             overflow: hidden;
+            background-color: black;
         }
+        #hdnPoeng,#hdnRekord {
+            font-size: 20px;
+            color: white;
+            margin: 0;
+            font-family: arial, helvetica, sans-serif;
+        }
+        #hdnPoeng {
+            float: left;
+        }
+        #hdnRekord {
+            float: right;
+        }
+
     </style>
 </head>
 <body>
-<canvas id="canvas" width="1280px" height="680px"></canvas>
+<h1 id="hdnPoeng">Poeng: 0</h1>
+<h1 id="hdnRekord">Rekord: 0</h1>
+<canvas id="canvas" width="1280px" height="640px"></canvas>
 
 <script>
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
-
+    const hdnPoeng = document.getElementById("hdnPoeng");
+    const hdnRekord = document.getElementById("hdnRekord");
+    var poeng = 0;
+    if(localStorage.rekord === undefined){
+        localStorage.rekord = 0;
+    }
+    hdnRekord.innerHTML = "Rekord: " + localStorage.rekord;
     let bakgrunnsfarge = "green";
+
+
 
     let snake1 = {
         bredde:40,
@@ -28,7 +52,7 @@
         xfart:5,
         xretning:1,
         yfart:0,
-        yretning:1
+        yretning:0
     };
     let eple1 = {
         bredde:10,
@@ -62,10 +86,11 @@
         ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde);
     }
     function flyttSnake(snake){
+        poeng = 0;
         snake.xpos = snake.xpos + (snake.xretning*snake.xfart);
         snake.ypos = snake.ypos + (snake.yretning*snake.yfart);
         document.addEventListener("keydown",function(e){
-            if (e.keyCode == 38){
+            if (e.keyCode == 38 && !snake.yretning === 1){
                 console.log('up');
                 snake.yfart = 5;
                 snake.yretning = -1;
@@ -74,21 +99,21 @@
                 snake.hoyde = 40;
 
             }
-            else if (e.keyCode == 39){
+            else if (e.keyCode == 39 && !snake.xretning === -1 ){
                 snake.yfart = 0;
                 snake.xfart = 5;
                 snake.xretning = 1;
                 snake.bredde = 40;
                 snake.hoyde = 20;
             }
-            else if (e.keyCode == 37){
+            else if (e.keyCode == 37 && !snake.xretning === 1){
                 snake.yfart = 0;
                 snake.xfart = 5;
                 snake.xretning = -1;
                 snake.bredde = 40;
                 snake.hoyde = 20;
             }
-            else if (e.keyCode == 40) {
+            else if (e.keyCode == 40 && !snake.yretning === -1) {
                 console.log('down');
                 snake.yfart = 5;
                 snake.yretning = 1;
@@ -97,32 +122,57 @@
                 snake.hoyde = 40;
             }
         });
+
+    }
+    function sjekkSvar(snake){
+        alert("Du har tapt");
+        snake.xpos = 60;
+        snake.ypos = 70;
+        snake.xfart = 5;
+        snake.yfart = 0;
+        snake.xretning = 1;
+        snake.bredde = 40;
+        snake.hoyde = 20;
+        hdnPoeng.innerHTML = "Poeng: " + poeng;
+        if(poeng > localStorage.rekord){
+            localStorage.rekord = poeng;
+            hdnRekord.innerHTML ="Ny rekord: " + poeng;
+            hdnRekord.style.color = "DarkGreen";
+
+        }
     }
     function sjekkKolisjon(snake) {
         if (snake.xpos >= canvas.width-snake.bredde || snake.xpos <= 0 ){
-            alert("Du har tapt");
-            snake.xpos = 60;
-            snake.ypos = 70;
-            snake.xfart = 5;
-            snake.yfart = 0;
-            snake.xretning = 1;
+            sjekkSvar(snake1);
         }else if (snake.ypos >= canvas.height-snake.hoyde || snake.ypos <= 0 ){
-            alert("Du har tapt!");
-            snake.xpos = 60;
-            snake.ypos = 70;
-            snake.xfart = 5;
-            snake.yfart = 0;
-            snake.xretning = 1;
+            sjekkSvar(snake1);
+
         }
 
     }
+    function nyttEple(eple){
+        poeng++;
+        hdnPoeng.innerHTML = "Poeng: " + poeng;
+        eple.xpos = Math.random()*1280;
+        eple.ypos = Math.random()*640;
+    }
+
     function kolisjon(snake, eple){
-        if(snake.xpos === eple.xpos && snake.ypos === eple.ypos){
-            alert("1 poeng!");
-            eple.xpos = Math.random()*1280;
-            eple.ypos = Math.random()*680;
+        if(eple.xpos > snake.xpos && eple.xpos < snake.xpos + snake.bredde && eple.ypos > snake.ypos && eple.ypos < snake.ypos + snake.hoyde){
+            nyttEple(eple1);
+        }
+        if(eple.xpos + eple.bredde > snake.xpos && eple.xpos + eple.bredde < snake.xpos + snake.bredde && eple.ypos > snake.ypos && eple.ypos < snake.ypos + snake.hoyde){
+            nyttEple(eple1);
+        }
+        if(eple.xpos > snake.xpos && eple.xpos < snake.xpos + snake.bredde && eple.ypos + eple.hoyde > snake.ypos && eple.ypos + eple.hoyde < snake.ypos + snake.hoyde){
+            nyttEple(eple1);
+        }
+        if(eple.xpos + eple.bredde > snake.xpos && eple.xpos + eple.bredde < snake.xpos + snake.bredde && eple.ypos + eple.hoyde > snake.ypos && eple.ypos  + eple.hoyde < snake.ypos + snake.hoyde){
+            nyttEple(eple1);
         }
     }
+
+
     function clearCanvas(){
         ctx.fillStyle = bakgrunnsfarge;
         ctx.fillRect(0,0, canvas.width, canvas.height);
