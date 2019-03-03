@@ -133,8 +133,10 @@ function sjekkSvar(slange){
         hdnRekord.innerHTML ="Ny rekord: " + poeng;
         hdnRekord.style.color = "DarkGreen";
         poeng = 0;
+        hdnPoeng.innerHTML = "Poeng: " + poeng;
     }if(poeng < localStorage.rekord){
         poeng = 0;
+        hdnPoeng.innerHTML = "Poeng: " + poeng;
     }
 
 }
