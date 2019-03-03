@@ -133,23 +133,25 @@ function sjekkSvar(slange){
         hdnRekord.innerHTML ="Ny rekord: " + poeng;
         hdnRekord.style.color = "DarkGreen";
         poeng = 0;
+    }else {
+        poeng = 0;
     }
 }
 function sjekkKolisjon(slange) {
     if (slange.xpos >= canvas.width-slange.bredde || slange.xpos <= 0 ){
         sjekkSvar(slange1);
-
+        poeng = 0;
     }else if (slange.ypos >= canvas.height-slange.hoyde || slange.ypos <= 0 ){
         sjekkSvar(slange1);
-
+        poeng = 0;
     }
 
 }
 function nyttEple(eple){
     poeng++;
     hdnPoeng.innerHTML = "Poeng: " + poeng;
-    eple.xpos = Math.random()*1270;
-    eple.ypos = Math.random()*630;
+    eple.xpos = Math.random()*1200;
+    eple.ypos = Math.random()*600;
     okef+=0.25;
     //slangekroppene.push(slangekropp);
 }
