@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snake</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="1280px" height="680px"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    let bakgrunnsfarge = "green";
+
+    let snake1 = {
+        bredde:40,
+        hoyde:20,
+        xpos:60,
+        ypos:70,
+        farge:"orange",
+        xfart:5,
+        xretning:1,
+        yfart:0,
+        yretning:1
+    };
+    let eple1 = {
+        bredde:10,
+        hoyde:10,
+        xpos:600,
+        ypos:300,
+        farge:"red",
+
+    }
+
+
+    gameLoop();
+
+    function gameLoop() {
+        clearCanvas();
+        sjekkKolisjon(snake1);
+        kolisjon(snake1,eple1);
+        flyttSnake(snake1);
+        tegnSnake(snake1);
+        tegnEple(eple1);
+
+
+        requestAnimationFrame(gameLoop);
+    }
+    function tegnSnake(snake){
+        ctx.fillStyle = snake.farge;
+        ctx.fillRect(snake.xpos, snake.ypos, snake.bredde, snake.hoyde);
+    }
+    function tegnEple(eple){
+        ctx.fillStyle = eple.farge;
+        ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde);
+    }
+    function flyttSnake(snake){
+        snake.xpos = snake.xpos + (snake.xretning*snake.xfart);
+        snake.ypos = snake.ypos + (snake.yretning*snake.yfart);
+        document.addEventListener("keydown",function(e){
+            if (e.keyCode == 38){
+                console.log('up');
+                snake.yfart = 5;
+                snake.yretning = -1;
+                snake.xfart = 0;
+                snake.bredde = 20;
+                snake.hoyde = 40;
+
+            }
+            else if (e.keyCode == 39){
+                snake.yfart = 0;
+                snake.xfart = 5;
+                snake.xretning = 1;
+                snake.bredde = 40;
+                snake.hoyde = 20;
+            }
+            else if (e.keyCode == 37){
+                snake.yfart = 0;
+                snake.xfart = 5;
+                snake.xretning = -1;
+                snake.bredde = 40;
+                snake.hoyde = 20;
+            }
+            else if (e.keyCode == 40) {
+                console.log('down');
+                snake.yfart = 5;
+                snake.yretning = 1;
+                snake.xfart = 0;
+                snake.bredde = 20;
+                snake.hoyde = 40;
+            }
+        });
+    }
+    function sjekkKolisjon(snake) {
+        if (snake.xpos >= canvas.width-snake.bredde || snake.xpos <= 0 ){
+            alert("Du har tapt");
+            snake.xpos = 60;
+            snake.ypos = 70;
+            snake.xfart = 5;
+            snake.yfart = 0;
+            snake.xretning = 1;
+        }else if (snake.ypos >= canvas.height-snake.hoyde || snake.ypos <= 0 ){
+            alert("Du har tapt!");
+            snake.xpos = 60;
+            snake.ypos = 70;
+            snake.xfart = 5;
+            snake.yfart = 0;
+            snake.xretning = 1;
+        }
+
+    }
+    function kolisjon(snake, eple){
+        if(snake.xpos === eple.xpos && snake.ypos === eple.ypos){
+            alert("1 poeng!");
+            eple.xpos = Math.random()*1280;
+            eple.ypos = Math.random()*680;
+        }
+    }
+    function clearCanvas(){
+        ctx.fillStyle = bakgrunnsfarge;
+        ctx.fillRect(0,0, canvas.width, canvas.height);
+    }
+
+
+</script>
+</body>
+</html>
