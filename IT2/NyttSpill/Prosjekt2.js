@@ -48,10 +48,10 @@ let eple1 = {
 gameLoop();
 function gameLoop() {
     clearCanvas();
-    sjekkKolisjon(slange1[0]);
-    kolisjon(slange1[0],eple1);
-    flyttSlange(slange1[0]);
-    tegnSlange(slange1[0]);
+    sjekkKolisjon(slange1);
+    kolisjon(slange1,eple1);
+    flyttSlange(slange1);
+    tegnSlange(slange1);
     tegnEple(eple1);
 
 
@@ -59,7 +59,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 function advanceSlange(slange) {
-    const hode = {x: slange[0].xpos + dx, y: slange[0].ypos + dy};
+    const hode = {xpos: slange[0].xpos + dx, ypos: slange[0].ypos + dy};
     slange.unshift(hode);
     slange.pop();
 }
@@ -80,7 +80,6 @@ function tegnEple(eple){
 }
 function flyttSlange(slange){
     slange.xpos = slange.xpos + (slange.xretning*slange.xfart);
-    slange.ypos = slange.ypos + (slange.yretning*slange.yfart);
     document.addEventListener("keydown",function(e){
 
         if (e.keyCode == 38 && !(slange.yretning === 1)){
