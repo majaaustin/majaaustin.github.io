@@ -15,7 +15,7 @@ dx = 0;
 dy = -20;
 
 
-let slange = [{
+let slange1 = [{
     bredde:20,
     hoyde:20,
     xpos:60,
@@ -48,23 +48,23 @@ let eple1 = {
 gameLoop();
 function gameLoop() {
     clearCanvas();
-    sjekkKolisjon(slange[0]);
-    kolisjon(slange[0],eple1);
-    flyttSlange(slange[0]);
-    tegnSlange(slange[0]);
+    sjekkKolisjon(slange1[0]);
+    kolisjon(slange1[0],eple1);
+    flyttSlange(slange1[0]);
+    tegnSlange(slange1[0]);
     tegnEple(eple1);
 
 
 
     requestAnimationFrame(gameLoop);
 }
-function advanceSlange() {
+function advanceSlange(slange) {
     const hode = {x: slange[0].xpos + dx, y: slange[0].ypos + dy};
     slange.unshift(hode);
     slange.pop();
 }
 
-function tegnSlange() {
+function tegnSlange(slange) {
     // loop through the snake parts drawing each part on the canvas
     slange.forEach(tegnSlangeDel)
 }
@@ -142,10 +142,10 @@ function sjekkSvar(slange){
 }
 function sjekkKolisjon(slange) {
     if (slange.xpos >= canvas.width-slange.bredde || slange.xpos <= 0 ){
-        sjekkSvar(hode);
+        sjekkSvar(slange1);
 
     }else if (slange.ypos >= canvas.height-slange.hoyde || slange.ypos <= 0 ){
-        sjekkSvar(hode);
+        sjekkSvar(slange1);
 
     }
 
@@ -156,6 +156,7 @@ function nyttEple(eple){
     eple.xpos = Math.random()*1200;
     eple.ypos = Math.random()*600;
     okef+=0.25;
+    advanceSlange();
 
 
 
