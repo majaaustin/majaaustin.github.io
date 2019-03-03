@@ -59,17 +59,7 @@
         yfart:0,
         yretning:0
     };
-    let snake2 = {
-        bredde:40,
-        hoyde:20,
-        xpos:60,
-        ypos:100,
-        farge:"blue",
-        xfart:5,
-        xretning:1,
-        yfart:0,
-        yretning:0
-    };
+
     let eple1 = {
         bredde:10,
         hoyde:10,
@@ -149,49 +139,7 @@
         });
 
     }
-    function flyttSnake2(snake){
-        snake.xpos = snake.xpos + (snake.xretning*snake.xfart);
-        snake.ypos = snake.ypos + (snake.yretning*snake.yfart);
-        document.addEventListener("keydown",function(e){
 
-            if (e.keyCode == 87 && !(snake.yretning === 1)){
-                console.log('up');
-                snake.yfart = 5;
-                snake.yretning = -1;
-                snake.xfart = 0;
-                snake.xretning = 0;
-                snake.bredde = 20;
-                snake.hoyde = 40;
-
-            }
-            else if (e.keyCode == 68 && !(snake.xretning === -1) ){
-                snake.yfart = 0;
-                snake.yretning = 0;
-                snake.xfart = 5;
-                snake.xretning = 1;
-                snake.bredde = 40;
-                snake.hoyde = 20;
-            }
-            else if (e.keyCode == 65 && !(snake.xretning === 1)){
-                snake.yfart = 0;
-                snake.yretning = 0;
-                snake.xfart = 5;
-                snake.xretning = -1;
-                snake.bredde = 40;
-                snake.hoyde = 20;
-            }
-            else if (e.keyCode == 83 && !(snake.yretning === -1)) {
-                console.log('down');
-                snake.yfart = 5;
-                snake.xretning = 0;
-                snake.yretning = 1;
-                snake.xfart = 0;
-                snake.bredde = 20;
-                snake.hoyde = 40;
-            }
-        });
-
-    }
     function sjekkSvar(snake){
         alert("Du har tapt");
         snake.xpos = 60;
