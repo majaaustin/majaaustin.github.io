@@ -11,20 +11,29 @@ if(localStorage.rekord === undefined){
 }
 hdnRekord.innerHTML = "Rekord: " + localStorage.rekord;
 let bakgrunnsfarge = "green";
+dx = 0;
+dy = -20;
 
 
-let hode = {
+let slange = [{
     bredde:20,
     hoyde:20,
     xpos:60,
     ypos:70,
-    farge:"orange",
     xfart:5,
     xretning:1,
     yfart:0,
     yretning:0
-};
-
+},{
+    bredde: 20,
+    hoyde: 20,
+    xpos: 40,
+    ypos: 70,
+    xfart:5,
+    xretning:1,
+    yfart:0,
+    yretning:0
+}];
 
 let eple1 = {
     bredde:10,
@@ -39,23 +48,30 @@ let eple1 = {
 gameLoop();
 function gameLoop() {
     clearCanvas();
-    sjekkKolisjon(hode);
-    kolisjon(hode,eple1);
-    flyttSlange(hode);
-    tegnSlange(hode);
+    sjekkKolisjon(slange[0]);
+    kolisjon(slange[0],eple1);
+    flyttSlange(slange[0]);
+    tegnSlange(slange[0]);
     tegnEple(eple1);
 
 
 
     requestAnimationFrame(gameLoop);
 }
+function advanceSlange() {
+    const hode = {x: slange[0].xpos + dx, y: slange[0].ypos + dy};
+    slange.unshift(hode);
+    slange.pop();
+}
 
+function tegnSlange() {
+    // loop through the snake parts drawing each part on the canvas
+    slange.forEach(tegnSlangeDel)
+}
 
-
-
-function tegnSlange(slange){
-    ctx.fillStyle = slange.farge;
-    ctx.fillRect(slange.xpos, slange.ypos, slange.bredde, slange.hoyde);
+function tegnSlangeDel(slangeDel){
+    ctx.fillStyle = "darkorange";
+    ctx.fillRect(slangeDel.xpos, slangeDel.ypos, slangeDel.bredde, slangeDel.hoyde);
 }
 
 function tegnEple(eple){
@@ -73,8 +89,6 @@ function flyttSlange(slange){
             slange.yretning = -1;
             slange.xfart = 0;
             slange.xretning = 0;
-            slange.bredde = 20;
-            slange.hoyde = 20;
 
         }
         if (e.keyCode == 39 && !(slange.xretning === -1) ){
@@ -82,16 +96,14 @@ function flyttSlange(slange){
             slange.yretning = 0;
             slange.xfart = 5 + okef;
             slange.xretning = 1;
-            slange.bredde = 20;
-            slange.hoyde = 20;
+
         }
         if (e.keyCode == 37 && !(slange.xretning === 1)){
             slange.yfart = 0;
             slange.yretning = 0;
             slange.xfart = 5 + okef;
             slange.xretning = -1;
-            slange.bredde = 20;
-            slange.hoyde = 20;
+
         }
         if (e.keyCode == 40 && !(slange.yretning === -1)) {
             console.log('down');
@@ -99,12 +111,12 @@ function flyttSlange(slange){
             slange.xretning = 0;
             slange.yretning = 1;
             slange.xfart = 0;
-            slange.bredde = 20;
-            slange.hoyde = 20;
+
         }
     });
 
 }
+
 
 function sjekkSvar(slange){
     alert("Du har tapt");
@@ -144,6 +156,9 @@ function nyttEple(eple){
     eple.xpos = Math.random()*1200;
     eple.ypos = Math.random()*600;
     okef+=0.25;
+
+
+
 
 
 }
