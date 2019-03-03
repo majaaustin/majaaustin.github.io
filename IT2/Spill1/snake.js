@@ -4,6 +4,10 @@ var WIDTH = 1080;
 var HEIGHT = 540;
 var snakesize = 50;
 var offsetX = 0, offsetY = 0;
+var apples = [];
+var maxNumOfApples = 1;
+var appleSize = 8;
+var score = 0;
 
 function init() {
     document.addEventListener("keydown",function(e){
@@ -76,22 +80,48 @@ function drawing() {
 }
 
 function drawEple() {
-
-    var posXX = Math.floor(Math.random()*HEIGHT+1);
-    var posYY = Math.floor(Math.random()*WIDTH);
-    ctx.fillStyle = "red";
-    ctx.fillRect(posYY, posXX, 8, 8);
+	if (apples.length < maxNumOfApples) {
+	    var posXX = Math.floor(Math.random()*WIDTH);
+	    var posYY = Math.floor(Math.random()*HEIGHT+1);
+	    apples.push([posXX, posYY]);
+	}
+	
+	ctx.fillStyle = "red";
+	for (var i=0; i < apples.length; i++){
+		ctx.fillRect(apples[i][0], apples[i][1], appleSize, appleSize);
+	}
 }
 
+function checkEatingApple() {
+	var centerX = (WIDTH - snakesize) / 2;
+    var centerY = Math.floor((HEIGHT - snakesize) / 2);
 
-        loadImages();
+    var posX = centerX + offsetX;
+    var posY = centerY + offsetY;
 
-
-
-
-
+    var snakeCorners = [[posX, posY], [posX, posY + 15], [posX + 15, posY], [posX + 15, posY + 15]];
+    for (var i=0; i < apples.length; i++) {
+    	for (var j=0; j < snakeCorners.length; j++) {
+    		var apple = apples[i];
+    		var corner = snakeCorners[j];
+    		//console.log(apple[0] < corner[0] && corner[0] < apple[0] + appleSize);
+    		//console.log(apple[1] < corner[1] && corner[1] < apple[1] + appleSize);	
+    		if (apple[0] < corner[0] && corner[0] < apple[0] + appleSize && apple[1] < corner[1] && corner[1] < apple[1] + appleSize){
+    			score++;
+    			console.log(score);
+    			apples.splice(i,1);
+    			break;
+    		}
+    	}
+    }
+}
+var n = 0;
 function update(){
-    return;
+	if (n<10){
+		checkEatingApple();
+		//n++;
+	}
+	return;
 }
 
 function run(){
