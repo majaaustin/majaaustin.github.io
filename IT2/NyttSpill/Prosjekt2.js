@@ -133,17 +133,18 @@ function sjekkSvar(slange){
         hdnRekord.innerHTML ="Ny rekord: " + poeng;
         hdnRekord.style.color = "DarkGreen";
         poeng = 0;
-    }else {
+    }if(poeng < localStorage.rekord){
         poeng = 0;
     }
+
 }
 function sjekkKolisjon(slange) {
     if (slange.xpos >= canvas.width-slange.bredde || slange.xpos <= 0 ){
         sjekkSvar(slange1);
-        poeng = 0;
+
     }else if (slange.ypos >= canvas.height-slange.hoyde || slange.ypos <= 0 ){
         sjekkSvar(slange1);
-        poeng = 0;
+
     }
 
 }
