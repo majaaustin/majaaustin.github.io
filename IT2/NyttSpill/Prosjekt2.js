@@ -13,9 +13,10 @@ hdnRekord.innerHTML = "Rekord: " + localStorage.rekord;
 let bakgrunnsfarge = "green";
 dx = 0;
 dy = -20;
+let n = 0;
 
 
-let slange1 = [{
+let slange1 = {
     bredde:20,
     hoyde:20,
     xpos:60,
@@ -24,16 +25,7 @@ let slange1 = [{
     xretning:1,
     yfart:0,
     yretning:0
-},{
-    bredde: 20,
-    hoyde: 20,
-    xpos: 40,
-    ypos: 70,
-    xfart:5,
-    xretning:1,
-    yfart:0,
-    yretning:0
-}];
+};
 
 let eple1 = {
     bredde:10,
@@ -51,23 +43,24 @@ function gameLoop() {
     sjekkKolisjon(slange1);
     kolisjon(slange1,eple1);
     flyttSlange(slange1);
-    tegnSlange(slange1);
+    tegnSlangeDel(slange1);
     tegnEple(eple1);
 
 
 
     requestAnimationFrame(gameLoop);
 }
-function advanceSlange(slange) {
-    const hode = {xpos: slange[0].xpos + dx, ypos: slange[0].ypos + dy};
-    slange.unshift(hode);
-    slange.pop();
-}
+/*
+function advanceSlange() {
+    const hode = {xpos: slange1.xpos + dx, ypos: slange1.ypos + dy};
+    slange1.unshift(hode);
+    slange1.pop();
+}*/
 
-function tegnSlange(slange) {
+/*function tegnSlange() {
     // loop through the snake parts drawing each part on the canvas
-    slange.forEach(tegnSlangeDel)
-}
+    slange1.forEach(tegnSlangeDel)
+}*/
 
 function tegnSlangeDel(slangeDel){
     ctx.fillStyle = "darkorange";
@@ -80,6 +73,7 @@ function tegnEple(eple){
 }
 function flyttSlange(slange){
     slange.xpos = slange.xpos + (slange.xretning*slange.xfart);
+    slange.ypos = slange.ypos + (slange.yretning*slange.yfart);
     document.addEventListener("keydown",function(e){
 
         if (e.keyCode == 38 && !(slange.yretning === 1)){
@@ -126,6 +120,7 @@ function sjekkSvar(slange){
     slange.xretning = 1;
     slange.bredde = 20;
     slange.hoyde = 20;
+    okef = 0;
     hdnPoeng.innerHTML = "Poeng: " + poeng;
     if(poeng > localStorage.rekord){
         localStorage.rekord = poeng;
@@ -155,7 +150,7 @@ function nyttEple(eple){
     eple.xpos = Math.random()*1200;
     eple.ypos = Math.random()*600;
     okef+=0.25;
-    advanceSlange();
+
 
 
 
