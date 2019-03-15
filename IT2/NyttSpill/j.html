@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="1100px" height="500px"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    let tapbilde = document.createElement("tapbilde");
+    let xpos = 100;
+    let ypos = 100;
+
+
+    game();
+    function game() {
+
+
+        bildeTap();
+        requestAnimationFrame(game);
+    }
+    function bildeTap() {
+        clearCanvas();
+        tapbilde.src="eple.png";
+        ctx.drawImage(tapbilde,xpos, ypos,100, 100);
+    }
+    function clearCanvas(){
+        ctx.fillStyle = "transparent";
+        ctx.fillRect(0,0, canvas.width, canvas.height);
+    }
+</script>
+
+</body>
+</html>
