@@ -5,6 +5,8 @@ const hdnPoeng = document.getElementById("hdnPoeng");
 const hdnPoeng2 = document.getElementById("hdnPoeng2");
 const hdnRekord = document.getElementById("hdnRekord");
 const antallSpillere = document.getElementById("antallSpillere");
+
+
 //global variabler
 let poeng = 0;
 let poeng2 = 0;
@@ -15,7 +17,6 @@ if(localStorage.rekord === undefined){
     localStorage.rekord = 0;
 }
 let img = document.createElement("img");
-let tapbilde = document.createElement("tapbilde");
 hdnRekord.innerHTML = "Rekord: " + localStorage.rekord;
 //globale variabler
 let slange1 = {
@@ -65,6 +66,9 @@ function gameLoop() {
 
     requestAnimationFrame(gameLoop);
 }
+antallSpillere.onchange = function () {
+    document.activeElement.blur();
+};
 function antallSpill() {
     if(antallSpillere.value === "spiller2"){ //gir verdier til slange2, slik at den blir synlig når en velger To spillere
         slange2.bredde = 20;
@@ -179,6 +183,7 @@ function sjekkSvar(slange){ // når slangen treffer kanten av canvas skal den st
     slange.xfart = 5;
     slange.yfart = 0;
     slange.xretning = 1;
+    slange.yretning = 0;
     slange.bredde = 20;
     slange.hoyde = 20;
     okef1 = 0;
@@ -201,6 +206,7 @@ function sjekkSvar2(slange){
     slange.xfart = 5;
     slange.yfart = 0;
     slange.xretning = 1;
+    slange.yretning = 0;
     slange.bredde = 20;
     slange.hoyde = 20;
     okef2 = 0;
