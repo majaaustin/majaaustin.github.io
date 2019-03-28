@@ -2,9 +2,13 @@ body {
     overflow: hidden;
     background-color: black;
 }
+#hdnPoeng {
+    color: darkorange;
+}#hdnPoeng2 {
+    color: blue;
+}
 #hdnPoeng,#hdnRekord, #hdnPoeng2 {
     font-size: 20px;
-    color: white;
     margin: 0;
     font-family: arial, helvetica, sans-serif;
 }
@@ -15,4 +19,5 @@ body {
 #hdnRekord {
     float: right;
     padding-right: 15%;
+    color: white;
 }
