@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kast</title>
+</head>
+<body>
+<input type="text" id="inpNavn">
+<input type="number" id="inpLengde1">
+<input type="number" id="inpLengde2">
+<input type="number" id="inpLengde3">
+
+<button id="btn">Ok</button>
+<p id="p"></p>
+
+
+<script>
+
+    var inpNavn = document.getElementById("inpNavn");
+    var inpLengde1 = document.getElementById("inpLengde1");
+    var inpLengde2 = document.getElementById("inpLengde2");
+    var inpLengde3 = document.getElementById("inpLengde3");
+    var btn = document.getElementById("btn");
+    var p = document.getElementById("p");
+    var lengde1 = [];
+    var lengde2 = [];
+    var lengde3 = [];
+    var spydkaster = [];
+    var n = 0;
+
+    class Kaster{
+        constructor(navn, kast1, kast2, kast3){
+            this.navn = navn;
+            this.kast1 = kast1;
+            this.kast2 = kast2;
+            this.kast3 = kast3;
+        }
+        visinformasjon(){
+            p.innerHTML+= this.navn + this.kast1 + this.kast2 + this.kast3
+        }
+
+    }
+
+    btn.onclick = function () {
+        lengde1.push(Number(inpLengde1.value));
+        lengde2.push(Number(inpLengde2.value));
+        lengde3.push(Number(inpLengde3.value));
+        spydkaster.push(inpNavn.value);
+
+
+
+if (spydkaster.length ===2){
+    let Utdover1 = new Kaster(spydkaster[0], lengde1[0], lengde2[0], lengde3[0]);
+    let Utdover2 = new Kaster(spydkaster[1], lengde1[1], lengde2[1], lengde3[1]);
+    Utdover1.visinformasjon();
+    Utdover2.visinformasjon();
+
+
+}
+
+
+    }
+
+</script>
+
+</body>
+</html>
