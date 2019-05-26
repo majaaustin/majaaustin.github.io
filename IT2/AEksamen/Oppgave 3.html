@@ -37,7 +37,11 @@
             this.kast3 = kast3;
         }
         visinformasjon(){
-            p.innerHTML+= this.navn + this.kast1 + this.kast2 + this.kast3
+            p.innerHTML+= this.navn + this.kast1 + this.kast2 + this.kast3;
+        }
+
+        lengstekast(){
+            return Math.max(this.kast1,this.kast2,this.kast3);
         }
 
     }
@@ -53,7 +57,13 @@
 if (spydkaster.length ===2){
     let Utdover1 = new Kaster(spydkaster[0], lengde1[0], lengde2[0], lengde3[0]);
     let Utdover2 = new Kaster(spydkaster[1], lengde1[1], lengde2[1], lengde3[1]);
+    var lengsteUtdover1 = Utdover1.lengstekast();
+    if (Utdover1.lengstekast() > Utdover2.lengstekast()) {
+    lengsteUtdover1.visinformasjon();
+    }
+
     Utdover1.visinformasjon();
+    Utdover1.lengstekast();
     Utdover2.visinformasjon();
 
 
